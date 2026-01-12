@@ -1,6 +1,39 @@
 /* Design System - tfradet Portfolio */
 /* Custom CSS Variables for unique branding */
 
+/* Dolly Pro Font Family */
+@font-face {
+  font-family: 'Dolly Pro';
+  src: url('../../assets/fonts/Dolly/DollyPro-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dolly Pro';
+  src: url('../../assets/fonts/Dolly/DollyPro-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dolly Pro';
+  src: url('../../assets/fonts/Dolly/DollyPro-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dolly Pro SmallCaps';
+  src: url('../../assets/fonts/Dolly/DollyPro-RegularSmallCaps.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Color Palette - Clean & Minimal */
   --color-primary: #171717;        /* Near black for text */
@@ -87,10 +120,24 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Spectral', Georgia, serif;
+  font-family: 'Dolly Pro', 'Spectral', Georgia, serif;
   font-weight: 700;
   line-height: 1.2;
   color: var(--text-primary);
+}
+
+/* Resume section headers use small-caps variant */
+h3.uppercase {
+  font-family: 'Dolly Pro SmallCaps', 'Dolly Pro', 'Spectral', Georgia, serif;
+  text-transform: none;
+  font-weight: 400;
+}
+
+/* Subtitle text uses Dolly Pro Regular */
+.subtitle-text {
+  font-family: 'Dolly Pro', 'Spectral', Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Lighter bullet text */
