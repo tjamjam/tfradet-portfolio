@@ -49,8 +49,21 @@
 
     <!-- Theme Script (loads immediately to prevent flash) -->
     <script src="src/scripts/theme.js"></script>
+
+    <!-- Calculate Years of Experience -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startDate = new Date('2012-05-01');
+            const today = new Date();
+            const yearsExperience = ((today - startDate) / (365.25 * 24 * 60 * 60 * 1000)).toFixed(1);
+            const element = document.getElementById('years-experience-resume');
+            if (element) {
+                element.textContent = yearsExperience;
+            }
+        });
+    </script>
 </head>
-<body class="font-body bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50 transition-colors duration-300">
+<body class="font-body bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50 transition-colors duration-300">
 
     <!-- Navigation -->
     <nav class="max-w-container mx-auto px-6 md:px-12 py-8">
@@ -71,116 +84,137 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="max-w-container mx-auto px-6 md:px-12 pb-20">
+    <!-- Paper Container -->
+    <div class="max-w-container mx-auto px-6 pb-12">
+        <!-- Main Content -->
+        <main class="bg-white dark:bg-neutral-800 shadow-md px-8 md:px-16 py-12 md:py-16" style="border-radius: var(--radius-sm);">
 
         <!-- Resume Header -->
-        <header class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-display text-accent mb-3">Terrence Fradet</h1>
+        <header class="mb-16">
+            <h1 class="text-4xl md:text-5xl font-display text-accent mb-4">Terrence Fradet</h1>
             <div class="flex flex-wrap gap-3 text-sm text-neutral-600 dark:text-neutral-400">
-                <a href="https://product.com" class="hover:text-accent transition-colors">Product.com</a>
+                <a href="https://tfradet.com" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">tfradet.com</a>
                 <span>|</span>
-                <a href="mailto:terrence@hello@gmail.com" class="hover:text-accent transition-colors">terrence@hello@gmail.com</a>
+                <a href="mailto:terrencefradet@gmail.com" class="hover:text-accent transition-colors">terrencefradet@gmail.com</a>
                 <span>|</span>
-                <a href="tel:503-960-8332" class="hover:text-accent transition-colors">503-960-8332</a>
+                <a href="tel:802-304-0832" class="hover:text-accent transition-colors">802.304.0832</a>
                 <span>|</span>
-                <a href="https://linkedin.com/in/tfradet" class="hover:text-accent transition-colors">linkedin.com/in/tfradet</a>
+                <a href="https://linkedin.com/in/tfradet" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">linkedin.com/in/tfradet</a>
             </div>
         </header>
 
         <!-- Summary Section -->
-        <section class="mb-12 max-w-4xl">
-            <h2 class="text-2xl md:text-3xl font-display font-semibold mb-4">
-                Staff Product Designer with 13+ years of industry experience focusing on data insights, 0 to 1 products, & design strategy.
+        <section class="mb-16">
+            <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                Product Designer with <span id="years-experience-resume">12</span> years of industry experience focusing on data insights, 0 to 1 products, & design strategy.
             </h2>
             <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                Led user-centric web and mobile product development in high-growth series B/C tech startups. My expertise includes B2B enterprise products and B2B2C models for companies such as Nike, The World Bank, and National Geographic.
+                Led user-centric web and mobile product development in high-growth series B/C tech startups, specializing in enterprise SaaS B2B and B2B2C. Consulted for clients such as Google, Nike, The World Bank, and National Geographic.
             </p>
         </section>
 
         <!-- Two Column Layout -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
 
             <!-- Main Column (Experience) -->
             <div class="lg:col-span-2">
-                <h3 class="text-xl font-display font-semibold mb-6 uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Experience</h3>
+                <h3 class="text-xl font-display font-bold mb-10 uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Experience</h3>
 
                 <!-- Job 1 -->
-                <article class="mb-10">
-                    <div class="flex justify-between items-start mb-2">
+                <article class="mb-16">
+                    <div class="flex justify-between items-start mb-4">
                         <div>
-                            <h4 class="text-xl font-display font-semibold">Principal Product Designer</h4>
-                            <p class="text-neutral-600 dark:text-neutral-400">EcoCart - Secondly</p>
+                            <h4 class="text-xl font-display font-bold">Principal Product Designer</h4>
+                            <p class="text-neutral-600 dark:text-neutral-400">SensorUp</p>
                         </div>
-                        <span class="text-sm text-neutral-500 dark:text-neutral-500 whitespace-nowrap ml-4">Aug 2023 – present</span>
+                        <span class="text-sm text-neutral-500 dark:text-neutral-500 whitespace-nowrap ml-4">Aug 2024 – present</span>
                     </div>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-3 italic">
-                        Data analytics enterprise product with a million global org actively providing insights into best-in-touch for a large enterprise with 300+ employees and 1,200,000+ active members from 126,000 organizations.
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-5">
+                        Lead designer and product manager for an IoT analytics platform managing methane emissions, developing workflows for root cause analysis, regulatory compliance, and scientific reporting.
                     </p>
-                    <ul class="list-disc list-outside ml-5 space-y-2 text-neutral-700 dark:text-neutral-300">
-                        <li>Drove the first iteration of the product from conception to launch in 6 months, leading the product was team-oriented and goal-oriented, and building on agility, thought and precision for a simple SLA program to replace a disconnected system of 7+ digital products.</li>
-                        <li>Scaling value across 20+ initiatives and products in a redesign related to the development of the organization.</li>
-                        <li>Drives data collection into collaboration and operational tooling improvements implemented with Figma, Linear, and Atlassian.</li>
-                        <li>Reduced time to insight delivery by 40% while providing 5x more user-testable designs, through a lightweight design ops system.</li>
-                        <li>Helped ensure $15 million funding in collaborating with leadership and cross-functionally by articulating the difficult to measure insights regarding users from a Design in Mixpanel.</li>
-                        <li>Increased workflow efficiency by 30% by collaborating with stakeholders at every level of the organization to improve data-driven UI and experiential features, reducing time from work and motion gaps and technical UI components, keeping in constants broken and leveraging Design Tokens.</li>
-                    </ul>
                 </article>
 
                 <!-- Job 2 -->
-                <article class="mb-10">
-                    <div class="flex justify-between items-start mb-2">
+                <article class="mb-16">
+                    <div class="flex justify-between items-start mb-4">
                         <div>
-                            <h4 class="text-xl font-display font-semibold">Staff Product Designer</h4>
-                            <p class="text-neutral-600 dark:text-neutral-400">EcoCart - Secondly</p>
+                            <h4 class="text-xl font-display font-bold">Staff Product Designer</h4>
+                            <p class="text-neutral-600 dark:text-neutral-400">Premise Data</p>
                         </div>
-                        <span class="text-sm text-neutral-500 dark:text-neutral-500 whitespace-nowrap ml-4">Jan 2022 – Aug 2024</span>
+                        <span class="text-sm text-neutral-500 dark:text-neutral-500 whitespace-nowrap ml-4">May 2021 – Jun 2024</span>
                     </div>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-3 italic">
-                        Data analytics enterprise product with a million global org actively providing insights into best-in-touch for a large enterprise with 300+ employees and 1,200,000+ active members from 126,000 organizations.
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-5">
+                        Data analytics enterprise product with a million global gig-workers providing insights into hard to reach places. Joined during Series E as <strong>150th employee</strong> with <strong>$15M ARR</strong>, now <strong>$70M ARR</strong>.
                     </p>
-                    <ul class="list-disc list-outside ml-5 space-y-2 text-neutral-700 dark:text-neutral-300">
-                        <li>Increased onboarding efficiency by 40% via UX research engineered by 60+ post-test and delivery of's value via data design resulting in a more straightforward user engagement and adoption.</li>
-                        <li>Raised monthly product satisfaction scores by 18% via improving overall product by developing machine learning data product features such as predictions, alerts, and insights.</li>
-                        <li>Won daily users on an avg insights for the FEC section of Formula 1 kit by most execution, reducing abandonment by 20%, optimizing better learning structures in the design system for design teams across the org by providing a guidelines template.</li>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-5 italic">
+                        Promoted to Staff Product Designer, crafting end-to-end for mobile (iOS/Android) and web, evolving product into new verticals (commercial and government), and leading on system, thought and processes for a design team of <strong>4</strong>.
+                    </p>
+                    <ul class="list-disc list-outside ml-5 space-y-3 text-neutral-700 dark:text-neutral-300">
+                        <li><strong>5x commercial revenue</strong> and <strong>tripling</strong> the number of insights consumed by users, through a design overhaul of the data analytics product to make it enterprise ready and intuitive from onboarding to finding value.</li>
+                        <li>Drove <strong>30% increase</strong> in gig-worker productivity, by ensuring profitability in a new market for the first syndicated data product via collaborative discovery workshops leading to design enhancements to the data collection app (iOS/Android) and operational tooling improvements.</li>
+                        <li>Cultivated an impactful fast moving design team through bi-weekly jam sessions, design crits, stakeholder/user feedback and mentorship sessions that resulted in problem definitions and solution ideation.</li>
+                        <li>Helped secure <strong>$15 million</strong> bridge funding by collaborating with leadership and cross-functionally to synthesize and articulate a user-centric product vision, augmenting it with AI imagery to deliver a compelling end-to-end story about profitability via data product syndication and economies of scale.</li>
+                        <li><strong>Doubled</strong> eng/design efficiency and boosting design team impact by aligning our Design System (web and mobile app) with Material UI components, moving to semantic tokens and leveraging themes with Variables.</li>
+                    </ul>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-8 mb-5 italic">
+                        Joined as Senior Product Designer, leading enterprise data analytics product from beta to market fit and implementing our design system for web.
+                    </p>
+                    <ul class="list-disc list-outside ml-5 space-y-3 text-neutral-700 dark:text-neutral-300">
+                        <li>Increased feature discovery by <strong>30%</strong> and increased engagement by <strong>25%</strong> post beta and delivery of <strong>5 features</strong>, <strong>1 navigation</strong> enhancement, and establishing <strong>4 user engagement metrics</strong>.</li>
+                        <li>Helped secure <strong>$10 million</strong> bridge funding by supporting leadership with a Vision type narrating a <strong>3-year</strong> design vision story on data insights for the CPG market of Premise's ROI for retail execution.</li>
+                        <li><strong>Tripled</strong> eng/design productivity by streamlining token delivery pipeline applied to our design system aligning components between Figma and the web code base.</li>
                     </ul>
                 </article>
 
                 <!-- Job 3 -->
-                <article class="mb-10">
-                    <div class="flex justify-between items-start mb-2">
+                <article class="mb-16">
+                    <div class="flex justify-between items-start mb-4">
                         <div>
-                            <h4 class="text-xl font-display font-semibold">Senior Product Designer</h4>
-                            <p class="text-neutral-600 dark:text-neutral-400">Fathom Information Design</p>
+                            <h4 class="text-xl font-display font-bold">Senior Product Designer</h4>
+                            <p class="text-neutral-600 dark:text-neutral-400">Panorama Education</p>
                         </div>
-                        <span class="text-sm text-neutral-500 dark:text-neutral-500 whitespace-nowrap ml-4">May 2021 – Jun 2021</span>
+                        <span class="text-sm text-neutral-500 dark:text-neutral-500 whitespace-nowrap ml-4">Feb 2016 – May 2021</span>
                     </div>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-3 italic">
-                        ETL/tool data analytics product engineered to 15 data.gov sets quant support target, cloned down 8 on mobile software and a $200k+ SaaS annual contract with CRMR code.
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-5">
+                        EdTech data analytics product empowers K-12 educators with student support data. Joined Series B as <strong>52nd employee</strong> with <strong>$4M ARR</strong>, left Series C with <strong>250+ employees</strong> and <strong>$25M ARR</strong>.
                     </p>
-                    <ul class="list-disc list-outside ml-5 space-y-2 text-neutral-700 dark:text-neutral-300">
-                        <li>Executed existing customer AM by 20% through development and a positioning's product opportunities, building prototyping, and an iterative design engagement system.</li>
-                        <li>Led cross-discipline teams primarily driving growth of the Restoril Security platform.</li>
-                        <li>Directly and plans departments of education.</li>
-                        <li>Independently built the first pilot product platform succeeded by an average lead using of 7 products with more than 24 screens, collaborating with engineering to establish best capabilities and to maintain design standards and leverage component libraries.</li>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-5 italic">
+                        Promoted to Senior Product Designer, I oversaw UX & Research throughout the customer journey, primarily driving growth of the Student Success product.
+                    </p>
+                    <ul class="list-disc list-outside ml-5 space-y-3 text-neutral-700 dark:text-neutral-300">
+                        <li>Expanded existing customer ARR by <strong>20%</strong> through research & prototyping <strong>5 product opportunities</strong>, shaping the product roadmap.</li>
+                        <li>Generated <strong>$12M ARR</strong> by spearheading design for <strong>3 new product modules</strong>, leading to sales in <strong>25 districts</strong> and <strong>2 state departments</strong> of education.</li>
+                        <li>Sales emphasized UX as a key product differentiator, supported by an average <strong>NPS rating of 45</strong> from customers, achieved through continuous iteration, usability testing, and advocacy for great UX.</li>
+                        <li>Onboarded <strong>2 designers 2x faster</strong> than expected, via close collaboration, improved design ops with documentation, and established <strong>4 design processes</strong>.</li>
+                    </ul>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-8 mb-5 italic">
+                        Joined as the second Product Designer, focused on District Improvement and Social-Emotional Learning (SEL) survey product growth, then quickly led new product (Student Success) to market.
+                    </p>
+                    <ul class="list-disc list-outside ml-5 space-y-3 text-neutral-700 dark:text-neutral-300">
+                        <li>Contributed to <strong>$1M ARR</strong> with <strong>5 early adopters</strong> engaging weekly, creating a <strong>+$270M ARR</strong> market opportunity post-launch of the 0 to 1 product, Student Success.</li>
+                        <li>Decreased time to value, with <strong>20% more users</strong> reaching insights through navigation improvements and redesigned data visualization reporting experience.</li>
                     </ul>
                 </article>
 
                 <!-- Job 4 -->
-                <article class="mb-10">
-                    <div class="flex justify-between items-start mb-2">
+                <article class="mb-16">
+                    <div class="flex justify-between items-start mb-4">
                         <div>
-                            <h4 class="text-xl font-display font-semibold">Educational Designer</h4>
+                            <h4 class="text-xl font-display font-bold">Information Designer</h4>
                             <p class="text-neutral-600 dark:text-neutral-400">Fathom Information Design</p>
                         </div>
                         <span class="text-sm text-neutral-500 dark:text-neutral-500 whitespace-nowrap ml-4">May 2012 – Jan 2016</span>
                     </div>
-                    <ul class="list-disc list-outside ml-5 space-y-2 text-neutral-700 dark:text-neutral-300">
-                        <li>Joined as consultation designer, defining many clients such as Nike design approach, measuring the start-test for design logic approach.</li>
-                        <li>Designed interactive charts and visualizations for The World Bank.</li>
-                        <li>Increased engagement by 35% across multiple products for clients such as Google, AC, Clinton foundation, World Bank, Nike, and Popular Science.</li>
-                        <li>Led new business development, identified and developed client proposals, established relationships and facilitated consultation, and participated in negotiations.</li>
-                        <li>Enforced Fathom's reputation through blog posts, Harvard MIT presentations, and hosting workshops.</li>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-5">
+                        Joined as Information Designer, defining client deliverables with complex datasets across diverse platforms and industries, collaborating closely with Ben Fry, mastering his data-first design approach.
+                    </p>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-5 italic">
+                        Generated <strong>100s of thousands of dollars</strong> each year and helped numerous clients get promoted within <strong>Fortune 100</strong> companies by advancing the field of interactive visualizations with numerous call outs in Fast Company and studio awards:
+                    </p>
+                    <ul class="list-disc list-outside ml-5 space-y-3 text-neutral-700 dark:text-neutral-300">
+                        <li>Design lead for <strong>8 projects</strong>, partnering with market teams to inspire users with data stories, resulting in <strong>3 projects going viral</strong> including notable clients like Nike, Google, GE, Clinton Foundation, World Bank, Nat Geo, and Popular Science.</li>
+                        <li>Design lead for <strong>4 proprietary insights products</strong>, notable clients Nike, Fidelity Investments, and The Broad Institute at MIT.</li>
+                        <li>Enhanced Fathom's reputation through blog posts, Harvard & MIT presentations, and hosting meetups.</li>
                     </ul>
                 </article>
 
@@ -189,72 +223,72 @@
             <!-- Sidebar Column -->
             <aside class="lg:col-span-1">
 
-                <!-- Skills Section -->
-                <section class="mb-10">
-                    <h3 class="text-xl font-display font-semibold mb-4 uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Skills & Proficiency</h3>
-                    <ul class="space-y-2 text-sm text-neutral-700 dark:text-neutral-300">
-                        <li>UX/UI</li>
-                        <li>A11Y</li>
-                        <li>JS Coding</li>
-                        <li>Usability Testing</li>
-                        <li>Information Architecture</li>
-                        <li>Qualitative research</li>
-                        <li>Quantitative research</li>
-                        <li>Systems Thinking</li>
-                        <li>Documentation</li>
-                        <li>Rapid Prototyping</li>
-                        <li>Communication</li>
-                        <li>Team Coordination</li>
-                        <li>Curiosity</li>
-                    </ul>
-                </section>
-
                 <!-- Education Section -->
-                <section class="mb-10">
-                    <h3 class="text-xl font-display font-semibold mb-4 uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Education</h3>
-                    <div class="space-y-4 text-sm">
+                <section class="mb-12">
+                    <h3 class="text-xl font-display font-bold mb-6 uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Education</h3>
+                    <div class="space-y-3 text-sm">
                         <div>
-                            <p class="font-semibold text-neutral-900 dark:text-neutral-50">University of Wash</p>
-                            <p class="text-neutral-600 dark:text-neutral-400">BFA in Graphic Design, Advertising emphasis</p>
-                            <p class="text-neutral-600 dark:text-neutral-400">3 Magna Cum Laude</p>
-                            <p class="text-neutral-600 dark:text-neutral-400">1 honors scholarship</p>
+                            <p class="font-semibold text-neutral-900 dark:text-neutral-50">Savannah College of Art & Design</p>
+                            <p class="text-neutral-600 dark:text-neutral-400">BFA in Graphic Design, Printmaking minor</p>
+                            <p class="text-neutral-600 dark:text-neutral-400 mt-2">2007–2012</p>
+                        </div>
+                        <ul class="list-disc list-outside ml-5 space-y-1 text-neutral-600 dark:text-neutral-400">
+                            <li>Magna Cum Laude</li>
+                            <li>Honors Scholarship, 2007–2012</li>
+                            <li>Dean's List Honors, 2007–2012</li>
+                            <li>Outstanding Academic Achievement Award</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Values Section -->
+                <section class="mb-12">
+                    <h3 class="text-xl font-display font-bold mb-6 uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Values</h3>
+                    <div class="space-y-5 text-sm">
+                        <div>
+                            <p class="font-semibold text-neutral-900 dark:text-neutral-50 mb-1">Clear is kind</p>
+                            <p class="text-neutral-600 dark:text-neutral-400 italic">If it doesn't add value, take it out.</p>
                         </div>
                         <div>
-                            <p class="font-semibold text-neutral-900 dark:text-neutral-50">Continuing Education:</p>
-                            <p class="text-neutral-600 dark:text-neutral-400">Sorbonne Study Abroad</p>
-                            <p class="text-neutral-600 dark:text-neutral-400">2007-2012</p>
-                            <p class="text-neutral-600 dark:text-neutral-400">Continuing Academic Research</p>
+                            <p class="font-semibold text-neutral-900 dark:text-neutral-50 mb-1">Collaboration is key</p>
+                            <p class="text-neutral-600 dark:text-neutral-400 italic">"If you want to go fast, go alone; but if you want to go far, go together."</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-neutral-900 dark:text-neutral-50 mb-1">Solve real user problems</p>
+                            <p class="text-neutral-600 dark:text-neutral-400 italic">Define the problem, ship early, learn, redefine.</p>
                         </div>
                     </div>
                 </section>
 
-                <!-- Praise Section -->
-                <section class="mb-10">
-                    <h3 class="text-xl font-display font-semibold mb-4 uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Praise</h3>
-                    <div class="space-y-4 text-sm">
-                        <blockquote class="border-l-2 border-accent pl-3">
-                            <p class="text-neutral-700 dark:text-neutral-300 italic mb-2">"If you want to be like an angel but of work, you want to work with Terrence. Same with client problems"</p>
-                            <cite class="text-neutral-500 dark:text-neutral-500 not-italic text-xs">— John, some_title</cite>
-                        </blockquote>
-                        <blockquote class="border-l-2 border-accent pl-3">
-                            <p class="text-neutral-700 dark:text-neutral-300 italic mb-2">"T2 doesn't just solve problems — he also uncovers..."</p>
-                            <cite class="text-neutral-500 dark:text-neutral-500 not-italic text-xs">— Jane Doe</cite>
-                        </blockquote>
-                        <blockquote class="border-l-2 border-accent pl-3">
-                            <p class="text-neutral-700 dark:text-neutral-300 italic mb-2">"Terrence College of Arts's best and talent"</p>
-                            <cite class="text-neutral-500 dark:text-neutral-500 not-italic text-xs">— Someone</cite>
-                        </blockquote>
-                    </div>
+                <!-- Skills Section -->
+                <section class="mb-12">
+                    <h3 class="text-xl font-display font-bold mb-6 uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Skills & Methodologies</h3>
+                    <ul class="space-y-3 text-sm text-neutral-700 dark:text-neutral-300">
+                        <li>Figma</li>
+                        <li>UI/UX</li>
+                        <li>Prototyping</li>
+                        <li>Wireframing</li>
+                        <li>Information Architecture</li>
+                        <li>User Research</li>
+                        <li>Usability</li>
+                        <li>Product Strategy</li>
+                        <li>Systems Thinking</li>
+                        <li>Communication</li>
+                        <li>Design Thinking</li>
+                        <li>Lean UX</li>
+                        <li>Continuous Discovery Habits</li>
+                    </ul>
                 </section>
 
             </aside>
 
         </div>
 
-    </main>
+        </main>
+    </div>
 
     <!-- Footer -->
-    <footer class="max-w-container mx-auto px-6 md:px-12 py-12 text-center text-sm text-neutral-500 dark:text-neutral-500 border-t border-neutral-200 dark:border-neutral-800">
+    <footer class="max-w-container mx-auto px-6 md:px-12 py-12 text-center text-sm text-neutral-500 dark:text-neutral-500">
         <p>© 2026 Terrence Fradet</p>
     </footer>
 
