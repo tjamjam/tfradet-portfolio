@@ -3,16 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        body { font-family: sans-serif; display: flex; justify-content: center;
-               align-items: center; height: 100vh; margin: 0; background: #111; color: #fff; }
-        h1 { font-weight: 300; letter-spacing: 2px; border-right: 2px solid;
-             padding-right: 10px; animation: blink 1s infinite; }
-        @keyframes blink { 50% { border-color: transparent; } }
-    </style>
+    <meta name="description" content="Terrence Fradet's Portfolio - Designer & Developer">
+    <title>Terrence Fradet | Portfolio</title>
+
+    <!-- Google Fonts: Spectral (display) + Lexend (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;600;700&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#2d5a7b',
+                            light: '#4a7ea0',
+                            dark: '#1a3d56'
+                        },
+                        accent: {
+                            DEFAULT: '#d97742',
+                            light: '#e89563',
+                            dark: '#b85f2f'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Spectral', 'Georgia', 'serif'],
+                        body: ['Lexend', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '88': '22rem',
+                        '128': '32rem'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- Theme Script (loads immediately to prevent flash) -->
+    <script src="src/scripts/theme.js"></script>
 </head>
-<body>
-    <h1>New site in progress...</h1>
+<body class="font-body min-h-screen flex items-center justify-center transition-colors duration-300">
+
+    <!-- Dark Mode Toggle Button -->
+    <button
+        onclick="toggleTheme()"
+        class="fixed top-6 right-6 p-3 rounded-full bg-neutral-200 dark:bg-neutral-800 hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-all duration-200 shadow-lg z-50"
+        aria-label="Toggle dark mode">
+        <!-- Sun Icon (shows in dark mode) -->
+        <svg class="w-6 h-6 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <!-- Moon Icon (shows in light mode) -->
+        <svg class="w-6 h-6 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+    </button>
+
+    <!-- Main Content -->
+    <main class="text-center px-6 max-w-4xl">
+        <div class="space-y-6">
+            <!-- Name/Brand -->
+            <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-primary dark:text-primary-light">
+                Terrence Fradet
+            </h1>
+
+            <!-- Coming Soon Message -->
+            <div class="flex items-center justify-center gap-2 text-2xl md:text-3xl font-light text-neutral-700 dark:text-neutral-300">
+                <span class="font-display">Building something new</span>
+                <span class="inline-block border-r-2 border-accent cursor-blink h-8 ml-1"></span>
+            </div>
+
+            <!-- Subtitle -->
+            <p class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
+                Designer & Developer crafting thoughtful digital experiences
+            </p>
+
+            <!-- Progress Indicator -->
+            <div class="pt-8">
+                <div class="w-64 h-1 bg-neutral-200 dark:bg-neutral-800 rounded-full mx-auto overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-primary to-accent rounded-full" style="width: 15%; transition: width 0.5s ease;"></div>
+                </div>
+                <p class="text-sm text-neutral-500 dark:text-neutral-500 mt-3 font-mono">
+                    Phase 1: Foundation
+                </p>
+            </div>
+        </div>
+    </main>
+
 </body>
 </html>
