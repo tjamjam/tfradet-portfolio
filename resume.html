@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terrence Fradet - Resume - Principal Product Designer">
+    <title>Resume | Terrence Fradet</title>
+
+    <!-- Google Fonts: Spectral (display) + Lexend (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;600;700&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#171717',
+                            light: '#404040',
+                            dark: '#0a0a0a'
+                        },
+                        accent: {
+                            DEFAULT: '#E74C3C',
+                            light: '#EC7063',
+                            dark: '#C0392B'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Spectral', 'Georgia', 'serif'],
+                        body: ['Lexend', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                    },
+                    maxWidth: {
+                        'container': '1200px'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- Theme Script (loads immediately to prevent flash) -->
+    <script src="src/scripts/theme.js"></script>
+</head>
+<body class="font-body bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="max-w-container mx-auto px-6 md:px-12 py-8">
+        <div class="flex justify-end items-center gap-6">
+            <a href="/" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">Home</a>
+            <a href="/resume.html" class="text-sm text-accent">Resume</a>
+            <button
+                onclick="toggleTheme()"
+                class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors"
+                aria-label="Toggle dark mode">
+                <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+                <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-container mx-auto px-6 md:px-12 pb-20">
+
+        <!-- Resume Header -->
+        <header class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-display text-accent mb-3">Terrence Fradet</h1>
+            <div class="flex flex-wrap gap-3 text-sm text-neutral-600 dark:text-neutral-400">
+                <a href="https://product.com" class="hover:text-accent transition-colors">Product.com</a>
+                <span>|</span>
+                <a href="mailto:terrence@hello@gmail.com" class="hover:text-accent transition-colors">terrence@hello@gmail.com</a>
+                <span>|</span>
+                <a href="tel:503-960-8332" class="hover:text-accent transition-colors">503-960-8332</a>
+                <span>|</span>
+                <a href="https://linkedin.com/in/tfradet" class="hover:text-accent transition-colors">linkedin.com/in/tfradet</a>
+            </div>
+        </header>
+
+        <!-- Summary Section -->
+        <section class="mb-12 max-w-4xl">
+            <h2 class="text-2xl md:text-3xl font-display font-semibold mb-4">
+                Staff Product Designer with 13+ years of industry experience focusing on data insights, 0 to 1 products, & design strategy.
+            </h2>
+            <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                Led user-centric web and mobile product development in high-growth series B/C tech startups. My expertise includes B2B enterprise products and B2B2C models for companies such as Nike, The World Bank, and National Geographic.
+            </p>
+        </section>
+
+        <!-- Two Column Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+            <!-- Main Column (Experience) -->
+            <div class="lg:col-span-2">
+                <h3 class="text-xl font-display font-semibold mb-6 uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Experience</h3>
+
+                <!-- Job 1 -->
+                <article class="mb-10">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h4 class="text-xl font-display font-semibold">Principal Product Designer</h4>
+                            <p class="text-neutral-600 dark:text-neutral-400">EcoCart - Secondly</p>
+                        </div>
+                        <span class="text-sm text-neutral-500 dark:text-neutral-500 whitespace-nowrap ml-4">Aug 2023 – present</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-3 italic">
+                        Data analytics enterprise product with a million global org actively providing insights into best-in-touch for a large enterprise with 300+ employees and 1,200,000+ active members from 126,000 organizations.
+                    </p>
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-neutral-700 dark:text-neutral-300">
+                        <li>Drove the first iteration of the product from conception to launch in 6 months, leading the product was team-oriented and goal-oriented, and building on agility, thought and precision for a simple SLA program to replace a disconnected system of 7+ digital products.</li>
+                        <li>Scaling value across 20+ initiatives and products in a redesign related to the development of the organization.</li>
+                        <li>Drives data collection into collaboration and operational tooling improvements implemented with Figma, Linear, and Atlassian.</li>
+                        <li>Reduced time to insight delivery by 40% while providing 5x more user-testable designs, through a lightweight design ops system.</li>
+                        <li>Helped ensure $15 million funding in collaborating with leadership and cross-functionally by articulating the difficult to measure insights regarding users from a Design in Mixpanel.</li>
+                        <li>Increased workflow efficiency by 30% by collaborating with stakeholders at every level of the organization to improve data-driven UI and experiential features, reducing time from work and motion gaps and technical UI components, keeping in constants broken and leveraging Design Tokens.</li>
+                    </ul>
+                </article>
+
+                <!-- Job 2 -->
+                <article class="mb-10">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h4 class="text-xl font-display font-semibold">Staff Product Designer</h4>
+                            <p class="text-neutral-600 dark:text-neutral-400">EcoCart - Secondly</p>
+                        </div>
+                        <span class="text-sm text-neutral-500 dark:text-neutral-500 whitespace-nowrap ml-4">Jan 2022 – Aug 2024</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-3 italic">
+                        Data analytics enterprise product with a million global org actively providing insights into best-in-touch for a large enterprise with 300+ employees and 1,200,000+ active members from 126,000 organizations.
+                    </p>
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-neutral-700 dark:text-neutral-300">
+                        <li>Increased onboarding efficiency by 40% via UX research engineered by 60+ post-test and delivery of's value via data design resulting in a more straightforward user engagement and adoption.</li>
+                        <li>Raised monthly product satisfaction scores by 18% via improving overall product by developing machine learning data product features such as predictions, alerts, and insights.</li>
+                        <li>Won daily users on an avg insights for the FEC section of Formula 1 kit by most execution, reducing abandonment by 20%, optimizing better learning structures in the design system for design teams across the org by providing a guidelines template.</li>
+                    </ul>
+                </article>
+
+                <!-- Job 3 -->
+                <article class="mb-10">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h4 class="text-xl font-display font-semibold">Senior Product Designer</h4>
+                            <p class="text-neutral-600 dark:text-neutral-400">Fathom Information Design</p>
+                        </div>
+                        <span class="text-sm text-neutral-500 dark:text-neutral-500 whitespace-nowrap ml-4">May 2021 – Jun 2021</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-3 italic">
+                        ETL/tool data analytics product engineered to 15 data.gov sets quant support target, cloned down 8 on mobile software and a $200k+ SaaS annual contract with CRMR code.
+                    </p>
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-neutral-700 dark:text-neutral-300">
+                        <li>Executed existing customer AM by 20% through development and a positioning's product opportunities, building prototyping, and an iterative design engagement system.</li>
+                        <li>Led cross-discipline teams primarily driving growth of the Restoril Security platform.</li>
+                        <li>Directly and plans departments of education.</li>
+                        <li>Independently built the first pilot product platform succeeded by an average lead using of 7 products with more than 24 screens, collaborating with engineering to establish best capabilities and to maintain design standards and leverage component libraries.</li>
+                    </ul>
+                </article>
+
+                <!-- Job 4 -->
+                <article class="mb-10">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h4 class="text-xl font-display font-semibold">Educational Designer</h4>
+                            <p class="text-neutral-600 dark:text-neutral-400">Fathom Information Design</p>
+                        </div>
+                        <span class="text-sm text-neutral-500 dark:text-neutral-500 whitespace-nowrap ml-4">May 2012 – Jan 2016</span>
+                    </div>
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-neutral-700 dark:text-neutral-300">
+                        <li>Joined as consultation designer, defining many clients such as Nike design approach, measuring the start-test for design logic approach.</li>
+                        <li>Designed interactive charts and visualizations for The World Bank.</li>
+                        <li>Increased engagement by 35% across multiple products for clients such as Google, AC, Clinton foundation, World Bank, Nike, and Popular Science.</li>
+                        <li>Led new business development, identified and developed client proposals, established relationships and facilitated consultation, and participated in negotiations.</li>
+                        <li>Enforced Fathom's reputation through blog posts, Harvard MIT presentations, and hosting workshops.</li>
+                    </ul>
+                </article>
+
+            </div>
+
+            <!-- Sidebar Column -->
+            <aside class="lg:col-span-1">
+
+                <!-- Skills Section -->
+                <section class="mb-10">
+                    <h3 class="text-xl font-display font-semibold mb-4 uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Skills & Proficiency</h3>
+                    <ul class="space-y-2 text-sm text-neutral-700 dark:text-neutral-300">
+                        <li>UX/UI</li>
+                        <li>A11Y</li>
+                        <li>JS Coding</li>
+                        <li>Usability Testing</li>
+                        <li>Information Architecture</li>
+                        <li>Qualitative research</li>
+                        <li>Quantitative research</li>
+                        <li>Systems Thinking</li>
+                        <li>Documentation</li>
+                        <li>Rapid Prototyping</li>
+                        <li>Communication</li>
+                        <li>Team Coordination</li>
+                        <li>Curiosity</li>
+                    </ul>
+                </section>
+
+                <!-- Education Section -->
+                <section class="mb-10">
+                    <h3 class="text-xl font-display font-semibold mb-4 uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Education</h3>
+                    <div class="space-y-4 text-sm">
+                        <div>
+                            <p class="font-semibold text-neutral-900 dark:text-neutral-50">University of Wash</p>
+                            <p class="text-neutral-600 dark:text-neutral-400">BFA in Graphic Design, Advertising emphasis</p>
+                            <p class="text-neutral-600 dark:text-neutral-400">3 Magna Cum Laude</p>
+                            <p class="text-neutral-600 dark:text-neutral-400">1 honors scholarship</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-neutral-900 dark:text-neutral-50">Continuing Education:</p>
+                            <p class="text-neutral-600 dark:text-neutral-400">Sorbonne Study Abroad</p>
+                            <p class="text-neutral-600 dark:text-neutral-400">2007-2012</p>
+                            <p class="text-neutral-600 dark:text-neutral-400">Continuing Academic Research</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Praise Section -->
+                <section class="mb-10">
+                    <h3 class="text-xl font-display font-semibold mb-4 uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Praise</h3>
+                    <div class="space-y-4 text-sm">
+                        <blockquote class="border-l-2 border-accent pl-3">
+                            <p class="text-neutral-700 dark:text-neutral-300 italic mb-2">"If you want to be like an angel but of work, you want to work with Terrence. Same with client problems"</p>
+                            <cite class="text-neutral-500 dark:text-neutral-500 not-italic text-xs">— John, some_title</cite>
+                        </blockquote>
+                        <blockquote class="border-l-2 border-accent pl-3">
+                            <p class="text-neutral-700 dark:text-neutral-300 italic mb-2">"T2 doesn't just solve problems — he also uncovers..."</p>
+                            <cite class="text-neutral-500 dark:text-neutral-500 not-italic text-xs">— Jane Doe</cite>
+                        </blockquote>
+                        <blockquote class="border-l-2 border-accent pl-3">
+                            <p class="text-neutral-700 dark:text-neutral-300 italic mb-2">"Terrence College of Arts's best and talent"</p>
+                            <cite class="text-neutral-500 dark:text-neutral-500 not-italic text-xs">— Someone</cite>
+                        </blockquote>
+                    </div>
+                </section>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-container mx-auto px-6 md:px-12 py-12 text-center text-sm text-neutral-500 dark:text-neutral-500 border-t border-neutral-200 dark:border-neutral-800">
+        <p>© 2026 Terrence Fradet</p>
+    </footer>
+
+</body>
+</html>
