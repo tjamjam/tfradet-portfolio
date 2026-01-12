@@ -88,9 +88,18 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Spectral', Georgia, serif;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
   color: var(--text-primary);
+}
+
+/* Lighter bullet text */
+ul li {
+  font-weight: 300;
+}
+
+ul li strong {
+  font-weight: 600;
 }
 
 /* Custom Typography Classes */

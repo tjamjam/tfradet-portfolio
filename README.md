@@ -18,6 +18,9 @@ See [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md) for complete documentation on:
 - Spacing system
 - Dark mode implementation
 
+**⚠️ Golden Rule: Never diverge from the design system theme.**
+Always use CSS variables and design tokens defined in `src/styles/main.css`. Consistency is key to maintaining an invisible, cohesive design.
+
 ## 🏗️ Project Structure
 ```
 ├── index.html              # Main entry point
