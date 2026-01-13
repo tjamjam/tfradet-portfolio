@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accelerating the Sales Cycle - Case Study by Terrence Fradet">
+    <title>Accelerating the Sales Cycle | Terrence Fradet</title>
+
+    <!-- Google Fonts: Spectral (display) + Lexend (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;600;700&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#171717',
+                            light: '#404040',
+                            dark: '#0a0a0a'
+                        },
+                        accent: {
+                            DEFAULT: '#E74C3C',
+                            light: '#EC7063',
+                            dark: '#C0392B'
+                        },
+                        neutral: {
+                            850: '#1e1e1e'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Dolly Pro', 'Spectral', 'Georgia', 'serif'],
+                        body: ['Lexend', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                    },
+                    maxWidth: {
+                        'container': '1200px'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- Theme Script (loads immediately to prevent flash) -->
+    <script src="src/scripts/theme.js"></script>
+
+    <!-- Copy to Clipboard Script -->
+    <script>
+        function copyEmail(event, email) {
+            const button = event.currentTarget;
+            navigator.clipboard.writeText(email).then(() => {
+                button.classList.add('copied');
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</head>
+<body class="font-body bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-neutral-900">
+        <div class="max-w-container mx-auto px-6 md:px-12 py-3">
+        <div class="flex justify-between items-center">
+            <a href="/" class="text-accent font-medium">← Back</a>
+            <div class="flex gap-6 items-center">
+                <a href="/" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">Home</a>
+                <a href="/about.html" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">About</a>
+                <a href="/resume.html" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">Resume</a>
+                <button
+                    onclick="toggleTheme()"
+                    class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors"
+                    aria-label="Toggle dark mode">
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                    <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section Group (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <!-- Hero Section -->
+            <section class="max-w-container mx-auto px-6 md:px-12 py-12 md:py-20">
+                <div class="max-w-4xl">
+                    <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
+                        Systems thinking · Free trial · B2B2C
+                    </p>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+                        Accelerating the Sales Cycle
+                    </h1>
+                    <p class="subtitle-text text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Creating a solution library for 15x faster customer insights.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Hero Image -->
+            <section class="max-w-container mx-auto px-6 md:px-12 pb-12 md:pb-20">
+                <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                    <span class="text-neutral-400">[Hero image]</span>
+                </div>
+            </section>
+        </div>
+
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+        <!-- The Problem Section (White) -->
+        <section class="py-12 md:py-20">
+            <div class="max-w-3xl">
+                <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                    The Problem
+                </h2>
+                <p class="text-xl md:text-2xl font-display text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
+                    Customers didn't want to wait 4-6 weeks to see Premise's capabilities.
+                </p>
+                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
+                    Customers had to spend a lot of their time sitting down with Premise team members to explain their goals and understand if Premise could even solve them.
+                </p>
+                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                    This services heavy process was not scalable as it took team members across solutions consulting, customer success, data acquisition, data quality and data analysts 4-6 weeks to deliver data to a customer before they signed a year contract.
+                </p>
+            </div>
+        </section>
+
+        </div> <!-- Close white container -->
+
+        <!-- Success Metric Section (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <div class="max-w-container mx-auto px-6 md:px-12">
+                <section class="py-12 md:py-20">
+                    <div class="max-w-3xl">
+                        <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                            Success Metric
+                        </h2>
+                        <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                            Enabling Product Qualified Leads (PQLs) for the first time ever was our business success metric.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+        <!-- The Discovery Section (White) -->
+        <section class="py-12 md:py-20">
+            <div class="max-w-3xl mb-12">
+                <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                    The Discovery
+                </h2>
+                <p class="text-xl md:text-2xl font-display text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
+                    We approached the project as a Design Sprint
+                </p>
+                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8">
+                    There were many unknowns and risks involved so to derisk investing in the wrong thing we went from research to prototype in a few weeks.
+                </p>
+                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                    I interviewed our solution consultants and client success team to map out the customer journey and understand touchpoints. We discovered that the process involved numerous demos and exchanging project information via email just to get started.
+                </p>
+            </div>
+
+            <!-- Customer Journey Diagram -->
+            <div class="max-w-4xl mx-auto mb-12">
+                <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-4">
+                    <span class="text-neutral-400">[Customer journey diagram]</span>
+                </div>
+                <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
+                    I created this diagram to map the onboarding process from the marketing site to signing up for a demo account. I discovered we lacked essential authorization features, such as organizations and roles/permissions. Additionally, the sign-up flow had usability issues.
+                </p>
+            </div>
+
+            <!-- Customer Interviews -->
+            <div class="max-w-3xl">
+                <p class="text-lg font-semibold text-neutral-700 dark:text-neutral-300 mb-4">
+                    We interviewed customers and learned...
+                </p>
+                <ul class="space-y-4 text-neutral-700 dark:text-neutral-300">
+                    <li class="flex items-start">
+                        <span class="text-accent mr-4 mt-1 text-xl">•</span>
+                        <span>They wanted to see what we were capable of and get inspired by existing solutions.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-accent mr-4 mt-1 text-xl">•</span>
+                        <span>They didn't mind if we couldn't perfectly solve their problem if they could leverage an existing solution that gets them data faster.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-accent mr-4 mt-1 text-xl">•</span>
+                        <span>They felt like waiting 4-6 weeks to run a survey was a negative first impression that would be factored into their purchase decision.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        </div> <!-- Close white container -->
+
+        <!-- HMW Section (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <div class="max-w-container mx-auto px-6 md:px-12">
+                <section class="py-12 md:py-20">
+                    <div class="text-center">
+                        <h2 class="text-3xl md:text-4xl font-display font-bold text-accent leading-relaxed">
+                            How might we show customers value up front and deliver insights in days not weeks?
+                        </h2>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+        <!-- The Solution Section (White) -->
+        <section class="py-12 md:py-20">
+            <div class="max-w-3xl mb-12">
+                <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                    The Solution
+                </h2>
+                <p class="text-xl md:text-2xl font-display text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
+                    We converged on a self sign-up demo experience
+                </p>
+                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                    There were many unknowns and risks involved so to derisk investing in the wrong thing we went from research to prototype in a few weeks.
+                </p>
+            </div>
+        </section>
+
+        <!-- I looked for inspiration -->
+        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
+                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Inspiration examples]</span>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        I looked for inspiration
+                    </h3>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        I studied how other products demonstrated their value and created demo experiences that allowed users to try out various use cases.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Iterated on the workflow -->
+        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Iterated on the workflow
+                    </h3>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        I tested two task creation workflows and initially found the single-page option more intuitive. However, I opted for the multi-page option because choices on one page influenced options on subsequent pages.
+                    </p>
+                </div>
+                <div class="flex justify-center lg:justify-end">
+                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Workflow iterations]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </div> <!-- Close white container -->
+
+        <!-- Systems thinking, Experience, and Features (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <div class="max-w-container mx-auto px-6 md:px-12">
+
+                <!-- Systems thinking -->
+                <section class="py-12 md:py-20">
+                    <div class="max-w-4xl mx-auto mb-8">
+                        <h3 class="text-2xl md:text-3xl font-display font-bold mb-6 text-center">
+                            I applied systems thinking to scaling to various use cases
+                        </h3>
+                        <p class="text-lg font-display text-neutral-700 dark:text-neutral-300 leading-relaxed text-center mb-12">
+                            I considered how different use cases could work in a multi-step flow and how each page would have different inputs. Each color here represents a different page and each solid block shows the feature required.
+                        </p>
+                    </div>
+                    <div class="max-w-4xl mx-auto">
+                        <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                            <span class="text-neutral-400">[Systems thinking diagram]</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- The Experience Section -->
+                <section class="py-12 md:py-20">
+                    <div class="text-center mb-12">
+                        <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">
+                            The Experience
+                        </h2>
+                        <p class="text-lg font-display text-neutral-700 dark:text-neutral-300">
+                            Introducing a Solution Library
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Feature 1: Show what we are capable of -->
+                <section class="py-12 md:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
+                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Solution library UI]</span>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Show what we are capable of
+                    </h3>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        Customers can now browse existing use cases to discover Premise's capabilities. Previously, they were unaware of what we could deliver.
+                    </p>
+                </div>
+            </div>
+                </section>
+
+                <!-- Feature 2: Demonstrate the power -->
+                <section class="py-12 md:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Demonstrate the power of our 1M+ gig-workers
+                    </h3>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        Customers can collect data via a guided self-service workflow and see the results in 1-2 days rather than 4-6 weeks. We experimented with a products API and locations API to create a Proof of Concept for the first use case around Product Availability.
+                    </p>
+                </div>
+                <div class="flex justify-center lg:justify-end">
+                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Self-service workflow]</span>
+                    </div>
+                </div>
+            </div>
+                </section>
+
+                <!-- Feature 3: Deliver insights -->
+                <section class="py-12 md:py-20">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
+                            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                                <span class="text-neutral-400">[Results view]</span>
+                            </div>
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                                Deliver insights rather than a flat file
+                            </h3>
+                            <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                                We designed a simple view of the results that could scale to different use cases with a module layout.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+            </div> <!-- Close max-w-container for light grey -->
+        </div> <!-- Close light grey container -->
+
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+        <!-- The Impact Section (White) -->
+        <section class="py-12 md:py-20">
+            <div class="max-w-3xl">
+                <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                    The Impact
+                </h2>
+                <p class="text-xl md:text-2xl font-display text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
+                    Continuous learning & better alignment
+                </p>
+                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
+                    While we failed-fast and learned a lot through this project. Most of the team was new to the company so this experience proved to be the ultimate onboarding experience.
+                </p>
+                <ul class="space-y-4 text-neutral-700 dark:text-neutral-300 mb-8">
+                    <li class="flex items-start">
+                        <span class="text-accent mr-4 mt-1 text-xl">•</span>
+                        <span>Without marketing bringing in leads we weren't going to get PQLs and we learned that the marketing team would be better suited to solve some of the problems we were hearing from customers before attempting to do so in the product.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-accent mr-4 mt-1 text-xl">•</span>
+                        <span>We learned that the sales strategy was focused on large enterprise (not small-medium enterprise as product leadership believed) so it was too risky to expect customers would take a self-service approach.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-accent mr-4 mt-1 text-xl">•</span>
+                        <span>We learned that our gig-worker networks were not robust enough to let customers run data collection even with UX guardrails in place. In addition, our form builder and campaign management tools had a severe learning curve and limitations to many use cases.</span>
+                    </li>
+                </ul>
+                <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                    We succeeded by aligning better with leadership after creating a low-resource Proof of Concept. This brought clarity to our strategy and roadmap moving forward.
+                </p>
+            </div>
+        </section>
+
+        </div> <!-- Close white container -->
+
+        <!-- My Role Section (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <div class="max-w-container mx-auto px-6 md:px-12">
+                <section class="py-12 md:py-20">
+                    <div class="max-w-3xl">
+                        <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                            My role
+                        </h2>
+                        <p class="text-lg font-display text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6">
+                            I led the design from concept to execution in August of 2021.
+                        </p>
+                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
+                            I worked alongside 1 Product Manager (JJ Barrett), 1 Tech Lead Engineer (Chris Lanoue) and 2 additional Engineers.
+                        </p>
+                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                            The proof of concept launched in September of 2021.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+        <!-- CTA Section (White) -->
+        <section class="py-12 md:py-20">
+            <div class="max-w-2xl mx-auto text-center">
+                <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                    Want to see more design process?
+                </h3>
+                <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-8">
+                    Get in touch with me to see my in-depth case studies.
+                </p>
+                <button onclick="copyEmail(event, 'terrencefradet@gmail.com')" class="copy-email inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-medium px-8 py-3 rounded-lg transition-colors cursor-pointer" data-tooltip="Copy to clipboard">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                    </svg>
+                    <span>terrencefradet@gmail.com</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <section class="py-12 md:py-20">
+            <div class="flex justify-center">
+                <a href="/" class="text-accent font-medium">
+                    ← Back to Home
+                </a>
+            </div>
+        </section>
+
+        </div> <!-- Close white container -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-container mx-auto px-6 md:px-12 py-12 text-center text-sm text-neutral-500 dark:text-neutral-500 border-t border-neutral-200 dark:border-neutral-800">
+        <p class="mb-2">© 2026 Terrence Fradet</p>
+        <p>Created with Figma + Claude · <a href="https://github.com/tjamjam/tfradet-portfolio" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors inline-flex items-center gap-1">View source <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+# Local development files (not pushed to GitHub)
+local-dev/
+
+# macOS
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo

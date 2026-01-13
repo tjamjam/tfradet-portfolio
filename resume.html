@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terrence Fradet - Resume - Principal Product Designer">
+    <title>Resume | Terrence Fradet</title>
+
+    <!-- Google Fonts: Spectral (display) + Lexend (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;600;700&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#171717',
+                            light: '#404040',
+                            dark: '#0a0a0a'
+                        },
+                        accent: {
+                            DEFAULT: '#E74C3C',
+                            light: '#EC7063',
+                            dark: '#C0392B'
+                        },
+                        neutral: {
+                            850: '#1e1e1e'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Dolly Pro', 'Spectral', 'Georgia', 'serif'],
+                        body: ['Lexend', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                    },
+                    maxWidth: {
+                        'container': '1200px'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- Theme Script (loads immediately to prevent flash) -->
+    <script src="src/scripts/theme.js"></script>
+
+    <!-- Copy to Clipboard Script -->
+    <script>
+        function copyEmail(event, email) {
+            const button = event.currentTarget;
+            navigator.clipboard.writeText(email).then(() => {
+                button.classList.add('copied');
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+
+    <!-- Calculate Years of Experience -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startDate = new Date('2012-05-01');
+            const today = new Date();
+            const yearsExperience = ((today - startDate) / (365.25 * 24 * 60 * 60 * 1000)).toFixed(1);
+            const element = document.getElementById('years-experience-resume');
+            if (element) {
+                element.textContent = yearsExperience;
+            }
+        });
+    </script>
+</head>
+<body class="font-body bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="max-w-container mx-auto px-6 md:px-12 py-3">
+        <div class="flex justify-end items-center gap-6">
+                <a href="/" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">Home</a>
+                <a href="/about.html" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">About</a>
+                <a href="/resume.html" class="text-sm text-accent">Resume</a>
+                <button
+                    onclick="toggleTheme()"
+                    class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors"
+                    aria-label="Toggle dark mode">
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                    <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+        </div>
+    </nav>
+
+    <!-- Paper Container -->
+    <div class="max-w-container mx-auto px-6 pb-12">
+        <!-- Main Content -->
+        <main class="bg-white dark:bg-neutral-800 shadow-md px-8 md:px-16 py-12 md:py-16" style="border-radius: var(--radius-sm);">
+
+        <!-- Resume Header -->
+        <header class="mb-16">
+            <h1 class="text-4xl md:text-5xl font-display text-accent mb-4">Terrence Fradet</h1>
+            <div class="flex flex-wrap gap-3 text-sm text-neutral-600 dark:text-neutral-400">
+                <a href="https://tfradet.com" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">tfradet.com</a>
+                <span>|</span>
+                <!-- Mobile: mailto link -->
+                <a href="mailto:terrencefradet@gmail.com" class="md:hidden hover:text-accent transition-colors inline-flex items-center gap-1">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <span>terrencefradet@gmail.com</span>
+                </a>
+                <!-- Desktop: copy to clipboard -->
+                <button onclick="copyEmail(event, 'terrencefradet@gmail.com')" class="copy-email hidden md:inline-flex hover:text-accent transition-colors cursor-pointer items-center gap-1" data-tooltip="Copy to clipboard">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                    </svg>
+                    <span>terrencefradet@gmail.com</span>
+                </button>
+                <span>|</span>
+                <a href="tel:802-304-0832" class="hover:text-accent transition-colors md:hidden inline-flex items-center gap-1">
+                    802.304.0832
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                </a>
+                <span class="hidden md:inline">802.304.0832</span>
+                <span>|</span>
+                <a href="https://linkedin.com/in/tfradet" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors inline-flex items-center gap-1">
+                    linkedin.com/in/tfradet
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+                <span>|</span>
+                <a href="https://github.com/tjamjam" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors inline-flex items-center gap-1">
+                    github.com/tjamjam
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+        </header>
+
+        <!-- Summary Section -->
+        <section class="mb-16">
+            <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                Product Designer with <span id="years-experience-resume">12</span> years of industry experience focusing on data insights, 0 to 1 products, & design strategy.
+            </h2>
+            <p class="subtitle-text text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                Led user-centric web and mobile product development in high-growth series B/C tech startups, specializing in enterprise SaaS B2B and B2B2C. Consulted for clients such as Google, Nike, The World Bank, and National Geographic.
+            </p>
+        </section>
+
+        <!-- Two Column Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+
+            <!-- Main Column (Experience) -->
+            <div class="lg:col-span-2">
+                <h3 class="text-xl font-display font-bold mb-10 uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Experience</h3>
+
+                <!-- Job 1 -->
+                <article class="mb-16">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="text-xl font-display font-bold">Principal Product Designer</h4>
+                            <p class="text-neutral-600 dark:text-neutral-400">SensorUp</p>
+                        </div>
+                        <span class="text-sm text-neutral-500 dark:text-neutral-500 whitespace-nowrap ml-4">Aug 2024 – present</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-5">
+                        IoT analytics platform for Oil & Gas companies managing methane emission events and asset inventory. Joined during Series B as <strong>55th employee</strong> with <strong>$3M ARR</strong>, now <strong>$5M ARR</strong>.
+                    </p>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-5 italic">
+                        Leading product design for web platform, developing end-to-end experiences for emission event management, asset inventory, root cause analysis, leak repair, and regulatory compliance & reporting workflows.
+                    </p>
+                    <ul class="list-disc list-outside ml-5 space-y-3 text-neutral-700 dark:text-neutral-300">
+                        <li>Increased engagement by <strong>2.3x</strong> with a new event management workflow through <strong>25+ discovery research sessions</strong> and <strong>10+ coded prototypes</strong>.</li>
+                        <li>Increased operator efficiency by <strong>3x</strong>, enabling just one user to achieve environmental impact equivalent to removing <strong>3,900 cars annually</strong> across 8 facilities.</li>
+                        <li>Achieved <strong>20x app performance improvement</strong> (20s → 1s) by restructuring data infrastructure around user workflows and access patterns.</li>
+                        <li>Automated <strong>3 time-consuming processes</strong> with custom GitHub Actions—sprint capacity tracking, release notes, and user documentation.</li>
+                        <li>Saved <strong>100+ hours</strong> of engineering time with an AI-powered codebase assistant (Claude + Mintlify) that accurately answers technical questions.</li>
+                    </ul>
+                </article>
+
+                <!-- Job 2 -->
+                <article class="mb-16">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="text-xl font-display font-bold">Staff Product Designer</h4>
+                            <p class="text-neutral-600 dark:text-neutral-400">Premise Data</p>
+                        </div>
+                        <span class="text-sm text-neutral-500 dark:text-neutral-500 whitespace-nowrap ml-4">May 2021 – Jun 2024</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-5">
+                        Data analytics enterprise product with a million global gig-workers providing insights into hard to reach places. Joined during Series E as <strong>150th employee</strong> with <strong>$15M ARR</strong>, now <strong>$70M ARR</strong>.
+                    </p>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-5 italic">
+                        Promoted to Staff Product Designer, crafting end-to-end for mobile (iOS/Android) and web, evolving product into new verticals (commercial and government), and leading on system, thought and processes for a design team of <strong>4</strong>.
+                    </p>
+                    <ul class="list-disc list-outside ml-5 space-y-3 text-neutral-700 dark:text-neutral-300">
+                        <li><strong>5x commercial revenue</strong> and <strong>tripling</strong> the number of insights consumed by users, through a design overhaul of the data analytics product to make it enterprise ready and intuitive from onboarding to finding value.</li>
+                        <li>Drove <strong>30% increase</strong> in gig-worker productivity, by ensuring profitability in a new market for the first syndicated data product via collaborative discovery workshops leading to design enhancements to the data collection app (iOS/Android) and operational tooling improvements.</li>
+                        <li>Cultivated an impactful fast moving design team through bi-weekly jam sessions, design crits, stakeholder/user feedback and mentorship sessions that resulted in problem definitions and solution ideation.</li>
+                        <li>Helped secure <strong>$15 million</strong> bridge funding by collaborating with leadership and cross-functionally to synthesize and articulate a user-centric product vision, augmenting it with AI imagery to deliver a compelling end-to-end story about profitability via data product syndication and economies of scale.</li>
+                        <li><strong>Doubled</strong> eng/design efficiency and boosting design team impact by aligning our Design System (web and mobile app) with Material UI components, moving to semantic tokens and leveraging themes with Variables.</li>
+                    </ul>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-8 mb-5 italic">
+                        Joined as Senior Product Designer, leading enterprise data analytics product from beta to market fit and implementing our design system for web.
+                    </p>
+                    <ul class="list-disc list-outside ml-5 space-y-3 text-neutral-700 dark:text-neutral-300">
+                        <li>Increased feature discovery by <strong>30%</strong> and increased engagement by <strong>25%</strong> post beta and delivery of <strong>5 features</strong>, <strong>1 navigation</strong> enhancement, and establishing <strong>4 user engagement metrics</strong>.</li>
+                        <li>Helped secure <strong>$10 million</strong> bridge funding by supporting leadership with a Vision type narrating a <strong>3-year</strong> design vision story on data insights for the CPG market of Premise's ROI for retail execution.</li>
+                        <li><strong>Tripled</strong> eng/design productivity by streamlining token delivery pipeline applied to our design system aligning components between Figma and the web code base.</li>
+                    </ul>
+                </article>
+
+                <!-- Job 3 -->
+                <article class="mb-16">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="text-xl font-display font-bold">Senior Product Designer</h4>
+                            <p class="text-neutral-600 dark:text-neutral-400">Panorama Education</p>
+                        </div>
+                        <span class="text-sm text-neutral-500 dark:text-neutral-500 whitespace-nowrap ml-4">Feb 2016 – May 2021</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-5">
+                        EdTech data analytics product empowers K-12 educators with student support data. Joined Series B as <strong>52nd employee</strong> with <strong>$4M ARR</strong>, left Series C with <strong>250+ employees</strong> and <strong>$25M ARR</strong>.
+                    </p>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-5 italic">
+                        Promoted to Senior Product Designer, I oversaw UX & Research throughout the customer journey, primarily driving growth of the Student Success product.
+                    </p>
+                    <ul class="list-disc list-outside ml-5 space-y-3 text-neutral-700 dark:text-neutral-300">
+                        <li>Expanded existing customer ARR by <strong>20%</strong> through research & prototyping <strong>5 product opportunities</strong>, shaping the product roadmap.</li>
+                        <li>Generated <strong>$12M ARR</strong> by spearheading design for <strong>3 new product modules</strong>, leading to sales in <strong>25 districts</strong> and <strong>2 state departments</strong> of education.</li>
+                        <li>Sales emphasized UX as a key product differentiator, supported by an average <strong>NPS rating of 45</strong> from customers, achieved through continuous iteration, usability testing, and advocacy for great UX.</li>
+                        <li>Onboarded <strong>2 designers 2x faster</strong> than expected, via close collaboration, improved design ops with documentation, and established <strong>4 design processes</strong>.</li>
+                    </ul>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-8 mb-5 italic">
+                        Joined as the second Product Designer, focused on District Improvement and Social-Emotional Learning (SEL) survey product growth, then quickly led new product (Student Success) to market.
+                    </p>
+                    <ul class="list-disc list-outside ml-5 space-y-3 text-neutral-700 dark:text-neutral-300">
+                        <li>Contributed to <strong>$1M ARR</strong> with <strong>5 early adopters</strong> engaging weekly, creating a <strong>+$270M ARR</strong> market opportunity post-launch of the 0 to 1 product, Student Success.</li>
+                        <li>Decreased time to value, with <strong>20% more users</strong> reaching insights through navigation improvements and redesigned data visualization reporting experience.</li>
+                    </ul>
+                </article>
+
+                <!-- Job 4 -->
+                <article class="mb-16">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="text-xl font-display font-bold">Information Designer</h4>
+                            <p class="text-neutral-600 dark:text-neutral-400">Fathom Information Design</p>
+                        </div>
+                        <span class="text-sm text-neutral-500 dark:text-neutral-500 whitespace-nowrap ml-4">May 2012 – Jan 2016</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-5">
+                        Joined as Information Designer, defining client deliverables with complex datasets across diverse platforms and industries, collaborating closely with Ben Fry, mastering his data-first design approach.
+                    </p>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-5 italic">
+                        Generated <strong>100s of thousands of dollars</strong> each year and helped numerous clients get promoted within <strong>Fortune 100</strong> companies by advancing the field of interactive visualizations with numerous call outs in Fast Company and studio awards:
+                    </p>
+                    <ul class="list-disc list-outside ml-5 space-y-3 text-neutral-700 dark:text-neutral-300">
+                        <li>Design lead for <strong>8 projects</strong>, partnering with market teams to inspire users with data stories, resulting in <strong>3 projects going viral</strong> including notable clients like Nike, Google, GE, Clinton Foundation, World Bank, Nat Geo, and Popular Science.</li>
+                        <li>Design lead for <strong>4 proprietary insights products</strong>, notable clients Nike, Fidelity Investments, and The Broad Institute at MIT.</li>
+                        <li>Enhanced Fathom's reputation through blog posts, Harvard & MIT presentations, and hosting meetups.</li>
+                    </ul>
+                </article>
+
+            </div>
+
+            <!-- Sidebar Column -->
+            <aside class="lg:col-span-1">
+
+                <!-- Education Section -->
+                <section class="mb-12">
+                    <h3 class="text-xl font-display font-bold mb-6 uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Education</h3>
+                    <div class="space-y-3 text-sm">
+                        <div>
+                            <p class="font-semibold text-neutral-900 dark:text-neutral-50">Savannah College of Art & Design</p>
+                            <p class="text-neutral-600 dark:text-neutral-400">BFA in Graphic Design, Printmaking minor</p>
+                            <p class="text-neutral-600 dark:text-neutral-400 mt-2">2007–2012</p>
+                        </div>
+                        <ul class="list-disc list-outside ml-5 space-y-1 text-neutral-600 dark:text-neutral-400">
+                            <li>Magna Cum Laude</li>
+                            <li>Honors Scholarship, 2007–2012</li>
+                            <li>Dean's List Honors, 2007–2012</li>
+                            <li>Outstanding Academic Achievement Award</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Values Section -->
+                <section class="mb-12">
+                    <h3 class="text-xl font-display font-bold mb-6 uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Values</h3>
+                    <div class="space-y-5 text-sm">
+                        <div>
+                            <p class="font-semibold text-neutral-900 dark:text-neutral-50 mb-1">Clear is kind</p>
+                            <p class="text-neutral-600 dark:text-neutral-400 italic">If it doesn't add value, take it out.</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-neutral-900 dark:text-neutral-50 mb-1">Collaboration is key</p>
+                            <p class="text-neutral-600 dark:text-neutral-400 italic">"If you want to go fast, go alone; but if you want to go far, go together."</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-neutral-900 dark:text-neutral-50 mb-1">Solve real user problems</p>
+                            <p class="text-neutral-600 dark:text-neutral-400 italic">Define the problem, ship early, learn, redefine.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section class="mb-12">
+                    <h3 class="text-xl font-display font-bold mb-6 uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Skills & Methodologies</h3>
+                    <ul class="space-y-3 text-sm text-neutral-700 dark:text-neutral-300">
+                        <li>Claude / Cursor / Lovable</li>
+                        <li>Figma</li>
+                        <li>UI/UX</li>
+                        <li>Prototyping</li>
+                        <li>Wireframing</li>
+                        <li>Information Architecture</li>
+                        <li>User Research</li>
+                        <li>Usability</li>
+                        <li>Product Strategy</li>
+                        <li>Systems Thinking</li>
+                        <li>Communication</li>
+                        <li>Design Thinking</li>
+                        <li>Lean UX</li>
+                        <li>Continuous Discovery Habits</li>
+                    </ul>
+                </section>
+
+            </aside>
+
+        </div>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="max-w-container mx-auto px-6 md:px-12 py-12 text-center text-sm text-neutral-500 dark:text-neutral-500">
+        <p class="mb-2">© 2026 Terrence Fradet</p>
+        <p>Created with Figma + Claude · <a href="https://github.com/tjamjam/tfradet-portfolio" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors inline-flex items-center gap-1">View source <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a></p>
+    </footer>
+
+</body>
+</html>

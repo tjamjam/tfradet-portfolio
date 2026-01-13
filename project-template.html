@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[Project Title] - Case Study by Terrence Fradet">
+    <title>[Project Title] | Terrence Fradet</title>
+
+    <!-- Google Fonts: Spectral (display) + Lexend (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;600;700&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#171717',
+                            light: '#404040',
+                            dark: '#0a0a0a'
+                        },
+                        accent: {
+                            DEFAULT: '#E74C3C',
+                            light: '#EC7063',
+                            dark: '#C0392B'
+                        },
+                        neutral: {
+                            850: '#1e1e1e'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Dolly Pro', 'Spectral', 'Georgia', 'serif'],
+                        body: ['Lexend', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                    },
+                    maxWidth: {
+                        'container': '1200px'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- Theme Script (loads immediately to prevent flash) -->
+    <script src="src/scripts/theme.js"></script>
+
+    <!-- Copy to Clipboard Script -->
+    <script>
+        function copyEmail(event, email) {
+            const button = event.currentTarget;
+            navigator.clipboard.writeText(email).then(() => {
+                button.classList.add('copied');
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</head>
+<body class="font-body bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-neutral-900">
+        <div class="max-w-container mx-auto px-6 md:px-12 py-3">
+        <div class="flex justify-between items-center">
+            <a href="/" class="text-accent font-medium">← Back</a>
+            <div class="flex gap-6 items-center">
+                <a href="/" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">Home</a>
+                <a href="/about.html" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">About</a>
+                <a href="/resume.html" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">Resume</a>
+                <button
+                    onclick="toggleTheme()"
+                    class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors"
+                    aria-label="Toggle dark mode">
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                    <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- ===== HERO OPTIONS (Choose one) ===== -->
+
+        <!-- Hero Option 1: Text Only (No Image) -->
+        <section class="max-w-container mx-auto px-6 md:px-12 py-12 md:py-20">
+            <div class="max-w-4xl">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+                    [Project Title]
+                </h1>
+                <p class="subtitle-text text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                    [Tagline or brief description - can be longer without competing with image]
+                </p>
+            </div>
+        </section>
+
+        <!-- Hero Option 2: Two Column (Text Left + Image Right) -->
+        <section class="max-w-container mx-auto px-6 md:px-12 py-12 md:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+                        [Project Title]
+                    </h1>
+                    <p class="subtitle-text text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        [Tagline or brief description]
+                    </p>
+                </div>
+                <div class="flex justify-center lg:justify-end">
+                    <div class="w-full aspect-square bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Hero Image]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hero Option 3: Full-Bleed Media -->
+        <section class="w-full">
+            <!-- Title above -->
+            <div class="max-w-container mx-auto px-6 md:px-12 py-12 md:py-20">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight text-center">
+                    [Project Title]
+                </h1>
+                <p class="subtitle-text text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed text-center">
+                    [Tagline or brief description]
+                </p>
+            </div>
+            <!-- Full-bleed media container -->
+            <div class="w-full h-[60vh] md:h-[70vh] bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center">
+                <span class="text-neutral-400">[Full-Bleed Hero Media - Image or Video]</span>
+            </div>
+        </section>
+
+        <!-- Hero Option 4: Large Image (Desktop + Mobile Overlapping) -->
+        <section class="max-w-container mx-auto px-6 md:px-12 py-12 md:py-20">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-12 leading-tight text-center">
+                [Project Title]
+            </h1>
+            <div class="relative max-w-5xl mx-auto">
+                <!-- Desktop mockup -->
+                <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                    <span class="text-neutral-400">[Desktop Screenshot]</span>
+                </div>
+                <!-- Mobile mockup overlaid on bottom right -->
+                <div class="absolute -bottom-8 -right-4 md:-right-8 w-32 md:w-48">
+                    <div class="aspect-[9/16] bg-neutral-100 dark:bg-neutral-800 rounded-lg border-4 border-white dark:border-neutral-900 shadow-lg flex items-center justify-center">
+                        <span class="text-neutral-400 text-xs">[Mobile]</span>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center subtitle-text text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed mt-12">
+                [Optional tagline or description]
+            </p>
+        </section>
+
+        <!-- ===== END HERO OPTIONS ===== -->
+
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+        <!-- Context Section -->
+        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+            <div class="max-w-3xl">
+                <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                    [Section Heading]
+                </h2>
+                <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6">
+                    [Context paragraph - describe your role, the problem, and approach]
+                </p>
+                <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                    [Additional context if needed]
+                </p>
+            </div>
+        </section>
+
+        <!-- Metrics/Stats Section -->
+        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Metric 1 -->
+                <div class="text-center">
+                    <div class="text-5xl md:text-6xl font-display font-bold text-accent mb-4">
+                        [8.2]
+                    </div>
+                    <p class="text-neutral-600 dark:text-neutral-400">
+                        [Metric description]
+                    </p>
+                </div>
+                <!-- Metric 2 -->
+                <div class="text-center">
+                    <div class="text-5xl md:text-6xl font-display font-bold text-accent mb-4">
+                        [4]
+                    </div>
+                    <p class="text-neutral-600 dark:text-neutral-400">
+                        [Metric description]
+                    </p>
+                </div>
+                <!-- Metric 3 -->
+                <div class="text-center">
+                    <div class="text-5xl md:text-6xl font-display font-bold text-accent mb-4">
+                        [100%]
+                    </div>
+                    <p class="text-neutral-600 dark:text-neutral-400">
+                        [Metric description]
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full-Width Image Section -->
+        <section class="py-12 md:py-20">
+            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                <span class="text-neutral-400">[Full-Width Image]</span>
+            </div>
+        </section>
+
+        <!-- Feature Section (Image Left, Text Right) -->
+        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="aspect-square bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Feature Image]</span>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        [Feature Heading]
+                    </h3>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6">
+                        [Feature description paragraph]
+                    </p>
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        [Additional details or impact]
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section (Text Left, Image Right) -->
+        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        [Feature Heading]
+                    </h3>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6">
+                        [Feature description paragraph]
+                    </p>
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        [Additional details or impact]
+                    </p>
+                </div>
+                <div class="flex justify-center lg:justify-end">
+                    <div class="aspect-square bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Feature Image]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Desktop/Wide Content Section -->
+        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+            <div class="mb-12">
+                <h3 class="text-2xl md:text-3xl font-display font-bold mb-6 text-center">
+                    [Section Heading]
+                </h3>
+                <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed text-center max-w-3xl mx-auto">
+                    [Section description]
+                </p>
+            </div>
+            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                <span class="text-neutral-400">[Desktop Screenshot]</span>
+            </div>
+        </section>
+
+        <!-- Flexible Media Grid - 1 Item (Full Width) -->
+        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+            <h3 class="text-2xl md:text-3xl font-display font-bold mb-12 text-center">
+                [Section Heading - Optional]
+            </h3>
+            <div class="max-w-4xl mx-auto">
+                <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                    <span class="text-neutral-400">[Media: Image or Video]</span>
+                </div>
+                <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                    [Optional caption]
+                </p>
+            </div>
+        </section>
+
+        <!-- Flexible Media Grid - 2 Items (Side by Side) -->
+        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+            <h3 class="text-2xl md:text-3xl font-display font-bold mb-12 text-center">
+                [Section Heading - Optional]
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Media 1]</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                        [Optional caption]
+                    </p>
+                </div>
+                <div>
+                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Media 2]</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                        [Optional caption]
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flexible Media Grid - 3 Items -->
+        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+            <h3 class="text-2xl md:text-3xl font-display font-bold mb-12 text-center">
+                [Section Heading - Optional]
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div>
+                    <div class="aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Media 1]</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                        [Optional caption]
+                    </p>
+                </div>
+                <div>
+                    <div class="aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Media 2]</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                        [Optional caption]
+                    </p>
+                </div>
+                <div>
+                    <div class="aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Media 3]</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                        [Optional caption]
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flexible Media Grid - 4 Items (2x2) -->
+        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+            <h3 class="text-2xl md:text-3xl font-display font-bold mb-12 text-center">
+                [Section Heading - Optional]
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Media 1]</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                        [Optional caption]
+                    </p>
+                </div>
+                <div>
+                    <div class="aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Media 2]</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                        [Optional caption]
+                    </p>
+                </div>
+                <div>
+                    <div class="aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Media 3]</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                        [Optional caption]
+                    </p>
+                </div>
+                <div>
+                    <div class="aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Media 4]</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                        [Optional caption]
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flexible Media Grid - 6 Items (2x3) -->
+        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+            <h3 class="text-2xl md:text-3xl font-display font-bold mb-12 text-center">
+                [Section Heading - Optional]
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div>
+                    <div class="aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Media 1]</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                        [Optional caption]
+                    </p>
+                </div>
+                <div>
+                    <div class="aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Media 2]</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                        [Optional caption]
+                    </p>
+                </div>
+                <div>
+                    <div class="aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Media 3]</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                        [Optional caption]
+                    </p>
+                </div>
+                <div>
+                    <div class="aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Media 4]</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                        [Optional caption]
+                    </p>
+                </div>
+                <div>
+                    <div class="aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Media 5]</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                        [Optional caption]
+                    </p>
+                </div>
+                <div>
+                    <div class="aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Media 6]</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                        [Optional caption]
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Desktop + Mobile Responsive Combo -->
+        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+            <h3 class="text-2xl md:text-3xl font-display font-bold mb-12 text-center">
+                [Section Heading]
+            </h3>
+            <div class="relative max-w-5xl mx-auto">
+                <!-- Desktop mockup -->
+                <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                    <span class="text-neutral-400">[Desktop Screenshot]</span>
+                </div>
+                <!-- Mobile mockup overlaid on bottom right -->
+                <div class="absolute -bottom-8 -right-4 md:-right-8 w-32 md:w-48">
+                    <div class="aspect-[9/16] bg-neutral-100 dark:bg-neutral-800 rounded-lg border-4 border-white dark:border-neutral-900 shadow-lg flex items-center justify-center">
+                        <span class="text-neutral-400 text-xs">[Mobile]</span>
+                    </div>
+                </div>
+            </div>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-12">
+                [Optional caption describing responsive implementation]
+            </p>
+        </section>
+
+        <!-- Process/Methodology Section -->
+        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+            <h3 class="text-2xl md:text-3xl font-display font-bold mb-12 text-center">
+                [Process Heading]
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Process Step 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-accent text-2xl font-bold">1</span>
+                    </div>
+                    <h4 class="font-display font-bold text-lg mb-3">[Step Title]</h4>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        [Step description]
+                    </p>
+                </div>
+                <!-- Process Step 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-accent text-2xl font-bold">2</span>
+                    </div>
+                    <h4 class="font-display font-bold text-lg mb-3">[Step Title]</h4>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        [Step description]
+                    </p>
+                </div>
+                <!-- Process Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-accent text-2xl font-bold">3</span>
+                    </div>
+                    <h4 class="font-display font-bold text-lg mb-3">[Step Title]</h4>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        [Step description]
+                    </p>
+                </div>
+                <!-- Process Step 4 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-accent text-2xl font-bold">4</span>
+                    </div>
+                    <h4 class="font-display font-bold text-lg mb-3">[Step Title]</h4>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        [Step description]
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Outcome/Impact Section -->
+        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+            <div class="max-w-3xl mx-auto text-center">
+                <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                    [Outcome Heading]
+                </h3>
+                <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
+                    [Summary of impact and outcomes]
+                </p>
+                <ul class="text-left space-y-4 text-neutral-700 dark:text-neutral-300">
+                    <li class="flex items-start">
+                        <span class="text-accent mr-3 mt-1">✓</span>
+                        <span>[Key outcome 1]</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-accent mr-3 mt-1">✓</span>
+                        <span>[Key outcome 2]</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-accent mr-3 mt-1">✓</span>
+                        <span>[Key outcome 3]</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Next Project / Navigation -->
+        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">
+                    ← Previous Project
+                </a>
+                <a href="/" class="text-accent font-medium">
+                    All Projects
+                </a>
+                <a href="#" class="text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">
+                    Next Project →
+                </a>
+            </div>
+        </section>
+
+        </div> <!-- Close max-w-container -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-container mx-auto px-6 md:px-12 py-12 text-center text-sm text-neutral-500 dark:text-neutral-500 border-t border-neutral-200 dark:border-neutral-800">
+        <p class="mb-2">© 2026 Terrence Fradet</p>
+        <p>Created with Figma + Claude · <a href="https://github.com/tjamjam/tfradet-portfolio" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors inline-flex items-center gap-1">View source <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a></p>
+    </footer>
+
+</body>
+</html>
