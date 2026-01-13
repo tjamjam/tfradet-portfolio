@@ -30,6 +30,9 @@
                             DEFAULT: '#E74C3C',
                             light: '#EC7063',
                             dark: '#C0392B'
+                        },
+                        neutral: {
+                            850: '#1e1e1e'
                         }
                     },
                     fontFamily: {
@@ -66,7 +69,8 @@
 <body class="font-body bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50 transition-colors duration-300">
 
     <!-- Navigation -->
-    <nav class="max-w-container mx-auto px-6 md:px-12 py-8">
+    <nav class="sticky top-0 z-50 bg-white dark:bg-neutral-900">
+        <div class="max-w-container mx-auto px-6 md:px-12 py-3">
         <div class="flex justify-between items-center">
             <a href="/" class="text-accent font-medium">← Back</a>
             <div class="flex gap-6 items-center">
@@ -85,36 +89,44 @@
                 </button>
             </div>
         </div>
+    </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="max-w-container mx-auto px-6 md:px-12">
+    <main>
 
-        <!-- Hero Section -->
-        <section class="py-12 md:py-20">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
-                        Prototyping · Collaborative problem solving · B2B2C
-                    </p>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
-                        Profitability via Productivity
-                    </h1>
-                    <p class="subtitle-text text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                        Increased gig-worker productivity by 46% and internal efficiencies by 5x leading to profitability in a new region for Premise's first data product.
-                    </p>
-                </div>
-                <div class="flex justify-center lg:justify-end">
-                    <!-- Hero image/mockup goes here -->
-                    <div class="w-full aspect-square bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
-                        <span class="text-neutral-400">[Hero Image - Phone mockup]</span>
+        <!-- Hero Section Group (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <div class="max-w-container mx-auto px-6 md:px-12">
+                <!-- Hero Section -->
+                <section class="py-12 md:py-20">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
+                                Prototyping · Collaborative problem solving · B2B2C
+                            </p>
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+                                Profitability via Productivity
+                            </h1>
+                            <p class="subtitle-text text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                                Increased gig-worker productivity by 46% and internal efficiencies by 5x leading to profitability in a new region for Premise's first data product.
+                            </p>
+                        </div>
+                        <div class="flex justify-center lg:justify-end">
+                            <!-- Hero image/mockup goes here -->
+                            <div class="w-full aspect-square bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                                <span class="text-neutral-400">[Hero Image - Phone mockup]</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </section>
             </div>
-        </section>
+        </div>
 
-        <!-- My Role Section -->
-        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+        <!-- My Role Section (White) -->
+        <section class="py-12 md:py-20">
             <div class="max-w-3xl">
                 <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
                     My Role
@@ -156,46 +168,54 @@
             </div>
         </section>
 
-        <!-- The Challenge Section -->
-        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
-            <div class="max-w-3xl mx-auto text-center mb-12">
-                <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
-                    The Challenge
-                </h2>
-                <p class="text-lg font-display text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                    The app experience was a primary reason gig-worker churn exceeded 50%
-                </p>
-            </div>
+        </div> <!-- Close white container -->
 
-            <!-- Metric Callout -->
-            <div class="max-w-2xl mx-auto text-center mb-12">
-                <div class="text-6xl md:text-7xl font-display font-bold text-accent mb-4">
-                    8.2
-                </div>
-                <p class="text-lg text-neutral-600 dark:text-neutral-400 mb-2">
-                    Audits per day
-                </p>
-                <p class="text-neutral-600 dark:text-neutral-400">
-                    Our gig-workers were auditing 8.2 stores per day, but to be profitable in Mexico, we needed to increase this to over 13.
-                </p>
-            </div>
+        <!-- The Challenge Section (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <div class="max-w-container mx-auto px-6 md:px-12">
+                <section class="py-12 md:py-20">
+                    <div class="max-w-3xl mx-auto text-center mb-12">
+                        <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                            The Challenge
+                        </h2>
+                        <p class="text-xl md:text-2xl font-display text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                            The app experience was a primary reason gig-worker churn exceeded 50%
+                        </p>
+                    </div>
 
-            <!-- Before Experience Image -->
-            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-6">
-                <span class="text-neutral-400">[Before Experience - Linear survey flow image]</span>
-            </div>
-            <p class="text-center text-sm text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
-                This was the before experience. The linear survey flow forced them to walk around a store countless times to collect the data from Premise's mental model.
-            </p>
-        </section>
+                    <!-- Metric Callout -->
+                    <div class="max-w-2xl mx-auto text-center mb-12">
+                        <div class="text-6xl md:text-7xl font-display font-bold text-accent mb-4">
+                            8.2
+                        </div>
+                        <p class="text-lg text-neutral-600 dark:text-neutral-400 mb-2">
+                            Audits per day
+                        </p>
+                        <p class="text-neutral-600 dark:text-neutral-400">
+                            Our gig-workers were auditing 8.2 stores per day, but to be profitable in Mexico, we needed to increase this to over 13.
+                        </p>
+                    </div>
 
-        <!-- The Problem Section -->
-        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+                    <!-- Before Experience Image -->
+                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-6">
+                        <span class="text-neutral-400">[Before Experience - Linear survey flow image]</span>
+                    </div>
+                    <p class="text-center text-sm text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
+                        This was the before experience. The linear survey flow forced them to walk around a store countless times to collect the data from Premise's mental model.
+                    </p>
+                </section>
+            </div>
+        </div>
+
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+        <!-- The Problem Section (White) -->
+        <section class="py-12 md:py-20">
             <div class="max-w-3xl mx-auto">
                 <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
                     The Problem
                 </h2>
-                <p class="text-lg font-display text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
+                <p class="text-xl md:text-2xl font-display text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
                     After interviewing a dozen gig-workers we learned
                 </p>
 
@@ -216,17 +236,25 @@
             </div>
         </section>
 
-        <!-- HMW Section -->
-        <section class="py-12 md:py-20 bg-neutral-50 dark:bg-neutral-900 -mx-6 md:-mx-12 px-6 md:px-12">
-            <div class="max-w-container mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-display font-bold text-accent leading-relaxed">
-                    How might we help gig-workers collect more efficiently?
-                </h2>
-            </div>
-        </section>
+        </div> <!-- Close white container -->
 
-        <!-- The App Redesign Section -->
-        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+        <!-- HMW Section (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <div class="max-w-container mx-auto px-6 md:px-12">
+                <section class="py-12 md:py-20">
+                    <div class="text-center">
+                        <h2 class="text-3xl md:text-4xl font-display font-bold text-accent leading-relaxed">
+                            How might we help gig-workers collect more efficiently?
+                        </h2>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+        <!-- The App Redesign Section (White) -->
+        <section class="py-12 md:py-20">
             <div class="text-center mb-12">
                 <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">
                     The App Redesign
@@ -246,7 +274,7 @@
         </section>
 
         <!-- Feature 1: Know where to go -->
-        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+        <section class="py-12 md:py-20">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
                     <div class="aspect-[9/16] w-64 bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
@@ -265,7 +293,7 @@
         </section>
 
         <!-- Feature 2: Walk through the store once -->
-        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+        <section class="py-12 md:py-20">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
@@ -284,7 +312,7 @@
         </section>
 
         <!-- Feature 3: Choose your adventure -->
-        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+        <section class="py-12 md:py-20">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
                     <div class="aspect-[9/16] w-64 bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
@@ -305,28 +333,33 @@
             </div>
         </section>
 
-        <!-- Premise Internal Workflows Section -->
-        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
-            <div class="text-center mb-12">
-                <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">
-                    Premise Internal Workflows
-                </h2>
-                <p class="text-lg font-display text-neutral-700 dark:text-neutral-300">
-                    Streamlined tooling for the Premise ops team
-                </p>
-            </div>
+        </div> <!-- Close white container -->
 
-            <!-- Ops Tools Image -->
-            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-6">
-                <span class="text-neutral-400">[Internal tools overview]</span>
-            </div>
-            <p class="text-center text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto mb-16">
-                A new architecture enhances the app experience by improving data management, tasking, and the submission pipeline.
-            </p>
-        </section>
+        <!-- Premise Internal Workflows Section (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <div class="max-w-container mx-auto px-6 md:px-12">
 
-        <!-- Internal Feature 1: Data model management -->
-        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+                <section class="py-12 md:py-20">
+                    <div class="text-center mb-12">
+                        <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">
+                            Premise Internal Workflows
+                        </h2>
+                        <p class="text-lg font-display text-neutral-700 dark:text-neutral-300">
+                            Streamlined tooling for the Premise ops team
+                        </p>
+                    </div>
+
+                    <!-- Ops Tools Image -->
+                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-6">
+                        <span class="text-neutral-400">[Internal tools overview]</span>
+                    </div>
+                    <p class="text-center text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto mb-16">
+                        A new architecture enhances the app experience by improving data management, tasking, and the submission pipeline.
+                    </p>
+                </section>
+
+                <!-- Internal Feature 1: Data model management -->
+                <section class="py-12 md:py-20">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
@@ -342,10 +375,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+                </section>
 
-        <!-- Internal Feature 2: Form builder -->
-        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+                <!-- Internal Feature 2: Form builder -->
+                <section class="py-12 md:py-20">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="order-2 lg:order-1">
                     <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
@@ -361,10 +394,15 @@
                     </p>
                 </div>
             </div>
-        </section>
+                </section>
 
-        <!-- The Impact Section -->
-        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+            </div> <!-- Close max-w-container for light grey -->
+        </div> <!-- Close light grey container -->
+
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+        <!-- The Impact Section (White) -->
+        <section class="py-12 md:py-20">
             <h2 class="text-2xl md:text-3xl font-display font-bold mb-12 text-center">
                 The Impact
             </h2>
@@ -374,7 +412,7 @@
                     <div class="text-6xl md:text-7xl font-display font-bold text-accent mb-4">
                         +46%
                     </div>
-                    <p class="text-xl font-display text-neutral-700 dark:text-neutral-300">
+                    <p class="text-xl md:text-2xl font-display text-neutral-700 dark:text-neutral-300">
                         increase in worker productivity
                     </p>
                 </div>
@@ -415,8 +453,8 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 -mx-6 md:-mx-12 px-6 md:px-12">
+        <!-- CTA Section (White) -->
+        <section class="py-12 md:py-20">
             <div class="max-w-2xl mx-auto text-center">
                 <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
                     Want to see more design process?
@@ -434,13 +472,15 @@
         </section>
 
         <!-- Navigation -->
-        <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+        <section class="py-12 md:py-20">
             <div class="flex justify-center">
                 <a href="/" class="text-accent font-medium">
                     ← Back to Home
                 </a>
             </div>
         </section>
+
+        </div> <!-- Close white container -->
 
     </main>
 
