@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Terrence Fradet - Principal Product Designer">
+    <title>About | Terrence Fradet</title>
+
+    <!-- Google Fonts: Spectral (display) + Lexend (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;600;700&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#171717',
+                            light: '#404040',
+                            dark: '#0a0a0a'
+                        },
+                        accent: {
+                            DEFAULT: '#E74C3C',
+                            light: '#EC7063',
+                            dark: '#C0392B'
+                        },
+                        neutral: {
+                            850: '#1e1e1e'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Dolly Pro', 'Spectral', 'Georgia', 'serif'],
+                        body: ['Lexend', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                    },
+                    maxWidth: {
+                        'container': '1200px'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- Theme Script (loads immediately to prevent flash) -->
+    <script src="src/scripts/theme.js"></script>
+</head>
+<body class="font-body bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-neutral-900">
+        <div class="max-w-container mx-auto px-6 md:px-12 py-3">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-accent font-medium">← Back</a>
+                <div class="flex gap-6 items-center">
+                    <a href="/" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">Home</a>
+                    <a href="/about.html" class="text-sm text-accent">About</a>
+                    <a href="/resume.html" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">Resume</a>
+                    <button
+                        onclick="toggleTheme()"
+                        class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors"
+                        aria-label="Toggle dark mode">
+                        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section (Light Grey) -->
+        <section class="bg-neutral-50 dark:bg-neutral-850">
+            <div class="max-w-container mx-auto px-6 md:px-12 py-12 md:py-20">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+                    About Me
+                </h1>
+                <p class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">
+                    I'm a Principal Product Designer with a passion for creating intuitive, data-driven experiences that solve real user problems.
+                </p>
+            </div>
+        </section>
+
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+            <!-- Bio Section (White) -->
+            <section class="py-12 md:py-20">
+                <div class="max-w-3xl">
+                    <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Background
+                    </h2>
+                    <div class="space-y-4 text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        <p>
+                            [Add your background and journey into design...]
+                        </p>
+                        <p>
+                            [Talk about what drives you and your design philosophy...]
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div> <!-- Close white container -->
+
+        <!-- Approach Section (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <div class="max-w-container mx-auto px-6 md:px-12">
+
+                <section class="py-12 md:py-20">
+                    <div class="max-w-3xl">
+                        <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                            My Approach
+                        </h2>
+                        <div class="space-y-4 text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                            <p>
+                                [Describe your design approach and methodology...]
+                            </p>
+                            <p>
+                                [Explain what makes your work unique...]
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+            </div> <!-- Close max-w-container for light grey -->
+        </div> <!-- Close light grey container -->
+
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+            <!-- Skills & Tools Section (White) -->
+            <section class="py-12 md:py-20">
+                <div class="max-w-3xl">
+                    <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Skills & Tools
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-lg font-display font-bold mb-3 text-accent">
+                                Design
+                            </h3>
+                            <ul class="space-y-2 text-neutral-600 dark:text-neutral-400">
+                                <li>Product Design</li>
+                                <li>UX Research</li>
+                                <li>Design Systems</li>
+                                <li>Prototyping</li>
+                                <li>Data Visualization</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-display font-bold mb-3 text-accent">
+                                Tools
+                            </h3>
+                            <ul class="space-y-2 text-neutral-600 dark:text-neutral-400">
+                                <li>Figma</li>
+                                <li>Adobe Creative Suite</li>
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                                <li>Processing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Personal Interests Section (White) -->
+            <section class="py-12 md:py-20">
+                <div class="max-w-3xl">
+                    <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Beyond Design
+                    </h2>
+                    <div class="space-y-4 text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        <p>
+                            When I'm not designing, you'll find me working on personal projects ranging from data visualization experiments to electrical engineering builds and vertical gardening.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section (White) -->
+            <section class="py-12 md:py-20 border-t border-neutral-200 dark:border-neutral-800">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Let's Work Together
+                    </h3>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-8">
+                        I'm always interested in hearing about new projects and opportunities.
+                    </p>
+                    <a href="mailto:terrencefradet@gmail.com" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-medium px-8 py-3 rounded-lg transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        Get in Touch
+                    </a>
+                </div>
+            </section>
+
+        </div> <!-- Close white container -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-container mx-auto px-6 md:px-12 py-12 text-center text-sm text-neutral-500 dark:text-neutral-500 border-t border-neutral-200 dark:border-neutral-800">
+        <p class="mb-2">© 2026 Terrence Fradet</p>
+        <p>Created with Figma + Claude · <a href="https://github.com/tjamjam/tfradet-portfolio" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors inline-flex items-center gap-1">View source <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a></p>
+    </footer>
+
+</body>
+</html>
