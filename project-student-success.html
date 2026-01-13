@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="$0 to $12M ARR via a New Product - Case Study by Terrence Fradet">
+    <title>$0 to $12M ARR via a New Product | Terrence Fradet</title>
+
+    <!-- Google Fonts: Spectral (display) + Lexend (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;600;700&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#171717',
+                            light: '#404040',
+                            dark: '#0a0a0a'
+                        },
+                        accent: {
+                            DEFAULT: '#E74C3C',
+                            light: '#EC7063',
+                            dark: '#C0392B'
+                        },
+                        neutral: {
+                            850: '#1e1e1e'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Dolly Pro', 'Spectral', 'Georgia', 'serif'],
+                        body: ['Lexend', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                    },
+                    maxWidth: {
+                        'container': '1200px'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- Theme Script (loads immediately to prevent flash) -->
+    <script src="src/scripts/theme.js"></script>
+
+    <!-- Copy to Clipboard Script -->
+    <script>
+        function copyEmail(event, email) {
+            const button = event.currentTarget;
+            navigator.clipboard.writeText(email).then(() => {
+                button.classList.add('copied');
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</head>
+<body class="font-body bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-neutral-900">
+        <div class="max-w-container mx-auto px-6 md:px-12 py-3">
+        <div class="flex justify-between items-center">
+            <a href="/" class="text-accent font-medium">← Back</a>
+            <div class="flex gap-6 items-center">
+                <a href="/" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">Home</a>
+                <a href="/resume.html" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">Resume</a>
+                <button
+                    onclick="toggleTheme()"
+                    class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors"
+                    aria-label="Toggle dark mode">
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                    <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section Group (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <!-- Hero Section -->
+            <section class="max-w-container mx-auto px-6 md:px-12 py-12 md:py-20">
+                <div class="max-w-4xl">
+                    <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
+                        0 to 1 product · Data insights · B2B
+                    </p>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+                        $0 to $12M ARR via a New Product
+                    </h1>
+                    <p class="subtitle-text text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Helping educators better support their students through a data-driven and collaborative product called Student Success.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+        <!-- Top Metrics Section (White) -->
+        <section class="py-12 md:py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-accent mb-3">
+                        32
+                    </div>
+                    <p class="text-neutral-600 dark:text-neutral-400">
+                        customers including 2 state-wide contracts
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-accent mb-3">
+                        4%
+                    </div>
+                    <p class="text-neutral-600 dark:text-neutral-400">
+                        market share achieved
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-accent mb-3">
+                        2M
+                    </div>
+                    <p class="text-neutral-600 dark:text-neutral-400">
+                        students in the product
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-accent mb-3">
+                        500k
+                    </div>
+                    <p class="text-neutral-600 dark:text-neutral-400">
+                        students supported in the product
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Problem Section (White) -->
+        <section class="py-12 md:py-20">
+            <div class="max-w-3xl">
+                <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                    The Problem
+                </h2>
+                <p class="text-xl md:text-2xl font-display text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
+                    The quiet students slip through the cracks
+                </p>
+                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                    Counselors, psychologists, and interventionists are responsible for the social-emotional and academic success of a caseload of approximately 300-400 students. However, determining who to prioritize for support on any given day is often a reactive process.
+                </p>
+            </div>
+        </section>
+
+        </div> <!-- Close white container -->
+
+        <!-- After interviewing + Onsite observation (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <div class="max-w-container mx-auto px-6 md:px-12">
+
+                <!-- After interviewing -->
+                <section class="py-12 md:py-20">
+            <div class="max-w-3xl">
+                <p class="text-lg font-semibold text-neutral-700 dark:text-neutral-300 mb-6">
+                    After interviewing dozens of Educators we learned...
+                </p>
+                <ul class="space-y-4 text-neutral-700 dark:text-neutral-300 mb-12">
+                    <li class="flex items-start">
+                        <span class="text-accent mr-4 mt-1 text-xl">•</span>
+                        <span>Educators lacked timely access to essential data, often relying on laborious exports from outdated student information systems.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-accent mr-4 mt-1 text-xl">•</span>
+                        <span>They were concerned that students needing supports were not getting them both social-emotionally and academically.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-accent mr-4 mt-1 text-xl">•</span>
+                        <span>Educators often went off of gut rather than being aligned around a data informed support system and their interventions were more reactive than proactive.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-accent mr-4 mt-1 text-xl">•</span>
+                        <span>Educators couldn't see if another educator was supporting a student which led to some students getting duplicate support or no support at all.</span>
+                    </li>
+                </ul>
+
+                <p class="text-lg font-semibold text-neutral-700 dark:text-neutral-300 mb-4">
+                    We surveyed educators to understand the competitor landscape
+                </p>
+                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                    Schools varied in their student support efforts: some held weekly triage meetings, others considered adopting a framework, and some tracked supports in context-lacking spreadsheets.
+                </p>
+            </div>
+                </section>
+
+                <!-- Onsite observation -->
+                <section class="py-12 md:py-20">
+                    <div class="max-w-4xl mx-auto">
+                        <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-neutral-400">[Onsite observation photo/diagram]</span>
+                        </div>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
+                            We went onsite to observe student support triage meetings.
+                        </p>
+                    </div>
+                </section>
+
+            </div> <!-- Close max-w-container for light grey -->
+        </div> <!-- Close light grey container -->
+
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+        <!-- HMW Section (White) -->
+        <section class="py-12 md:py-20">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-accent leading-relaxed">
+                    How can we help educators support at-risk students and prepare them for college?
+                </h2>
+            </div>
+        </section>
+
+        </div> <!-- Close white container -->
+
+        <!-- The Product Section + Features (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <div class="max-w-container mx-auto px-6 md:px-12">
+
+                <!-- The Product Section -->
+                <section class="py-12 md:py-20">
+                    <div class="text-center mb-12">
+                        <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">
+                            The Product
+                        </h2>
+                        <p class="text-lg font-display text-neutral-700 dark:text-neutral-300">
+                            Introducing Student Success
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Feature 1: Early warning system -->
+                <section class="py-12 md:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
+                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Early warning system UI]</span>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Early warning system
+                    </h3>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        While competitors could prioritize students across one or two dimensions, Student Success differentiated itself by considering the whole student.
+                    </p>
+                </div>
+            </div>
+                </section>
+
+                <!-- Feature 2: Social-emotional learning -->
+                <section class="py-12 md:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Social-emotional learning
+                    </h3>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        SEL is Panorama's differentiator but until we brought it into Student Success it was only measured at a system level. Now educators could see which students self-reported low and could support them with their social-emotional growth.
+                    </p>
+                </div>
+                <div class="flex justify-center lg:justify-end">
+                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[SEL UI]</span>
+                    </div>
+                </div>
+            </div>
+                </section>
+
+                <!-- Feature 3: Intervention tracking -->
+                <section class="py-12 md:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
+                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Intervention tracking UI]</span>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Intervention tracking
+                    </h3>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        Once we consolidated all relevant data, educators wanted to create and track group and individual interventions, enabling collaboration and visibility into what helps students.
+                    </p>
+                </div>
+            </div>
+                </section>
+
+                <!-- Feature 4: Student check-ins -->
+                <section class="py-12 md:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Student check-ins
+                    </h3>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        Leveraging Panorama's robust survey platform, we developed an MVP allowing educators to initiate and record check-ins directly on students' profiles.
+                    </p>
+                </div>
+                <div class="flex justify-center lg:justify-end">
+                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Check-ins UI]</span>
+                    </div>
+                </div>
+            </div>
+                </section>
+
+                <!-- Feature 5: Delightful features -->
+                <section class="py-12 md:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
+                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Birthday hats feature]</span>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Delightful features
+                    </h3>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        Adding birthday hats to students' profile images not only provided an opportunity for educators to connect with students, but also added a playful and humanizing touch to the product.
+                    </p>
+                </div>
+            </div>
+                </section>
+
+            </div> <!-- Close max-w-container for light grey -->
+        </div> <!-- Close light grey container -->
+
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+        <!-- Video Testimonial (White) -->
+        <section class="py-12 md:py-20">
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-2xl md:text-3xl font-display font-bold mb-8 text-center">
+                    Ogden School District
+                </h3>
+                <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-4">
+                    <span class="text-neutral-400">[Video: Valerie Lopez testimonial]</span>
+                </div>
+                <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
+                    Valerie Lopez, a behavioral interventionalist, shares their experience supporting a student with Student Success. (No audio, subtitles only)
+                </p>
+            </div>
+        </section>
+
+        <!-- The Impact Section (White) -->
+        <section class="py-12 md:py-20">
+            <h2 class="text-2xl md:text-3xl font-display font-bold mb-12 text-center">
+                The Impact
+            </h2>
+            <div class="text-center">
+                <div class="text-6xl md:text-7xl font-display font-bold text-accent mb-4">
+                    $0 to $12M ARR
+                </div>
+                <p class="text-xl md:text-2xl font-display text-neutral-700 dark:text-neutral-300">
+                    in 3 years
+                </p>
+            </div>
+        </section>
+
+        </div> <!-- Close white container -->
+
+        <!-- My Role Section (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <div class="max-w-container mx-auto px-6 md:px-12">
+                <section class="py-12 md:py-20">
+                    <div class="max-w-3xl">
+                        <h2 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                            My role
+                        </h2>
+                        <p class="text-lg font-display text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6">
+                            I led the design from concept to execution from 2017-20.
+                        </p>
+                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
+                    I worked alongside 1 Product Manager, 1 Tech Lead Engineer and 3 additional Engineers.
+                </p>
+                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                            The pilot launched in June 2017 followed by an MVP product later that year.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+        <!-- CTA Section (White) -->
+        <section class="py-12 md:py-20">
+            <div class="max-w-2xl mx-auto text-center">
+                <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                    Want to see more design process?
+                </h3>
+                <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-8">
+                    Get in touch with me to see my in-depth case studies.
+                </p>
+                <button onclick="copyEmail(event, 'terrencefradet@gmail.com')" class="copy-email inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-medium px-8 py-3 rounded-lg transition-colors cursor-pointer" data-tooltip="Copy to clipboard">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                    </svg>
+                    <span>terrencefradet@gmail.com</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Navigation (White) -->
+        <section class="py-12 md:py-20">
+            <div class="flex justify-center">
+                <a href="/" class="text-accent font-medium">
+                    ← Back to Home
+                </a>
+            </div>
+        </section>
+
+        </div> <!-- Close white container -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-container mx-auto px-6 md:px-12 py-12 text-center text-sm text-neutral-500 dark:text-neutral-500 border-t border-neutral-200 dark:border-neutral-800">
+        <p>© 2026 Terrence Fradet</p>
+    </footer>
+
+</body>
+</html>

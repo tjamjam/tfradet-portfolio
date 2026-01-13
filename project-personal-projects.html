@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Projects - Case Study by Terrence Fradet">
+    <title>Personal Projects | Terrence Fradet</title>
+
+    <!-- Google Fonts: Spectral (display) + Lexend (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;600;700&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#171717',
+                            light: '#404040',
+                            dark: '#0a0a0a'
+                        },
+                        accent: {
+                            DEFAULT: '#E74C3C',
+                            light: '#EC7063',
+                            dark: '#C0392B'
+                        },
+                        neutral: {
+                            850: '#1e1e1e'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Dolly Pro', 'Spectral', 'Georgia', 'serif'],
+                        body: ['Lexend', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                    },
+                    maxWidth: {
+                        'container': '1200px'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- Theme Script (loads immediately to prevent flash) -->
+    <script src="src/scripts/theme.js"></script>
+
+    <!-- Copy to Clipboard Script -->
+    <script>
+        function copyEmail(event, email) {
+            const button = event.currentTarget;
+            navigator.clipboard.writeText(email).then(() => {
+                button.classList.add('copied');
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</head>
+<body class="font-body bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-neutral-900">
+        <div class="max-w-container mx-auto px-6 md:px-12 py-3">
+        <div class="flex justify-between items-center">
+            <a href="/" class="text-accent font-medium">← Back</a>
+            <div class="flex gap-6 items-center">
+                <a href="/" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">Home</a>
+                <a href="/resume.html" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">Resume</a>
+                <button
+                    onclick="toggleTheme()"
+                    class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors"
+                    aria-label="Toggle dark mode">
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                    <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section Group (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <!-- Hero Section -->
+            <section class="max-w-container mx-auto px-6 md:px-12 py-12 md:py-20">
+                <div class="max-w-4xl">
+                    <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
+                        Continuous learning
+                    </p>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+                        Personal Projects
+                    </h1>
+                    <p class="subtitle-text text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Get to know me better by taking a look at some of my personal projects.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+        <!-- Data Viz: Colorful Language Section (White) -->
+        <section class="py-12 md:py-20">
+            <div class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">
+                    Data Viz
+                </h2>
+                <h3 class="text-xl md:text-2xl font-display font-bold mb-6 text-accent">
+                    Colorful Language
+                </h3>
+                <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
+                    The World Color Survey gathered data from 2,696 native speakers of 110 languages, asking each participant to identify 330 different colors.
+                </p>
+            </div>
+
+            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-12">
+                <span class="text-neutral-400">[Colorful Language main visualization]</span>
+            </div>
+
+            <div class="max-w-3xl mx-auto mb-12">
+                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
+                    Using Processing, I wrote code to read the survey data and explore various ways to categorize and group it. These sketches evolved into the final image, displaying the results for each language as a series of blocks radiating from the center, arranged from the most frequently used term to the least.
+                </p>
+                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                    Mixing colors programmatically resulted in muddy hues, but relying on our own eyes produced satisfying, textured visualizations.
+                </p>
+            </div>
+
+            <!-- Poster visualizations -->
+            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-4">
+                <span class="text-neutral-400">[Poster visualization explorations]</span>
+            </div>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mb-12">
+                Poster visualization explorations.
+            </p>
+
+            <!-- Comparing colors -->
+            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-4">
+                <span class="text-neutral-400">[Comparing like colors across languages]</span>
+            </div>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mb-12">
+                Comparing like colors across languages.
+            </p>
+
+            <!-- Survey tool -->
+            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-4">
+                <span class="text-neutral-400">[Survey tool interface]</span>
+            </div>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mb-4">
+                This is how the survey tool looked and functioned.
+            </p>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 text-center italic mb-12">
+                Photo Credit: Thomas Headland
+            </p>
+
+            <!-- Related Press -->
+            <div class="max-w-3xl mx-auto">
+                <h4 class="text-lg font-display font-bold mb-4">
+                    Related Press
+                </h4>
+                <ul class="space-y-2 text-neutral-600 dark:text-neutral-400">
+                    <li>
+                        <span class="font-semibold">Cabinet:</span> Color Primitive: Hue, language, and semantic universals - Winter 2013/2014
+                    </li>
+                    <li>
+                        <span class="font-semibold">Visualising Data:</span> Best of the visualisation web - November 2012
+                    </li>
+                    <li>
+                        <span class="font-semibold">Popular Science:</span> How People Explain Color Throughout the World - 12 December 2012
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        </div> <!-- Close white container -->
+
+        <!-- Electrical Engineering Section (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <div class="max-w-container mx-auto px-6 md:px-12">
+
+                <section class="py-12 md:py-20">
+                    <div class="mb-12">
+                        <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">
+                            Electrical Engineering
+                        </h2>
+                        <h3 class="text-xl md:text-2xl font-display font-bold mb-6 text-accent">
+                            Solar System Build
+                        </h3>
+                        <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
+                            My journey in building a 12v electrical solar system for my campervan started with creating a diagram and asking for feedback in a Facebook group. See how my design evolved with revisions inspired by community feedback.
+                        </p>
+                    </div>
+
+                    <!-- Version 1 -->
+                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-neutral-400">[Solar system diagram v1]</span>
+                    </div>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mb-12">
+                        v1
+                    </p>
+
+                    <!-- Campervan build -->
+                    <div class="max-w-3xl mx-auto mb-12">
+                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                            I also built out the entire campervan, from plumbing to the wood work and really enjoyed learning how to do many scary projects including cutting large holes to install windows.
+                        </p>
+                    </div>
+
+                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                        <span class="text-neutral-400">[Campervan build photos]</span>
+                    </div>
+                </section>
+
+            </div> <!-- Close max-w-container for light grey -->
+        </div> <!-- Close light grey container -->
+
+        <div class="max-w-container mx-auto px-6 md:px-12">
+
+        <!-- Vertical Gardening Section (White) -->
+        <section class="py-12 md:py-20">
+            <div class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">
+                    Vertical Gardening
+                </h2>
+                <h3 class="text-xl md:text-2xl font-display font-bold mb-6 text-accent">
+                    Urban Designs
+                </h3>
+                <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
+                    I mapped out the entire property, planning the use of every square foot. I espaliered plum, apple, cherry, and peach trees, and planted raspberry, blackberry, grape, strawberry, and elderberry bushes.
+                </p>
+            </div>
+
+            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
+                <span class="text-neutral-400">[Vertical garden layout]</span>
+            </div>
+        </section>
+
+        <!-- CTA Section (White) -->
+        <section class="py-12 md:py-20">
+            <div class="max-w-2xl mx-auto text-center">
+                <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                    Want to see more design process?
+                </h3>
+                <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-8">
+                    Get in touch with me to see my in-depth case studies.
+                </p>
+                <button onclick="copyEmail(event, 'terrencefradet@gmail.com')" class="copy-email inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-medium px-8 py-3 rounded-lg transition-colors cursor-pointer" data-tooltip="Copy to clipboard">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                    </svg>
+                    <span>terrencefradet@gmail.com</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Navigation (White) -->
+        <section class="py-12 md:py-20">
+            <div class="flex justify-center">
+                <a href="/" class="text-accent font-medium">
+                    ← Back to Home
+                </a>
+            </div>
+        </section>
+
+        </div> <!-- Close white container -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-container mx-auto px-6 md:px-12 py-12 text-center text-sm text-neutral-500 dark:text-neutral-500 border-t border-neutral-200 dark:border-neutral-800">
+        <p>© 2026 Terrence Fradet</p>
+    </footer>
+
+</body>
+</html>
