@@ -197,12 +197,20 @@
                         </p>
                     </div>
 
-                    <!-- Before Experience Video -->
-                    <div class="w-full mb-6">
+                    <!-- Before Experience Video - Desktop + Mobile Overlapping -->
+                    <div class="relative max-w-5xl mx-auto mb-6">
+                        <!-- Desktop video -->
                         <video width="100%" autoplay loop muted playsinline class="rounded-lg">
                             <source src="assets/images/project-profitability-productivity/demonstrate-store-flow.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
+                        <!-- Mobile video overlaid on bottom right -->
+                        <div class="absolute -bottom-8 -right-4 md:-right-8 w-32 md:w-48">
+                            <video width="100%" autoplay loop muted playsinline class="rounded-lg border-4 border-white dark:border-neutral-900 shadow-lg">
+                                <source src="assets/images/project-profitability-productivity/mobile-app-before-experience.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                     </div>
                     <p class="text-center text-sm text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
                         This was the before experience. The linear survey flow forced them to walk around a store countless times to collect the data from Premise's mental model.
