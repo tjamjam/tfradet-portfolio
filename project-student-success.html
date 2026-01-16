@@ -65,6 +65,22 @@
             });
         }
     </script>
+
+    <!-- Custom video positioning for this page -->
+    <style>
+        .w-\[81\%\] {
+            width: 78%;
+        }
+        .h-\[85\%\] {
+            height: 85%;
+        }
+        .top-\[2\.5\%\] {
+            top: 4%;
+        }
+        .left-\[9\.5\%\] {
+            left: 11%;
+        }
+    </style>
 </head>
 <body class="font-body bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50 transition-colors duration-300">
 
@@ -98,86 +114,134 @@
 
         <!-- Hero Section Group (Light Grey) -->
         <div class="bg-neutral-50 dark:bg-neutral-850">
-            <!-- Hero Section -->
-            <section class="max-w-container mx-auto px-6 md:px-12 py-12 md:py-20">
-                <div class="max-w-4xl">
+            <div class="max-w-container mx-auto px-6 md:px-12">
+                <!-- Hero Section -->
+                <section class="py-12 md:py-20">
+                    <div class="max-w-4xl mx-auto text-center mb-12">
+                        <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
+                            0 to 1 product · Data insights · B2B
+                        </p>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+                            $0 to $12M ARR via a New Product
+                        </h1>
+                        <p class="subtitle-text text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                            Helping educators better support their students through a data-driven and collaborative product called Student Success.
+                        </p>
+                    </div>
+
+                    <!-- Hero Image with Video -->
+                    <div class="max-w-5xl mx-auto relative">
+                        <img src="assets/templates/laptop-template.webp" alt="Laptop template" class="w-full">
+                        <div class="absolute top-[2.5%] left-[9.5%] w-[81%] h-[85%]">
+                            <video width="100%" height="100%" autoplay loop muted playsinline class="object-cover rounded-sm">
+                                <source src="assets/images/project-student-success/early-warning-system.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- My Role Section (White) -->
+        <div class="max-w-container mx-auto px-6 md:px-12">
+            <section class="py-12 md:py-20">
+                <div class="max-w-3xl mx-auto text-center">
                     <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
-                        0 to 1 product · Data insights · B2B
+                        My role
                     </p>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
-                        $0 to $12M ARR via a New Product
-                    </h1>
-                    <p class="subtitle-text text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                        Helping educators better support their students through a data-driven and collaborative product called Student Success.
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight mb-6">
+                        I led design from discovery to execution
+                    </h2>
+
+                    <!-- Core Team -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-8">
+                        <div class="text-sm text-center">
+                            <img src="assets/images/team-photos/terrence.jpeg" alt="Terrence Fradet" class="w-20 h-20 rounded-full object-cover mx-auto mb-3">
+                            <a href="https://www.linkedin.com/in/tfradet/" target="_blank" rel="noopener noreferrer" class="font-semibold text-neutral-900 dark:text-neutral-50 hover:text-accent dark:hover:text-accent transition-colors inline-flex items-center gap-1 justify-center">
+                                Terrence Fradet
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <p class="text-neutral-600 dark:text-neutral-400 mt-1">Lead Product Designer</p>
+                        </div>
+                        <div class="text-sm text-center">
+                            <img src="assets/images/team-photos/sarah.jpeg" alt="Sarah Robinson" class="w-20 h-20 rounded-full object-cover mx-auto mb-3">
+                            <a href="https://www.linkedin.com/in/sarahlundblad/" target="_blank" rel="noopener noreferrer" class="font-semibold text-neutral-900 dark:text-neutral-50 hover:text-accent dark:hover:text-accent transition-colors inline-flex items-center gap-1 justify-center">
+                                Sarah Robinson
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <p class="text-neutral-600 dark:text-neutral-400 mt-1">VP Product</p>
+                        </div>
+                        <div class="text-sm text-center">
+                            <img src="assets/images/team-photos/lauren.jpeg" alt="Lauren Hoder" class="w-20 h-20 rounded-full object-cover mx-auto mb-3">
+                            <a href="https://www.linkedin.com/in/lauren-hoder-35019945/" target="_blank" rel="noopener noreferrer" class="font-semibold text-neutral-900 dark:text-neutral-50 hover:text-accent dark:hover:text-accent transition-colors inline-flex items-center gap-1 justify-center">
+                                Lauren Hoder
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <p class="text-neutral-600 dark:text-neutral-400 mt-1">Group Product Manager</p>
+                        </div>
+                        <div class="text-sm text-center">
+                            <img src="assets/images/team-photos/jack.jpeg" alt="Jack McDermott" class="w-20 h-20 rounded-full object-cover mx-auto mb-3">
+                            <a href="https://www.linkedin.com/in/jackrmcdermott/" target="_blank" rel="noopener noreferrer" class="font-semibold text-neutral-900 dark:text-neutral-50 hover:text-accent dark:hover:text-accent transition-colors inline-flex items-center gap-1 justify-center">
+                                Jack McDermott
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <p class="text-neutral-600 dark:text-neutral-400 mt-1">Product Marketing Manager</p>
+                        </div>
+                        <div class="text-sm text-center">
+                            <img src="assets/images/team-photos/marc.jpeg" alt="Marc Siegel" class="w-20 h-20 rounded-full object-cover mx-auto mb-3">
+                            <a href="https://www.linkedin.com/in/marclsiegel/" target="_blank" rel="noopener noreferrer" class="font-semibold text-neutral-900 dark:text-neutral-50 hover:text-accent dark:hover:text-accent transition-colors inline-flex items-center gap-1 justify-center">
+                                Marc Siegel
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <p class="text-neutral-600 dark:text-neutral-400 mt-1">Engineering Manager</p>
+                        </div>
+                        <div class="text-sm text-center">
+                            <div class="w-20 h-20 rounded-full bg-neutral-200 dark:bg-neutral-700 mx-auto mb-3 flex items-center justify-center text-neutral-400 text-xl font-semibold">3</div>
+                            <p class="font-semibold text-neutral-900 dark:text-neutral-50">3 Engineers</p>
+                            <p class="text-neutral-600 dark:text-neutral-400 mt-1">Engineering Team</p>
+                        </div>
+                    </div>
+
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        The pilot launched in June 2017 followed by an MVP product later that year, with continued development through 2020.
                     </p>
                 </div>
             </section>
         </div>
 
-        <div class="max-w-container mx-auto px-6 md:px-12">
-
-        <!-- Top Metrics Section (White) -->
-        <section class="py-12 md:py-20">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-display font-bold text-accent mb-3">
-                        32
-                    </div>
-                    <p class="text-neutral-600 dark:text-neutral-400">
-                        customers including 2 state-wide contracts
-                    </p>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-display font-bold text-accent mb-3">
-                        4%
-                    </div>
-                    <p class="text-neutral-600 dark:text-neutral-400">
-                        market share achieved
-                    </p>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-display font-bold text-accent mb-3">
-                        2M
-                    </div>
-                    <p class="text-neutral-600 dark:text-neutral-400">
-                        students in the product
-                    </p>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-display font-bold text-accent mb-3">
-                        500k
-                    </div>
-                    <p class="text-neutral-600 dark:text-neutral-400">
-                        students supported in the product
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- The Problem Section (White) -->
-        <section class="py-12 md:py-20">
-            <div class="max-w-3xl">
-                <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
-                    The Problem
-                </p>
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight mb-8">
-                    The quiet students slip through the cracks
-                </h2>
-                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                    Counselors, psychologists, and interventionists are responsible for the social-emotional and academic success of a caseload of approximately 300-400 students. However, determining who to prioritize for support on any given day is often a reactive process.
-                </p>
-            </div>
-        </section>
-
-        </div> <!-- Close white container -->
-
-        <!-- After interviewing + Onsite observation (Light Grey) -->
+        <!-- The Problem + After interviewing + Onsite observation (Light Grey) -->
         <div class="bg-neutral-50 dark:bg-neutral-850">
             <div class="max-w-container mx-auto px-6 md:px-12">
 
+                <!-- The Problem Section -->
+                <section class="py-12 md:py-20">
+                    <div class="max-w-3xl mx-auto text-center">
+                        <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
+                            The Problem
+                        </p>
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight mb-8">
+                            The quiet students slip through the cracks
+                        </h2>
+                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                            Counselors, psychologists, and interventionists are responsible for the social-emotional and academic success of a caseload of approximately 300-400 students. However, determining who to prioritize for support on any given day is often a reactive process.
+                        </p>
+                    </div>
+                </section>
+
                 <!-- After interviewing -->
                 <section class="py-12 md:py-20">
-            <div class="max-w-3xl">
+            <div class="max-w-3xl mx-auto">
                 <p class="text-lg font-semibold text-neutral-700 dark:text-neutral-300 mb-6">
                     After interviewing dozens of Educators we learned...
                 </p>
@@ -203,18 +267,17 @@
                 <p class="text-lg font-semibold text-neutral-700 dark:text-neutral-300 mb-4">
                     We surveyed educators to understand the competitor landscape
                 </p>
-                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
                     Schools varied in their student support efforts: some held weekly triage meetings, others considered adopting a framework, and some tracked supports in context-lacking spreadsheets.
                 </p>
+                <img src="assets/images/project-student-success/market-research-survey.webp" alt="Market research survey results" class="w-full h-auto rounded-lg">
             </div>
                 </section>
 
                 <!-- Onsite observation -->
                 <section class="py-12 md:py-20">
                     <div class="max-w-4xl mx-auto">
-                        <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-4">
-                            <span class="text-neutral-400">[Onsite observation photo/diagram]</span>
-                        </div>
+                        <img src="assets/images/project-student-success/shadowing-school-inteventions.webp" alt="Shadowing school interventions" class="w-full h-auto rounded-lg mb-4">
                         <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
                             We went onsite to observe student support triage meetings.
                         </p>
@@ -229,7 +292,7 @@
         <!-- HMW Section (White) -->
         <section class="py-12 md:py-20">
             <div class="text-center">
-                <h2 class="text-3xl md:text-4xl font-display font-bold text-accent leading-relaxed">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-accent leading-relaxed italic">
                     How can we help educators support at-risk students and prepare them for college?
                 </h2>
             </div>
@@ -255,97 +318,107 @@
 
                 <!-- Feature 1: Early warning system -->
                 <section class="py-12 md:py-20">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
-                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
-                        <span class="text-neutral-400">[Early warning system UI]</span>
+                    <div class="max-w-3xl mx-auto text-center mb-12">
+                        <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                            Early warning system
+                        </h3>
+                        <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                            While competitors could prioritize students across one or two dimensions, Student Success differentiated itself by considering the whole student.
+                        </p>
                     </div>
-                </div>
-                <div class="order-1 lg:order-2">
-                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
-                        Early warning system
-                    </h3>
-                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                        While competitors could prioritize students across one or two dimensions, Student Success differentiated itself by considering the whole student.
-                    </p>
-                </div>
-            </div>
+                    <div class="max-w-5xl mx-auto relative">
+                        <img src="assets/templates/laptop-template.webp" alt="Laptop template" class="w-full">
+                        <div class="absolute top-[2.5%] left-[9.5%] w-[81%] h-[85%]">
+                            <video width="100%" height="100%" autoplay loop muted playsinline class="object-cover rounded-sm">
+                                <source src="assets/images/project-student-success/early-warning-system.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
                 </section>
 
                 <!-- Feature 2: Social-emotional learning -->
                 <section class="py-12 md:py-20">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
-                        Social-emotional learning
-                    </h3>
-                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                        SEL is Panorama's differentiator but until we brought it into Student Success it was only measured at a system level. Now educators could see which students self-reported low and could support them with their social-emotional growth.
-                    </p>
-                </div>
-                <div class="flex justify-center lg:justify-end">
-                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
-                        <span class="text-neutral-400">[SEL UI]</span>
+                    <div class="max-w-3xl mx-auto text-center mb-12">
+                        <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                            Social-emotional learning
+                        </h3>
+                        <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                            SEL is Panorama's differentiator but until we brought it into Student Success it was only measured at a system level. Now educators could see which students self-reported low and could support them with their social-emotional growth.
+                        </p>
                     </div>
-                </div>
-            </div>
+                    <div class="max-w-5xl mx-auto relative">
+                        <img src="assets/templates/laptop-template.webp" alt="Laptop template" class="w-full">
+                        <div class="absolute top-[2.5%] left-[9.5%] w-[81%] h-[85%]" style="top: 2.5%; left: 9.5%; width: 81%; height: 85%;">
+                            <video width="100%" height="100%" autoplay loop muted playsinline class="object-cover rounded-sm">
+                                <source src="assets/images/project-student-success/social-emotional-learning.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
                 </section>
 
                 <!-- Feature 3: Intervention tracking -->
                 <section class="py-12 md:py-20">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
-                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
-                        <span class="text-neutral-400">[Intervention tracking UI]</span>
+                    <div class="max-w-3xl mx-auto text-center mb-12">
+                        <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                            Intervention tracking
+                        </h3>
+                        <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                            Once we consolidated all relevant data, educators wanted to create and track group and individual interventions, enabling collaboration and visibility into what helps students.
+                        </p>
                     </div>
-                </div>
-                <div class="order-1 lg:order-2">
-                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
-                        Intervention tracking
-                    </h3>
-                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                        Once we consolidated all relevant data, educators wanted to create and track group and individual interventions, enabling collaboration and visibility into what helps students.
-                    </p>
-                </div>
-            </div>
+                    <div class="max-w-5xl mx-auto relative">
+                        <img src="assets/templates/laptop-template.webp" alt="Laptop template" class="w-full">
+                        <div class="absolute top-[2.5%] left-[9.5%] w-[81%] h-[85%]">
+                            <video width="100%" height="100%" autoplay loop muted playsinline class="object-cover rounded-sm">
+                                <source src="assets/images/project-student-success/intervention-tracking.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
                 </section>
 
                 <!-- Feature 4: Student check-ins -->
                 <section class="py-12 md:py-20">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
-                        Student check-ins
-                    </h3>
-                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                        Leveraging Panorama's robust survey platform, we developed an MVP allowing educators to initiate and record check-ins directly on students' profiles.
-                    </p>
-                </div>
-                <div class="flex justify-center lg:justify-end">
-                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
-                        <span class="text-neutral-400">[Check-ins UI]</span>
+                    <div class="max-w-3xl mx-auto text-center mb-12">
+                        <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                            Student check-ins
+                        </h3>
+                        <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                            Leveraging Panorama's robust survey platform, we developed an MVP allowing educators to initiate and record check-ins directly on students' profiles.
+                        </p>
                     </div>
-                </div>
-            </div>
+                    <div class="max-w-5xl mx-auto relative">
+                        <img src="assets/templates/laptop-template.webp" alt="Laptop template" class="w-full">
+                        <div class="absolute top-[2.5%] left-[9.5%] w-[81%] h-[85%]">
+                            <video width="100%" height="100%" autoplay loop muted playsinline class="object-cover rounded-sm">
+                                <source src="assets/images/project-student-success/sel-check-ins.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
                 </section>
 
                 <!-- Feature 5: Delightful features -->
                 <section class="py-12 md:py-20">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
-                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
-                        <span class="text-neutral-400">[Birthday hats feature]</span>
+                    <div class="max-w-3xl mx-auto text-center mb-12">
+                        <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                            Delightful features
+                        </h3>
+                        <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                            Adding birthday hats to students' profile images not only provided an opportunity for educators to connect with students, but also added a playful and humanizing touch to the product.
+                        </p>
                     </div>
-                </div>
-                <div class="order-1 lg:order-2">
-                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
-                        Delightful features
-                    </h3>
-                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                        Adding birthday hats to students' profile images not only provided an opportunity for educators to connect with students, but also added a playful and humanizing touch to the product.
-                    </p>
-                </div>
-            </div>
+                    <div class="max-w-5xl mx-auto relative">
+                        <img src="assets/templates/laptop-template.webp" alt="Laptop template" class="w-full">
+                        <div class="absolute top-[2.5%] left-[9.5%] w-[81%] h-[85%]">
+                            <video width="100%" height="100%" autoplay loop muted playsinline class="object-cover rounded-sm">
+                                <source src="assets/images/project-student-success/delightful-features.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
                 </section>
 
             </div> <!-- Close max-w-container for light grey -->
@@ -359,49 +432,74 @@
                 <h3 class="text-2xl md:text-3xl font-display font-bold mb-8 text-center">
                     Ogden School District
                 </h3>
-                <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-4">
-                    <span class="text-neutral-400">[Video: Valerie Lopez testimonial]</span>
-                </div>
-                <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
-                    Valerie Lopez, a behavioral interventionalist, shares their experience supporting a student with Student Success. (No audio, subtitles only)
-                </p>
-            </div>
-        </section>
+                <!-- Wistia Video Embed -->
+                <script src="https://fast.wistia.com/embed/medias/ky4cw09h7z.jsonp" async></script>
+                <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 
-        <!-- The Impact Section (White) -->
-        <section class="py-12 md:py-20">
-            <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-12 text-center">
-                The Impact
-            </p>
-            <div class="text-center">
-                <div class="text-6xl md:text-7xl font-display font-bold text-accent mb-4">
-                    $0 to $12M ARR
+                <div class="wistia_responsive_padding mb-4" style="padding:56.25% 0 0 0;position:relative;">
+                    <div class="wistia_responsive_wrapper rounded-lg overflow-hidden" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                        <span class="wistia_embed wistia_async_ky4cw09h7z popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;width:100%"></span>
+                    </div>
                 </div>
-                <p class="text-xl md:text-2xl font-display text-neutral-700 dark:text-neutral-300">
-                    in 3 years
+
+                <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
+                    Valeria Lopez (district behavior interventionist) describes how she supported an at-risk student using data in Panorama to build relationships and help this student reach his goal: high school graduation.
                 </p>
             </div>
         </section>
 
         </div> <!-- Close white container -->
 
-        <!-- My Role Section (Light Grey) -->
+        <!-- The Impact Section (Light Grey) -->
         <div class="bg-neutral-50 dark:bg-neutral-850">
             <div class="max-w-container mx-auto px-6 md:px-12">
                 <section class="py-12 md:py-20">
-                    <div class="max-w-3xl">
-                        <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
-                            My role
+                    <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-12 text-center">
+                        The Impact
+                    </p>
+                    <div class="text-center mb-12">
+                        <div class="text-6xl md:text-7xl font-display font-bold text-accent mb-4">
+                            $0 to $12M ARR
+                        </div>
+                        <p class="text-xl md:text-2xl font-display text-neutral-700 dark:text-neutral-300 mb-12">
+                            in 3 years
                         </p>
-                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight mb-6">
-                            I led the design from concept to execution from 2017-20.
-                        </h2>
-                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                    I worked alongside 1 Product Manager, 1 Tech Lead Engineer and 3 additional Engineers.
-                </p>
-                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                            The pilot launched in June 2017 followed by an MVP product later that year.
-                        </p>
+                    </div>
+
+                    <!-- Metrics -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="text-center">
+                            <div class="text-4xl md:text-5xl font-display font-bold text-accent mb-3">
+                                32
+                            </div>
+                            <p class="text-neutral-600 dark:text-neutral-400">
+                                customers including 2 state-wide contracts
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl md:text-5xl font-display font-bold text-accent mb-3">
+                                4%
+                            </div>
+                            <p class="text-neutral-600 dark:text-neutral-400">
+                                market share achieved
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl md:text-5xl font-display font-bold text-accent mb-3">
+                                2M
+                            </div>
+                            <p class="text-neutral-600 dark:text-neutral-400">
+                                students in the product
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl md:text-5xl font-display font-bold text-accent mb-3">
+                                500k
+                            </div>
+                            <p class="text-neutral-600 dark:text-neutral-400">
+                                students supported in the product
+                            </p>
+                        </div>
                     </div>
                 </section>
             </div>
