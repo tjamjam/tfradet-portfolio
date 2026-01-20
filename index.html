@@ -298,12 +298,24 @@
                     </div>
 
                     <!-- Project Card 8 -->
-                    <div class="block opacity-60 cursor-not-allowed">
+                    <a href="/project-streamlining-design.html" class="group block">
                         <div class="flex flex-col">
-                            <div class="aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-6">
-                                <span class="text-neutral-400">Coming soon</span>
+                            <div class="aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 rounded-lg overflow-hidden mb-6 flex items-center justify-center p-4">
+                                <div class="relative w-full">
+                                    <!-- Laptop with desktop screenshot -->
+                                    <div class="relative">
+                                        <img src="assets/templates/laptop-template.webp" alt="Laptop template" class="w-full h-auto">
+                                        <div class="absolute top-[2.5%] left-[9.5%] w-[81%] h-[85%]">
+                                            <img id="card-streamlining-desktop" src="assets/images/project-streamlining-design/streamline-design-hero-light.webp" alt="Design system desktop view" class="w-full h-full object-cover rounded-sm">
+                                        </div>
+                                    </div>
+                                    <!-- Mobile phone overlapping -->
+                                    <div class="absolute -bottom-4 w-1/3 z-10" style="right: -0.1rem;">
+                                        <img id="card-streamlining-mobile" src="assets/images/project-streamlining-design/streamline-design-mobile-hero-light.webp" alt="Design system mobile view" class="w-full h-auto drop-shadow-2xl">
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="text-xl md:text-2xl font-display font-bold mb-3">
+                            <h3 class="text-xl md:text-2xl font-display font-bold mb-3 group-hover:text-accent transition-colors">
                                 Streamlining Design
                             </h3>
                             <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4 flex-grow">
@@ -313,7 +325,30 @@
                                 Design system · Design ops · WCAG compliance
                             </p>
                         </div>
-                    </div>
+                    </a>
+
+                    <script>
+                        // Auto-cycle card preview between light and dark
+                        const cardDesktopImages = [
+                            'assets/images/project-streamlining-design/streamline-design-hero-light.webp',
+                            'assets/images/project-streamlining-design/streamline-design-hero-dark.webp'
+                        ];
+                        const cardMobileImages = [
+                            'assets/images/project-streamlining-design/streamline-design-mobile-hero-light.webp',
+                            'assets/images/project-streamlining-design/streamline-design-mobile-hero-dark.webp'
+                        ];
+                        let cardIndex = 0;
+                        const cardDesktopImg = document.getElementById('card-streamlining-desktop');
+                        const cardMobileImg = document.getElementById('card-streamlining-mobile');
+
+                        if (cardDesktopImg && cardMobileImg) {
+                            setInterval(() => {
+                                cardIndex = (cardIndex + 1) % cardDesktopImages.length;
+                                cardDesktopImg.src = cardDesktopImages[cardIndex];
+                                cardMobileImg.src = cardMobileImages[cardIndex];
+                            }, 3000);
+                        }
+                    </script>
                 </div>
             </div>
         </section>
