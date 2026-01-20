@@ -100,7 +100,7 @@
         <div class="bg-neutral-50 dark:bg-neutral-850">
             <!-- Hero Section -->
             <section class="max-w-container mx-auto px-6 md:px-12 py-12 md:py-20">
-                <div class="max-w-4xl">
+                <div class="max-w-4xl mx-auto text-center">
                     <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
                         Design system · Design ops · WCAG compliance
                     </p>
@@ -113,81 +113,172 @@
                 </div>
             </section>
 
-            <!-- Hero Image - Desktop + Mobile Template -->
+            <!-- Hero Image - Desktop + Mobile Overlapping Template -->
             <section class="max-w-container mx-auto px-6 md:px-12 pb-12 md:pb-20">
-                <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-12">
-                    <span class="text-neutral-400">[Desktop + Mobile template overlapping mockup]</span>
+                <div class="max-w-5xl mx-auto relative">
+                    <!-- Laptop with desktop screenshot -->
+                    <div class="relative">
+                        <img src="assets/templates/laptop-template.webp" alt="Laptop template" class="w-full">
+                        <div class="absolute top-[2.5%] left-[9.5%] w-[81%] h-[85%]">
+                            <img id="hero-desktop-image" src="assets/images/project-streamlining-design/streamline-design-hero-light.webp" alt="Design system desktop view" class="w-full h-full object-cover rounded-sm">
+                        </div>
+                    </div>
+                    <!-- Mobile phone overlapping -->
+                    <div class="absolute -bottom-8 -right-4 md:-bottom-12 md:-right-12 w-1/3 md:w-1/4 z-10">
+                        <img id="hero-mobile-image" src="assets/images/project-streamlining-design/streamline-design-mobile-hero-light.webp" alt="Design system mobile view" class="w-full h-auto drop-shadow-2xl">
+                    </div>
                 </div>
             </section>
 
-            <!-- Before/After Comparison -->
-            <section class="max-w-container mx-auto px-6 md:px-12 pb-12 md:pb-20">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-4">
-                            <span class="text-neutral-400">[Before screens]</span>
-                        </div>
-                        <p class="text-sm font-semibold text-neutral-700 dark:text-neutral-300 text-center">
-                            Before
+            <script>
+                // Auto-cycle between light and dark hero images
+                const heroDesktopImages = [
+                    'assets/images/project-streamlining-design/streamline-design-hero-light.webp',
+                    'assets/images/project-streamlining-design/streamline-design-hero-dark.webp'
+                ];
+                const heroMobileImages = [
+                    'assets/images/project-streamlining-design/streamline-design-mobile-hero-light.webp',
+                    'assets/images/project-streamlining-design/streamline-design-mobile-hero-dark.webp'
+                ];
+
+                let currentHeroIndex = 0;
+                const heroDesktopImg = document.getElementById('hero-desktop-image');
+                const heroMobileImg = document.getElementById('hero-mobile-image');
+
+                setInterval(() => {
+                    // Switch images instantly (no fade)
+                    currentHeroIndex = (currentHeroIndex + 1) % heroDesktopImages.length;
+                    heroDesktopImg.src = heroDesktopImages[currentHeroIndex];
+                    heroMobileImg.src = heroMobileImages[currentHeroIndex];
+                }, 3000); // Switch every 3 seconds
+            </script>
+
+        </div>
+
+        <!-- My Role Section (White) -->
+        <div class="max-w-container mx-auto px-6 md:px-12">
+            <section class="py-12 md:py-20">
+                    <div class="max-w-3xl mx-auto text-center">
+                        <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
+                            My role
                         </p>
-                    </div>
-                    <div>
-                        <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-4">
-                            <span class="text-neutral-400">[After screens]</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight mb-6">
+                        I led the design system from concept to implementation
+                    </h2>
+
+                    <!-- Core Team -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                        <div class="text-sm text-center">
+                            <img src="assets/images/team-photos/terrence.webp" alt="Terrence Fradet" class="w-20 h-20 rounded-full object-cover mx-auto mb-3">
+                            <a href="https://www.linkedin.com/in/tfradet/" target="_blank" rel="noopener noreferrer" class="font-semibold text-neutral-900 dark:text-neutral-50 hover:text-accent dark:hover:text-accent transition-colors inline-flex items-center gap-1 justify-center">
+                                Terrence Fradet
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <p class="text-neutral-600 dark:text-neutral-400 mt-1">Lead Product Designer</p>
                         </div>
-                        <p class="text-sm font-semibold text-neutral-700 dark:text-neutral-300 text-center">
-                            After
-                        </p>
+                        <div class="text-sm text-center">
+                            <img src="assets/images/team-photos/janet.webp" alt="Janet Lee" class="w-20 h-20 rounded-full object-cover mx-auto mb-3">
+                            <a href="https://www.linkedin.com/in/janet-l-6486617b/" target="_blank" rel="noopener noreferrer" class="font-semibold text-neutral-900 dark:text-neutral-50 hover:text-accent dark:hover:text-accent transition-colors inline-flex items-center gap-1 justify-center">
+                                Janet Lee
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <p class="text-neutral-600 dark:text-neutral-400 mt-1">Senior Product Designer</p>
+                        </div>
+                        <div class="text-sm text-center">
+                            <img src="assets/images/team-photos/blake.webp" alt="Blake Rogers" class="w-20 h-20 rounded-full object-cover mx-auto mb-3">
+                            <a href="https://www.linkedin.com/in/blakeevanrogers/" target="_blank" rel="noopener noreferrer" class="font-semibold text-neutral-900 dark:text-neutral-50 hover:text-accent dark:hover:text-accent transition-colors inline-flex items-center gap-1 justify-center">
+                                Blake Rogers
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <p class="text-neutral-600 dark:text-neutral-400 mt-1">Senior Manager Product Design</p>
+                        </div>
+                        <div class="text-sm text-center">
+                            <img src="assets/images/team-photos/chris.webp" alt="Chris Lanoue" class="w-20 h-20 rounded-full object-cover mx-auto mb-3">
+                            <a href="https://www.linkedin.com/in/chrislanoue/" target="_blank" rel="noopener noreferrer" class="font-semibold text-neutral-900 dark:text-neutral-50 hover:text-accent dark:hover:text-accent transition-colors inline-flex items-center gap-1 justify-center">
+                                Chris Lanoue
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <p class="text-neutral-600 dark:text-neutral-400 mt-1">Tech Lead</p>
+                            <p class="text-neutral-500 dark:text-neutral-500 mt-2 text-xs">🙌 Championed design system adoption across engineering teams</p>
+                        </div>
                     </div>
+
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        The design system launched in phases: Figma and B2B Web in 2021, revamped in 2022, and expanded to B2C Mobile in 2023.
+                    </p>
                 </div>
             </section>
         </div>
 
-        <div class="max-w-container mx-auto px-6 md:px-12">
-
-        <!-- The Problem Section (White) -->
-        <section class="py-12 md:py-20">
-            <div class="max-w-3xl">
-                <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
-                    The Problem
-                </p>
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight mb-8">
-                    A disjointed legacy experience
-                </h2>
-                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                    In 2021, following a company rebrand and updates to the marketing site, it became evident that the mobile and web products lacked credibility. Additionally, there were numerous inconsistencies in colors, typography, and components across the platforms.
-                </p>
-            </div>
-        </section>
-
-        </div> <!-- Close white container -->
-
-        <!-- Additional Before Screens (Light Grey) -->
+        <!-- The Problem Section (Light Grey) -->
         <div class="bg-neutral-50 dark:bg-neutral-850">
             <div class="max-w-container mx-auto px-6 md:px-12">
                 <section class="py-12 md:py-20">
-                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-neutral-400">[Additional before screens]</span>
+                    <div class="max-w-3xl mx-auto text-center">
+                        <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
+                            The Problem
+                        </p>
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight mb-8">
+                            A disjointed legacy experience
+                        </h2>
+                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                            In 2021, following a company rebrand and updates to the marketing site, it became evident that the mobile and web products lacked credibility. Additionally, there were numerous inconsistencies in colors, typography, and components across the platforms.
+                        </p>
                     </div>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
-                        Additional before screens
-                    </p>
+                </section>
+
+                <!-- Additional Before Examples Gallery -->
+                <section class="pb-12 md:pb-20">
+                    <div class="max-w-5xl mx-auto">
+                        <h3 class="text-2xl md:text-3xl font-display font-bold mb-8 text-center">
+                            More examples of inconsistencies across the platform
+                        </h3>
+
+                        <!-- Web Before Gallery -->
+                        <div class="mb-12">
+                            <p class="text-sm font-semibold text-neutral-700 dark:text-neutral-300 mb-4">Web Product</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                <img src="assets/images/project-streamlining-design/web-before-gallery-1.webp" alt="Web interface inconsistency example 1" class="w-full h-auto rounded-lg">
+                                <img src="assets/images/project-streamlining-design/web-before-gallery-2.webp" alt="Web interface inconsistency example 2" class="w-full h-auto rounded-lg">
+                                <img src="assets/images/project-streamlining-design/web-before-gallery-3.webp" alt="Web interface inconsistency example 3" class="w-full h-auto rounded-lg">
+                                <img src="assets/images/project-streamlining-design/web-before-gallery-4.webp" alt="Web interface inconsistency example 4" class="w-full h-auto rounded-lg">
+                                <img src="assets/images/project-streamlining-design/web-before-gallery-5.webp" alt="Web interface inconsistency example 5" class="w-full h-auto rounded-lg">
+                            </div>
+                        </div>
+
+                        <!-- Mobile Before Gallery -->
+                        <div>
+                            <p class="text-sm font-semibold text-neutral-700 dark:text-neutral-300 mb-4">Mobile App</p>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <img src="assets/images/project-streamlining-design/mobile-before-gallery-1.webp" alt="Mobile interface inconsistency example 1" class="w-full h-auto rounded-lg">
+                                <img src="assets/images/project-streamlining-design/mobile-before-gallery-2.webp" alt="Mobile interface inconsistency example 2" class="w-full h-auto rounded-lg">
+                                <img src="assets/images/project-streamlining-design/mobile-before-gallery-3.webp" alt="Mobile interface inconsistency example 3" class="w-full h-auto rounded-lg">
+                                <img src="assets/images/project-streamlining-design/mobile-before-gallery-4.webp" alt="Mobile interface inconsistency example 4" class="w-full h-auto rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- HMW Subsection (still Light Grey, part of Problem section) -->
+                <section class="py-12 md:py-20">
+                    <div class="max-w-container mx-auto px-6 md:px-12">
+                        <div class="text-center">
+                            <h2 class="text-3xl md:text-4xl font-display font-bold text-accent leading-relaxed italic">
+                                How might we increase velocity while creating a better user experience?
+                            </h2>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
-
-        <div class="max-w-container mx-auto px-6 md:px-12">
-
-        <!-- HMW Section (White) -->
-        <section class="py-12 md:py-20">
-            <div class="text-center">
-                <h2 class="text-3xl md:text-4xl font-display font-bold text-accent leading-relaxed italic">
-                    How might we increase velocity while creating a better user experience?
-                </h2>
-            </div>
-        </section>
-
-        </div> <!-- Close white container -->
 
         <!-- The System and Features (Light Grey) -->
         <div class="bg-neutral-50 dark:bg-neutral-850">
@@ -207,20 +298,13 @@
 
                 <!-- Feature 1: Built for the end user -->
                 <section class="py-12 md:py-20">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
-                            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
-                                <span class="text-neutral-400">[Design system UI examples]</span>
-                            </div>
-                        </div>
-                        <div class="order-1 lg:order-2">
-                            <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
-                                Built for the end user
-                            </h3>
-                            <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                                Not only did we want to achieve a consistent user experience we wanted to take the opportunity to improve accessibility and dark mode preferences.
-                            </p>
-                        </div>
+                    <div class="max-w-3xl mx-auto text-center">
+                        <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                            Built for the end user
+                        </h3>
+                        <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                            Not only did we want to achieve a consistent user experience we wanted to take the opportunity to improve accessibility and dark mode preferences.
+                        </p>
                     </div>
                 </section>
 
@@ -239,9 +323,7 @@
                             </p>
                         </div>
                         <div class="flex justify-center lg:justify-end">
-                            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
-                                <span class="text-neutral-400">[Accessibility contrast examples]</span>
-                            </div>
+                            <img src="assets/images/project-streamlining-design/accessible-colors.webp" alt="WCAG contrast compliance examples from the design system" class="w-full h-auto rounded-lg">
                         </div>
                     </div>
                 </section>
@@ -250,9 +332,10 @@
                 <section class="py-12 md:py-20">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
-                            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
-                                <span class="text-neutral-400">[Dark mode examples]</span>
-                            </div>
+                            <video width="100%" autoplay loop muted playsinline class="rounded-lg">
+                                <source src="assets/images/project-streamlining-design/toggle-dark-light-mode.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                         <div class="order-1 lg:order-2">
                             <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
@@ -283,29 +366,20 @@
                             </p>
                         </div>
                         <div class="flex justify-center lg:justify-end">
-                            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
-                                <span class="text-neutral-400">[Design tokens diagram]</span>
-                            </div>
+                            <img src="assets/images/project-streamlining-design/tokens-variables.webp" alt="Design tokens structure showing primitives mapped to semantic tokens" class="w-full h-auto rounded-lg">
                         </div>
                     </div>
                 </section>
 
                 <!-- Feature 5: Built for designers by designers -->
                 <section class="py-12 md:py-20">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
-                            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
-                                <span class="text-neutral-400">[Figma design system]</span>
-                            </div>
-                        </div>
-                        <div class="order-1 lg:order-2">
-                            <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
-                                Built for designers by designers
-                            </h3>
-                            <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                                I realized that for our design system to achieve ongoing adoption, ease-of-use and fostering creativity had to be central focuses.
-                            </p>
-                        </div>
+                    <div class="max-w-3xl mx-auto text-center">
+                        <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                            Built for designers by designers
+                        </h3>
+                        <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                            I realized that for our design system to achieve ongoing adoption, ease-of-use and fostering creativity had to be central focuses.
+                        </p>
                     </div>
                 </section>
 
@@ -324,9 +398,7 @@
                             </p>
                         </div>
                         <div class="flex justify-center lg:justify-end">
-                            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
-                                <span class="text-neutral-400">[MUI configuration]</span>
-                            </div>
+                            <img src="assets/images/project-streamlining-design/component-documentation.webp" alt="MUI for Figma configuration customized for our brand" class="w-full h-auto rounded-lg">
                         </div>
                     </div>
                 </section>
@@ -335,9 +407,10 @@
                 <section class="py-12 md:py-20">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
-                            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
-                                <span class="text-neutral-400">[Variable modes examples]</span>
-                            </div>
+                            <video width="100%" autoplay loop muted playsinline class="rounded-lg">
+                                <source src="assets/images/project-streamlining-design/new-branding-themes-variables.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                         <div class="order-1 lg:order-2">
                             <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
@@ -362,56 +435,49 @@
                             </p>
                         </div>
                         <div class="flex justify-center lg:justify-end">
-                            <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
-                                <span class="text-neutral-400">[Templates examples]</span>
-                            </div>
+                            <img src="assets/images/project-streamlining-design/component-documentation.webp" alt="Page templates for web and mobile platforms" class="w-full h-auto rounded-lg">
                         </div>
                     </div>
                 </section>
 
-            </div> <!-- Close max-w-container for light grey -->
-        </div> <!-- Close light grey container -->
-
-        <div class="max-w-container mx-auto px-6 md:px-12">
-
-        <!-- Process Improvements Section (White) -->
+        <!-- Process Improvements Section (Light Grey, continuing The System section) -->
         <section class="py-12 md:py-20">
-            <div class="max-w-3xl mx-auto mb-12">
-                <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
-                    Process Improvements
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                    Enabling Adoption
+                </h3>
+                <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                    With Chris championing adoption across engineering teams, we developed a process that allowed us to build the design system without slowing down product development.
                 </p>
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight mb-8">
-                    It is hard to adopt a design system but with the right engineer to champion it, it is far more possible in a start up environment.
-                </h2>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                 <div>
                     <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
-                        Maintaining velocity while establishing and maintaining the design system
+                        Maintaining velocity while building the system
                     </h3>
                     <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
                         Without a dedicated team, aligning with React components and following this process allowed us to decouple feature development from establishing the design system.
                     </p>
                 </div>
                 <div class="flex justify-center lg:justify-end">
-                    <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center">
-                        <span class="text-neutral-400">[Process diagram]</span>
-                    </div>
+                    <img src="assets/images/project-streamlining-design/documented-process-product-lifecycle.webp" alt="Design system implementation process workflow" class="w-full h-auto rounded-lg">
                 </div>
             </div>
 
             <div class="max-w-4xl mx-auto">
-                <div class="w-full aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center mb-4">
-                    <span class="text-neutral-400">[Loom video screenshot]</span>
-                </div>
+                <img src="assets/images/project-streamlining-design/loom-video-documentation.webp" alt="Loom video documentation for design system updates" class="w-full h-auto rounded-lg mb-4">
                 <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
                     I used Loom videos to document changes and share them with the team.
                 </p>
             </div>
         </section>
 
+            </div> <!-- Close max-w-container -->
+        </div> <!-- Close bg-neutral-50 (Light Grey) -->
+
         <!-- The Impact Section (White) -->
+        <div class="max-w-container mx-auto px-6 md:px-12">
         <section class="py-12 md:py-20">
             <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-12 text-center">
                 The Impact
@@ -440,7 +506,7 @@
                 </div>
                 <div class="text-center">
                     <div class="text-4xl md:text-5xl font-display font-bold text-accent mb-3">
-                        3x
+                        55
                     </div>
                     <p class="text-neutral-600 dark:text-neutral-400">
                         Customer NPS
@@ -448,42 +514,19 @@
                 </div>
                 <div class="text-center">
                     <div class="text-4xl md:text-5xl font-display font-bold text-accent mb-3">
-                        Less
+                        3x
                     </div>
                     <p class="text-neutral-600 dark:text-neutral-400">
-                        meetings doing visual design reviews
+                        less time on visual implementation reviews
                     </p>
                 </div>
             </div>
         </section>
-
         </div> <!-- Close white container -->
 
-        <!-- My Role Section (Light Grey) -->
+        <!-- CTA Section (Light Grey) -->
         <div class="bg-neutral-50 dark:bg-neutral-850">
             <div class="max-w-container mx-auto px-6 md:px-12">
-                <section class="py-12 md:py-20">
-                    <div class="max-w-3xl">
-                        <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
-                            My role
-                        </p>
-                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight mb-6">
-                            In 2021, I worked with 2 Designers (Janet Lee & Blake Rogers) and the Tech Lead (Chris Lanoue) to establish the Design System in Figma and B2B Web product.
-                        </h2>
-                        <p class="text-lg font-display text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6">
-                            In 2022, I led an initiative to revamp our Figma Design System and launched it for the B2B Web product.
-                        </p>
-                        <p class="text-lg font-display text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                            In 2023, I made improvements to the revamp and launched it for the B2C Mobile app.
-                        </p>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <div class="max-w-container mx-auto px-6 md:px-12">
-
-        <!-- CTA Section (White) -->
         <section class="py-12 md:py-20">
             <div class="max-w-2xl mx-auto text-center">
                 <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
@@ -510,7 +553,8 @@
             </div>
         </section>
 
-        </div> <!-- Close white container -->
+            </div> <!-- Close max-w-container -->
+        </div> <!-- Close light grey container -->
 
     </main>
 
