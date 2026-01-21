@@ -444,9 +444,14 @@
         <section class="py-12 md:py-20">
             <div class="grid grid-cols-1 lg:grid-cols-[7fr_3fr] gap-12 items-center">
                 <div class="flex justify-center lg:justify-start">
-                    <div class="w-full">
-                        <img id="campaign-builder-image" src="assets/images/project-right-tool/ops-campaign-builder-1.webp" alt="Bulk campaign creation interface for surveys" class="w-full h-auto rounded-lg mb-12">
-                        <img src="assets/images/project-right-tool/forms.webp" alt="Final campaign builder solution" class="w-full h-auto rounded-lg">
+                    <div class="relative w-full">
+                        <img src="assets/templates/laptop-template.webp" alt="Laptop template" class="w-full">
+                        <div class="absolute top-[2.5%] left-[9.5%] w-[81%] h-[85%]">
+                            <video width="100%" height="100%" autoplay loop muted playsinline class="object-cover rounded-sm">
+                                <source src="assets/images/project-right-tool/video-hero.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -631,22 +636,6 @@
             setInterval(() => {
                 campaignBuilderBeforeIndex = (campaignBuilderBeforeIndex + 1) % campaignBuilderBeforeImages.length;
                 campaignBuilderBeforeImg.src = campaignBuilderBeforeImages[campaignBuilderBeforeIndex];
-            }, 3000);
-        }
-
-        // Auto-cycle campaign builder images (solution section)
-        const campaignBuilderImages = [
-            'assets/images/project-right-tool/ops-campaign-builder-1.webp',
-            'assets/images/project-right-tool/ops-campaign-builder-2.webp',
-            'assets/images/project-right-tool/ops-campaign-builder-3.webp'
-        ];
-        let campaignBuilderIndex = 0;
-        const campaignBuilderImg = document.getElementById('campaign-builder-image');
-
-        if (campaignBuilderImg) {
-            setInterval(() => {
-                campaignBuilderIndex = (campaignBuilderIndex + 1) % campaignBuilderImages.length;
-                campaignBuilderImg.src = campaignBuilderImages[campaignBuilderIndex];
             }, 3000);
         }
     </script>
