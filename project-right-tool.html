@@ -337,10 +337,6 @@
                         </p>
                     </div>
 
-                    <div class="max-w-5xl mx-auto mb-12">
-                        <img id="form-builder-image" src="assets/images/project-right-tool/ops-form-builder-1.webp" alt="Redesigned form creation interface" class="w-full h-auto rounded-lg">
-                    </div>
-
                     <!-- Collaborating with customers subsection -->
                     <div class="mb-12">
                         <h3 class="text-xl md:text-2xl font-display font-bold mb-6 text-accent">
@@ -598,22 +594,6 @@
             setInterval(() => {
                 formBuilderBeforeIndex = (formBuilderBeforeIndex + 1) % formBuilderBeforeImages.length;
                 formBuilderBeforeImg.src = formBuilderBeforeImages[formBuilderBeforeIndex];
-            }, 3000);
-        }
-
-        // Auto-cycle form builder images (solution section)
-        const formBuilderImages = [
-            'assets/images/project-right-tool/ops-form-builder-1.webp',
-            'assets/images/project-right-tool/ops-form-builder-2.webp',
-            'assets/images/project-right-tool/ops-form-builder-3.webp'
-        ];
-        let formBuilderIndex = 0;
-        const formBuilderImg = document.getElementById('form-builder-image');
-
-        if (formBuilderImg) {
-            setInterval(() => {
-                formBuilderIndex = (formBuilderIndex + 1) % formBuilderImages.length;
-                formBuilderImg.src = formBuilderImages[formBuilderIndex];
             }, 3000);
         }
 
