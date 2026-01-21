@@ -113,10 +113,16 @@
                 </div>
             </section>
 
-            <!-- Hero Image -->
+            <!-- Hero Video -->
             <section class="max-w-container mx-auto px-6 md:px-12 pb-12 md:pb-20">
-                <div class="max-w-5xl mx-auto">
-                    <img src="assets/images/project-right-tool/hero-mockup.webp" alt="Internal operations tooling interface" class="w-full h-auto rounded-lg">
+                <div class="max-w-5xl mx-auto relative">
+                    <img src="assets/templates/laptop-template.webp" alt="Laptop template" class="w-full">
+                    <div class="absolute top-[2.5%] left-[9.5%] w-[81%] h-[85%]">
+                        <video width="100%" height="100%" autoplay loop muted playsinline class="object-cover rounded-sm">
+                            <source src="assets/images/project-right-tool/video-hero.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
             </section>
         </div>
@@ -146,8 +152,13 @@
                         </div>
                         <div class="text-sm text-center">
                             <img src="assets/images/team-photos/spencer.webp" alt="Spencer Cox" class="w-20 h-20 rounded-full object-cover mx-auto mb-3">
-                            <p class="font-semibold text-neutral-900 dark:text-neutral-50">Spencer Cox</p>
-                            <p class="text-neutral-600 dark:text-neutral-400 mt-1">Product Manager</p>
+                            <a href="https://www.linkedin.com/in/spencermcox/" target="_blank" rel="noopener noreferrer" class="font-semibold text-neutral-900 dark:text-neutral-50 hover:text-accent dark:hover:text-accent transition-colors inline-flex items-center gap-1 justify-center">
+                                Spencer Cox
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <p class="text-neutral-600 dark:text-neutral-400 mt-1">Director of Product Management</p>
                         </div>
                         <div class="text-sm text-center">
                             <img src="assets/images/team-photos/chris.webp" alt="Chris Lanoue" class="w-20 h-20 rounded-full object-cover mx-auto mb-3">
@@ -177,7 +188,7 @@
         <div class="bg-neutral-50 dark:bg-neutral-850">
             <div class="max-w-container mx-auto px-6 md:px-12">
         <section class="py-12 md:py-20">
-            <div class="max-w-3xl">
+            <div class="max-w-3xl mx-auto text-center">
                 <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
                     The Problem
                 </p>
@@ -187,152 +198,193 @@
                 <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
                     While Premise had ops tooling including a form builder and campaign manager, they had started using spreadsheets to manage more complex use cases that the system could not support. However these spreadsheets made it easy to make consequential mistakes.
                 </p>
-                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                    Here is what the form builder and one of the spreadsheets looked like before the project.
-                </p>
+            </div>
+
+        <!-- Where do we start? subsection -->
+        <section class="py-12 md:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-[3fr_7fr] gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Where do we start?
+                    </h3>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        I created a survey to get feedback from campaign mangers to understand where they spend the most time. Sentiment surveys required the most effort and they represented most of Premise's business so we started there.
+                    </p>
+                </div>
+                <div class="flex justify-center lg:justify-end">
+                    <img id="where-start-image" src="assets/images/project-right-tool/research-form-ops-results-0.webp" alt="Internal survey results showing campaign manager pain points" class="w-full h-auto rounded-lg">
+                </div>
             </div>
         </section>
 
-        <!-- Form Builder Before Image (Light Grey) -->
-        <section class="pb-12 md:pb-20">
-            <div class="max-w-5xl mx-auto">
-                <img src="assets/images/project-right-tool/form-builder-before.webp" alt="Form builder interface and spreadsheet workflow before improvements" class="w-full h-auto rounded-lg mb-4">
-                <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
-                    The original form builder alongside the spreadsheet-based workarounds internal teams were using.
-                </p>
+        <!-- Simplifying for surveys subsection -->
+        <section class="py-12 md:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-[7fr_3fr] gap-12 items-center">
+                <div class="flex justify-center lg:justify-start">
+                    <img src="assets/images/project-right-tool/mental-modal-mapping.webp" alt="Mental model diagram of campaign creation process" class="w-full h-auto rounded-lg">
+                </div>
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Simplifying for surveys
+                    </h3>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        We stripped down the campaign creation process to only the essential inputs for surveys, significantly simplifying the workflow.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Building Interviews (Light Grey) -->
+        <section class="py-12 md:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-[3fr_7fr] gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Forms required constant rework
+                    </h3>
+                    <ul class="space-y-4 text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        <li class="flex gap-3">
+                            <span class="text-accent">•</span>
+                            <span>They spend a lot of time rewriting similar questions because they can't easily refer to previous surveys.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-accent">•</span>
+                            <span>If a form requires templating they use Google Sheets.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-accent">•</span>
+                            <span>Input groups cannot be nested in Input groups and this limitation leads to many work arounds.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex justify-center lg:justify-end">
+                    <img id="form-builder-before-image" src="assets/images/project-right-tool/ops-form-builder-1.webp" alt="Form builder interface showing the problems" class="w-full h-auto rounded-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Campaign Interviews (Light Grey) -->
+        <section class="py-12 md:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-[7fr_3fr] gap-12 items-center">
+                <div class="flex justify-center lg:justify-start">
+                    <img id="campaign-builder-before-image" src="assets/images/project-right-tool/ops-campaign-builder-1.webp" alt="Campaign builder interface showing the problems" class="w-full h-auto rounded-lg">
+                </div>
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Campaigns needed bulk operations
+                    </h3>
+                    <ul class="space-y-4 text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        <li class="flex gap-3">
+                            <span class="text-accent">•</span>
+                            <span>They spend a lot of time creating campaigns for surveys because they need 50-100 campaigns to collect representative samples across age and gender.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-accent">•</span>
+                            <span>In order to reach representative targets they spend considerable time converting currencies and updating targets.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-accent">•</span>
+                            <span>Campaign configuration settings for Tasks was confusing, but they got used to it once they read internal documentation.</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
             </div> <!-- Close max-w-container for light grey -->
         </div> <!-- Close light grey container -->
 
-        <!-- Form Building Interviews (White) -->
+        <!-- Success Metric and HMW Section (White) -->
         <div class="max-w-container mx-auto px-6 md:px-12">
 
-                <section class="py-12 md:py-20">
-                    <div class="max-w-3xl">
-                        <p class="text-lg font-display text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
-                            We interviewed internal users about form building and learned...
-                        </p>
-                        <ul class="space-y-4 text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                            <li class="flex gap-3">
-                                <span class="text-accent">•</span>
-                                <span>They spend a lot of time rewriting similar questions because they can't easily refer to previous surveys.</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="text-accent">•</span>
-                                <span>If a form requires templating they use Google Sheets.</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="text-accent">•</span>
-                                <span>Input groups cannot be nested in Input groups and this limitation leads to many work arounds.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-        </div> <!-- Close white container -->
-
-        <!-- Campaign Manager Before (Light Grey) -->
-        <div class="bg-neutral-50 dark:bg-neutral-850">
-            <div class="max-w-container mx-auto px-6 md:px-12">
+        <!-- Success Metric Section (White) -->
         <section class="py-12 md:py-20">
-            <div class="max-w-3xl mb-12">
-                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                    Here is what the campaign manager and one of the spreadsheets looked like before the project.
-                </p>
-            </div>
-
-            <div class="max-w-5xl mx-auto">
-                <img src="assets/images/project-right-tool/campaign-manager-before.webp" alt="Campaign manager interface and spreadsheet workflow before improvements" class="w-full h-auto rounded-lg mb-4">
-                <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
-                    The campaign manager and the complex spreadsheets used for bulk operations.
-                </p>
-            </div>
-        </section>
-
-            </div> <!-- Close max-w-container for light grey -->
-        </div> <!-- Close light grey container -->
-
-        <!-- Campaign Interviews (White) -->
-        <div class="max-w-container mx-auto px-6 md:px-12">
-
-                <section class="py-12 md:py-20">
-                    <div class="max-w-3xl">
-                        <p class="text-lg font-display text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
-                            We interviewed internal users about campaigns and learned...
-                        </p>
-                        <ul class="space-y-4 text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                            <li class="flex gap-3">
-                                <span class="text-accent">•</span>
-                                <span>They spend a lot of time creating campaigns for surveys because they need 50-100 campaigns to collect representative samples across age and gender.</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="text-accent">•</span>
-                                <span>In order to reach representative targets they spend considerable time converting currencies and updating targets.</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="text-accent">•</span>
-                                <span>Campaign configuration settings for Tasks was confusing, but they got used to it once they read internal documentation.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-        </div> <!-- Close white container -->
-
-        <!-- Success Metric and HMW Section (Light Grey) -->
-        <div class="bg-neutral-50 dark:bg-neutral-850">
-            <div class="max-w-container mx-auto px-6 md:px-12">
-
-        <!-- Success Metric Section (Light Grey) -->
-        <section class="py-12 md:py-20">
-            <div class="max-w-3xl">
+            <div class="max-w-3xl mx-auto text-center">
                 <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
                     Success Metric
                 </p>
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight">
-                    Reduce the time Customer Success and Operations spend managing customer data collection.
+                <div class="text-8xl md:text-9xl font-display font-bold text-accent mb-6">
+                    10x
+                </div>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight mb-4">
+                    Reduction in ops time spent managing surveys
                 </h2>
+                <p class="text-lg text-neutral-600 dark:text-neutral-400">
+                    About 10 hours per week savings per person
+                </p>
             </div>
         </section>
 
-        <!-- HMW Section (Light Grey) -->
-        <section class="py-12 md:py-20">
-            <div class="text-center">
-                <h2 class="text-3xl md:text-4xl font-display font-bold text-accent leading-relaxed italic">
-                    How might we optimize ops workflows?
-                </h2>
-            </div>
-        </section>
+        </div> <!-- Close white container -->
 
-            </div> <!-- Close max-w-container for light grey -->
-        </div> <!-- Close light grey container -->
-
-        <!-- Form Building (Light Grey) -->
+        <!-- The Solutions (Light Grey) -->
         <div class="bg-neutral-50 dark:bg-neutral-850">
             <div class="max-w-container mx-auto px-6 md:px-12">
+        <section class="py-12 md:py-20">
+            <div class="mb-12 text-center">
+                <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
+                    The Solutions
+                </p>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight">
+                    Purpose-built tools for campaigns and forms
+                </h2>
+            </div>
 
-                <section class="py-12 md:py-20">
-                    <div class="mb-12">
-                        <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
-                            Form Building
-                        </p>
-                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight">
-                            We ran many experiments to bring clarity to a lot of ambiguity
-                        </h2>
+        </section>
+
+        <!-- Campaign updates subsection -->
+        <section class="py-12 md:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-[3fr_7fr] gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Campaign updates
+                    </h3>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        We started with making updates to existing campaigns easier because it was impactful and inexpensive. Increasing payment or collection targets required currency conversions and extensive calculations just to make a 10% increase across all campaigns.
+                    </p>
+                </div>
+                <div class="flex justify-center lg:justify-end">
+                    <div class="relative w-full">
+                        <img src="assets/templates/laptop-template.webp" alt="Laptop template" class="w-full">
+                        <div class="absolute top-[2.5%] left-[9.5%] w-[81%] h-[85%]">
+                            <video width="100%" height="100%" autoplay loop muted playsinline class="object-cover rounded-sm">
+                                <source src="assets/images/project-right-tool/campaign-updating-workflow.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="max-w-5xl mx-auto mb-12">
-                        <img src="assets/images/project-right-tool/form-building-experiments.webp" alt="Form building design experiments and prototypes" class="w-full h-auto rounded-lg mb-4">
-                        <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
-                            Multiple design experiments exploring different approaches to form building.
-                        </p>
+        <!-- Bulk campaign creation subsection -->
+        <section class="py-12 md:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-[7fr_3fr] gap-12 items-center">
+                <div class="flex justify-center lg:justify-start">
+                    <div class="relative w-full">
+                        <img src="assets/templates/laptop-template.webp" alt="Laptop template" class="w-full">
+                        <div class="absolute top-[2.5%] left-[9.5%] w-[81%] h-[85%]">
+                            <video width="100%" height="100%" autoplay loop muted playsinline class="object-cover rounded-sm">
+                                <source src="assets/images/project-right-tool/video-hero.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                     </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Bulk campaign creation for surveys
+                    </h3>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        Next we tackled bulk campaign creation for surveys. The use case for surveys was the need to collection representative samples primarily across age and gender.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Form creation subsection -->
-                    <div class="mb-12">
-                        <h3 class="text-xl md:text-2xl font-display font-bold mb-6 text-accent">
+        <!-- Form creation subsection -->
+        <section class="py-12 md:py-20">
+                    <div class="mb-12 max-w-3xl mx-auto text-center">
+                        <h3 class="text-2xl md:text-3xl font-display font-bold mb-6 text-neutral-900 dark:text-neutral-50">
                             Form creation
                         </h3>
                         <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
@@ -341,134 +393,65 @@
                     </div>
 
                     <div class="max-w-5xl mx-auto mb-12">
-                        <img src="assets/images/project-right-tool/form-creation.webp" alt="Redesigned form creation interface" class="w-full h-auto rounded-lg mb-4">
-                        <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
-                            The new form creation interface integrated into the customer product.
+                        <div class="relative">
+                            <img src="assets/templates/laptop-template.webp" alt="Laptop template" class="w-full">
+                            <div class="absolute top-[2.5%] left-[9.5%] w-[81%] h-[85%]">
+                                <video width="100%" height="100%" autoplay loop muted playsinline class="object-cover rounded-sm">
+                                    <source src="assets/images/project-right-tool/form-creation.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                            Form creation workflow demonstration.
                         </p>
                     </div>
 
                     <!-- Collaborating with customers subsection -->
-                    <div class="mb-12">
-                        <h3 class="text-xl md:text-2xl font-display font-bold mb-6 text-accent">
+                    <div class="mb-12 max-w-3xl mx-auto text-center">
+                        <h3 class="text-2xl md:text-3xl font-display font-bold mb-6 text-neutral-900 dark:text-neutral-50">
                             Collaborating with customers
                         </h3>
                         <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                            During form creation, there was significant back and forth with customers. By applying systems thinking, we considered allowing customers to use a view-only form builder that would replace the current task preview. This would enable both internal users and customers to collaborate in the same space, providing a mobile preview and enhanced localization capabilities.
+                            Form creation involved significant back and forth with customers. We gave customers view-only access to the form builder, turning it into a shared collaboration space with mobile preview and localization support.
                         </p>
                     </div>
 
                     <div class="max-w-5xl mx-auto">
-                        <img src="assets/images/project-right-tool/customer-collaboration.webp" alt="Customer collaboration interface for form building" class="w-full h-auto rounded-lg mb-4">
-                        <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
+                        <div class="relative">
+                            <img src="assets/templates/laptop-template.webp" alt="Laptop template" class="w-full">
+                            <div class="absolute top-[2.5%] left-[9.5%] w-[81%] h-[85%]">
+                                <video width="100%" height="100%" autoplay loop muted playsinline class="object-cover rounded-sm">
+                                    <source src="assets/images/project-right-tool/collaborating-with-customers.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
                             View-only form builder enabling collaboration between internal teams and customers.
                         </p>
                     </div>
-                </section>
+        </section>
 
             </div> <!-- Close max-w-container for light grey -->
         </div> <!-- Close light grey container -->
 
+        <!-- Learnings (White) -->
         <div class="max-w-container mx-auto px-6 md:px-12">
 
-        <!-- Campaign Building (White) -->
-        <section class="py-12 md:py-20">
-            <div class="mb-12">
-                <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
-                    Campaign Building
-                </p>
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight">
-                    We started with understanding the problem space
-                </h2>
-            </div>
-
-            <!-- Where do we start? subsection -->
-            <div class="mb-12">
-                <h3 class="text-xl md:text-2xl font-display font-bold mb-6 text-accent">
-                    Where do we start?
-                </h3>
-                <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                    I created a survey to get feedback from campaign mangers to understand where they spend the most time. Sentiment surveys required the most effort and they represented most of Premise's business so we started there.
-                </p>
-            </div>
-
-            <div class="max-w-5xl mx-auto mb-12">
-                <img src="assets/images/project-right-tool/campaign-survey-results.webp" alt="Internal survey results showing campaign manager pain points" class="w-full h-auto rounded-lg mb-4">
-                <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
-                    Survey results showing sentiment surveys require the most effort from campaign managers.
-                </p>
-            </div>
-
-            <!-- Mental model mapping subsection -->
-            <div class="mb-12">
-                <h3 class="text-xl md:text-2xl font-display font-bold mb-6 text-accent">
-                    Mental model mapping
-                </h3>
-                <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                    We analyzed the mental model of the current campaign creation process and identified the essential inputs required specifically for surveys. This allowed us to significantly simplify the process for creating survey campaigns.
-                </p>
-            </div>
-
-            <div class="max-w-5xl mx-auto mb-12">
-                <img src="assets/images/project-right-tool/mental-model-mapping.webp" alt="Mental model diagram of campaign creation process" class="w-full h-auto rounded-lg mb-4">
-                <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
-                    Analysis of the campaign creation mental model identifying essential inputs for surveys.
-                </p>
-            </div>
-
-            <!-- Campaign updates subsection -->
-            <div class="mb-12">
-                <h3 class="text-xl md:text-2xl font-display font-bold mb-6 text-accent">
-                    Campaign updates
-                </h3>
-                <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                    We started with making updates to existing campaigns easier because it was impactful and inexpensive. Increasing payment or collection targets required currency conversions and extensive calculations just to make a 10% increase across all campaigns.
-                </p>
-            </div>
-
-            <div class="max-w-5xl mx-auto mb-12">
-                <img src="assets/images/project-right-tool/campaign-updates.webp" alt="Improved campaign updates interface" class="w-full h-auto rounded-lg mb-4">
-                <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
-                    Simplified interface for updating campaigns without complex currency conversions.
-                </p>
-            </div>
-
-            <!-- Bulk campaign creation subsection -->
-            <div class="mb-12">
-                <h3 class="text-xl md:text-2xl font-display font-bold mb-6 text-accent">
-                    Bulk campaign creation for surveys
-                </h3>
-                <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                    Next we tackled bulk campaign creation for surveys. The use case for surveys was the need to collection representative samples primarily across age and gender.
-                </p>
-            </div>
-
-            <div class="max-w-5xl mx-auto">
-                <img src="assets/images/project-right-tool/bulk-campaign-creation.webp" alt="Bulk campaign creation interface for surveys" class="w-full h-auto rounded-lg mb-4">
-                <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
-                    Bulk campaign creation tool enabling representative sampling across age and gender.
-                </p>
-            </div>
-        </section>
-
-        </div> <!-- Close white container -->
-
-        <!-- Learnings (Light Grey) -->
-        <div class="bg-neutral-50 dark:bg-neutral-850">
-            <div class="max-w-container mx-auto px-6 md:px-12">
-
                 <section class="py-12 md:py-20">
-                    <div class="mb-12">
+                    <div class="mb-12 text-center">
                         <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
                             Learnings
                         </p>
                         <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight mb-8">
-                            Surveys and Tasks are fundamentally different
+                            Surveys and tasks are fundamentally different problems
                         </h2>
                         <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
-                            Premise had developed a single workflow for both surveys and tasks leading to a broken experience from data collection to customer data delivery.
+                            This project revealed a broader truth about product strategy: sometimes shared tooling creates more friction than it solves. What started as "fix the form builder" became "rethink how we serve two distinct use cases."
                         </p>
                         <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                            Let me further illustrate some of the fundamental differences and shared needs we identified.
+                            Here's what we learned about when workflows should diverge:
                         </p>
                     </div>
 
@@ -478,67 +461,53 @@
                             <thead>
                                 <tr class="border-b-2 border-neutral-300 dark:border-neutral-700">
                                     <th class="text-left py-4 px-4 font-display font-bold text-neutral-900 dark:text-neutral-50">Requirement</th>
-                                    <th class="text-left py-4 px-4 font-display font-bold text-neutral-900 dark:text-neutral-50">Surveys<br><span class="font-normal text-sm text-neutral-600 dark:text-neutral-400">People</span></th>
-                                    <th class="text-left py-4 px-4 font-display font-bold text-neutral-900 dark:text-neutral-50">Tasks<br><span class="font-normal text-sm text-neutral-600 dark:text-neutral-400">Places, Products</span></th>
+                                    <th class="text-left py-4 px-4 font-display font-bold text-neutral-900 dark:text-neutral-50">Surveys</th>
+                                    <th class="text-left py-4 px-4 font-display font-bold text-neutral-900 dark:text-neutral-50">Tasks</th>
                                 </tr>
                             </thead>
                             <tbody class="text-neutral-600 dark:text-neutral-400">
                                 <tr class="border-b border-neutral-200 dark:border-neutral-800">
-                                    <td class="py-4 px-4">Master Data Management</td>
-                                    <td class="py-4 px-4">Required</td>
-                                    <td class="py-4 px-4">Not required</td>
+                                    <td class="py-4 px-4">Representative sample</td>
+                                    <td class="py-4 px-4"><span class="text-green-600 dark:text-green-500 text-2xl">✓</span> People</td>
+                                    <td class="py-4 px-4"><span class="text-green-600 dark:text-green-500 text-2xl">✓</span> Places, Products</td>
                                 </tr>
                                 <tr class="border-b border-neutral-200 dark:border-neutral-800">
-                                    <td class="py-4 px-4">Representative Sampling of Respondents</td>
-                                    <td class="py-4 px-4">Required</td>
-                                    <td class="py-4 px-4">Not required</td>
+                                    <td class="py-4 px-4">Audience targeting (e.g. Pet Owners)</td>
+                                    <td class="py-4 px-4 text-center text-green-600 dark:text-green-500 text-2xl">✓</td>
+                                    <td class="py-4 px-4 text-center text-neutral-400 dark:text-neutral-500 text-2xl">✕</td>
                                 </tr>
                                 <tr class="border-b border-neutral-200 dark:border-neutral-800">
-                                    <td class="py-4 px-4">Respondent segment targeting (e.g. Pet Owners)</td>
-                                    <td class="py-4 px-4">Required</td>
-                                    <td class="py-4 px-4">Not required</td>
+                                    <td class="py-4 px-4">Multi-language support</td>
+                                    <td class="py-4 px-4 text-center text-green-600 dark:text-green-500 text-2xl">✓</td>
+                                    <td class="py-4 px-4 text-center text-neutral-400 dark:text-neutral-500 text-2xl">✕</td>
                                 </tr>
                                 <tr class="border-b border-neutral-200 dark:border-neutral-800">
-                                    <td class="py-4 px-4">Advanced localization</td>
-                                    <td class="py-4 px-4">Required</td>
-                                    <td class="py-4 px-4">Not required</td>
+                                    <td class="py-4 px-4">Dynamic form creation</td>
+                                    <td class="py-4 px-4 text-center text-neutral-400 dark:text-neutral-500 text-2xl">✕</td>
+                                    <td class="py-4 px-4 text-center text-green-600 dark:text-green-500 text-2xl">✓</td>
                                 </tr>
                                 <tr class="border-b border-neutral-200 dark:border-neutral-800">
-                                    <td class="py-4 px-4">Representative Sampling of Geographic Areas</td>
-                                    <td class="py-4 px-4">Not required</td>
-                                    <td class="py-4 px-4">Required</td>
-                                </tr>
-                                <tr class="border-b border-neutral-200 dark:border-neutral-800">
-                                    <td class="py-4 px-4">Questions/inputs created on the fly</td>
-                                    <td class="py-4 px-4">Not required</td>
-                                    <td class="py-4 px-4">Required</td>
-                                </tr>
-                                <tr class="border-b border-neutral-200 dark:border-neutral-800">
-                                    <td class="py-4 px-4">Conditional logic</td>
-                                    <td class="py-4 px-4">Required</td>
-                                    <td class="py-4 px-4">Required</td>
-                                </tr>
-                                <tr class="border-b border-neutral-200 dark:border-neutral-800">
-                                    <td class="py-4 px-4">Branching logic</td>
-                                    <td class="py-4 px-4">Required</td>
-                                    <td class="py-4 px-4">Required</td>
+                                    <td class="py-4 px-4">Conditional & branching logic</td>
+                                    <td class="py-4 px-4 text-center text-green-600 dark:text-green-500 text-2xl">✓</td>
+                                    <td class="py-4 px-4 text-center text-green-600 dark:text-green-500 text-2xl">✓</td>
                                 </tr>
                                 <tr>
                                     <td class="py-4 px-4">Templated questions</td>
-                                    <td class="py-4 px-4">Required</td>
-                                    <td class="py-4 px-4">Required</td>
+                                    <td class="py-4 px-4 text-center text-green-600 dark:text-green-500 text-2xl">✓</td>
+                                    <td class="py-4 px-4 text-center text-green-600 dark:text-green-500 text-2xl">✓</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </section>
 
-            </div> <!-- Close max-w-container for light grey -->
-        </div> <!-- Close light grey container -->
+        </div> <!-- Close white container -->
 
-        <div class="max-w-container mx-auto px-6 md:px-12">
+        <!-- CTA Section (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <div class="max-w-container mx-auto px-6 md:px-12">
 
-        <!-- CTA Section (White) -->
+        <!-- CTA Section (Light Grey) -->
         <section class="py-12 md:py-20">
             <div class="max-w-2xl mx-auto text-center">
                 <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
@@ -574,6 +543,56 @@
         <p class="mb-2">© 2026 Terrence Fradet</p>
         <p>Created with Figma + Claude · <a href="https://github.com/tjamjam/tfradet-portfolio" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors inline-flex items-center gap-1">View source <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a></p>
     </footer>
+
+    <script>
+        // Auto-cycle form builder BEFORE images (in problem section)
+        const formBuilderBeforeImages = [
+            'assets/images/project-right-tool/ops-form-builder-1.webp',
+            'assets/images/project-right-tool/ops-form-builder-2.webp',
+            'assets/images/project-right-tool/ops-form-builder-3.webp'
+        ];
+        let formBuilderBeforeIndex = 0;
+        const formBuilderBeforeImg = document.getElementById('form-builder-before-image');
+
+        if (formBuilderBeforeImg) {
+            setInterval(() => {
+                formBuilderBeforeIndex = (formBuilderBeforeIndex + 1) % formBuilderBeforeImages.length;
+                formBuilderBeforeImg.src = formBuilderBeforeImages[formBuilderBeforeIndex];
+            }, 3000);
+        }
+
+        // Auto-cycle where start images (in campaign building section)
+        const whereStartImages = [
+            'assets/images/project-right-tool/research-form-ops-results-0.webp',
+            'assets/images/project-right-tool/research-form-ops-results-1.webp',
+            'assets/images/project-right-tool/research-form-ops-results-2.webp'
+        ];
+        let whereStartIndex = 0;
+        const whereStartImg = document.getElementById('where-start-image');
+
+        if (whereStartImg) {
+            setInterval(() => {
+                whereStartIndex = (whereStartIndex + 1) % whereStartImages.length;
+                whereStartImg.src = whereStartImages[whereStartIndex];
+            }, 3000);
+        }
+
+        // Auto-cycle campaign builder BEFORE images (in problem section)
+        const campaignBuilderBeforeImages = [
+            'assets/images/project-right-tool/ops-campaign-builder-1.webp',
+            'assets/images/project-right-tool/ops-campaign-builder-2.webp',
+            'assets/images/project-right-tool/ops-campaign-builder-3.webp'
+        ];
+        let campaignBuilderBeforeIndex = 0;
+        const campaignBuilderBeforeImg = document.getElementById('campaign-builder-before-image');
+
+        if (campaignBuilderBeforeImg) {
+            setInterval(() => {
+                campaignBuilderBeforeIndex = (campaignBuilderBeforeIndex + 1) % campaignBuilderBeforeImages.length;
+                campaignBuilderBeforeImg.src = campaignBuilderBeforeImages[campaignBuilderBeforeIndex];
+            }, 3000);
+        }
+    </script>
 
 </body>
 </html>
