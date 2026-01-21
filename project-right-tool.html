@@ -393,7 +393,7 @@
                     </p>
                 </div>
                 <div class="flex justify-center lg:justify-end">
-                    <img src="assets/images/project-right-tool/campaign-survey-results.webp" alt="Internal survey results showing campaign manager pain points" class="w-full h-auto rounded-lg">
+                    <img id="where-start-image" src="assets/images/project-right-tool/research-form-ops-results-0.webp" alt="Internal survey results showing campaign manager pain points" class="w-full h-auto rounded-lg">
                 </div>
             </div>
         </section>
@@ -402,7 +402,7 @@
         <section class="py-12 md:py-20">
             <div class="grid grid-cols-1 lg:grid-cols-[7fr_3fr] gap-12 items-center">
                 <div class="flex justify-center lg:justify-start">
-                    <img src="assets/images/project-right-tool/mental-model-mapping.webp" alt="Mental model diagram of campaign creation process" class="w-full h-auto rounded-lg">
+                    <img src="assets/images/project-right-tool/mental-modal-mapping.webp" alt="Mental model diagram of campaign creation process" class="w-full h-auto rounded-lg">
                 </div>
                 <div>
                     <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
@@ -591,6 +591,22 @@
             setInterval(() => {
                 formBuilderBeforeIndex = (formBuilderBeforeIndex + 1) % formBuilderBeforeImages.length;
                 formBuilderBeforeImg.src = formBuilderBeforeImages[formBuilderBeforeIndex];
+            }, 3000);
+        }
+
+        // Auto-cycle where start images (in campaign building section)
+        const whereStartImages = [
+            'assets/images/project-right-tool/research-form-ops-results-0.webp',
+            'assets/images/project-right-tool/research-form-ops-results-1.webp',
+            'assets/images/project-right-tool/research-form-ops-results-2.webp'
+        ];
+        let whereStartIndex = 0;
+        const whereStartImg = document.getElementById('where-start-image');
+
+        if (whereStartImg) {
+            setInterval(() => {
+                whereStartIndex = (whereStartIndex + 1) % whereStartImages.length;
+                whereStartImg.src = whereStartImages[whereStartIndex];
             }, 3000);
         }
 
