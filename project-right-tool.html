@@ -113,10 +113,16 @@
                 </div>
             </section>
 
-            <!-- Hero Image -->
+            <!-- Hero Video -->
             <section class="max-w-container mx-auto px-6 md:px-12 pb-12 md:pb-20">
-                <div class="max-w-5xl mx-auto">
-                    <img src="assets/images/project-right-tool/hero-mockup.webp" alt="Internal operations tooling interface" class="w-full h-auto rounded-lg">
+                <div class="max-w-5xl mx-auto relative">
+                    <img src="assets/templates/laptop-template.webp" alt="Laptop template" class="w-full">
+                    <div class="absolute top-[2.5%] left-[9.5%] w-[81%] h-[85%]">
+                        <video width="100%" height="100%" autoplay loop muted playsinline class="object-cover rounded-sm">
+                            <source src="assets/images/project-right-tool/video-hero.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
             </section>
         </div>
@@ -146,8 +152,13 @@
                         </div>
                         <div class="text-sm text-center">
                             <img src="assets/images/team-photos/spencer.webp" alt="Spencer Cox" class="w-20 h-20 rounded-full object-cover mx-auto mb-3">
-                            <p class="font-semibold text-neutral-900 dark:text-neutral-50">Spencer Cox</p>
-                            <p class="text-neutral-600 dark:text-neutral-400 mt-1">Product Manager</p>
+                            <a href="https://www.linkedin.com/in/spencermcox/" target="_blank" rel="noopener noreferrer" class="font-semibold text-neutral-900 dark:text-neutral-50 hover:text-accent dark:hover:text-accent transition-colors inline-flex items-center gap-1 justify-center">
+                                Spencer Cox
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <p class="text-neutral-600 dark:text-neutral-400 mt-1">Director of Product Management</p>
                         </div>
                         <div class="text-sm text-center">
                             <img src="assets/images/team-photos/chris.webp" alt="Chris Lanoue" class="w-20 h-20 rounded-full object-cover mx-auto mb-3">
@@ -177,7 +188,7 @@
         <div class="bg-neutral-50 dark:bg-neutral-850">
             <div class="max-w-container mx-auto px-6 md:px-12">
         <section class="py-12 md:py-20">
-            <div class="max-w-3xl">
+            <div class="max-w-3xl mx-auto text-center">
                 <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
                     The Problem
                 </p>
@@ -187,30 +198,21 @@
                 <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
                     While Premise had ops tooling including a form builder and campaign manager, they had started using spreadsheets to manage more complex use cases that the system could not support. However these spreadsheets made it easy to make consequential mistakes.
                 </p>
-                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                    Here is what the form builder and one of the spreadsheets looked like before the project.
-                </p>
             </div>
-        </section>
 
-        <!-- Form Builder Before Image (Light Grey) -->
-        <section class="pb-12 md:pb-20">
-            <div class="max-w-5xl mx-auto">
-                <img src="assets/images/project-right-tool/form-builder-before.webp" alt="Form builder interface and spreadsheet workflow before improvements" class="w-full h-auto rounded-lg mb-4">
+        <!-- Form Builder Before Images (Light Grey) -->
+        <section class="py-12 md:py-20">
+            <div class="max-w-3xl mx-auto">
+                <img id="form-builder-before-image" src="assets/images/project-right-tool/ops-form-builder-1.webp" alt="Form builder interface showing the problems" class="w-full h-auto rounded-lg mb-4">
                 <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
-                    The original form builder alongside the spreadsheet-based workarounds internal teams were using.
+                    The form builder and spreadsheet-based workarounds that internal teams were using.
                 </p>
             </div>
         </section>
 
-            </div> <!-- Close max-w-container for light grey -->
-        </div> <!-- Close light grey container -->
-
-        <!-- Form Building Interviews (White) -->
-        <div class="max-w-container mx-auto px-6 md:px-12">
-
+                <!-- Form Building Interviews (Light Grey) -->
                 <section class="py-12 md:py-20">
-                    <div class="max-w-3xl">
+                    <div class="max-w-3xl mx-auto">
                         <p class="text-lg font-display text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
                             We interviewed internal users about form building and learned...
                         </p>
@@ -231,34 +233,19 @@
                     </div>
                 </section>
 
-        </div> <!-- Close white container -->
-
-        <!-- Campaign Manager Before (Light Grey) -->
-        <div class="bg-neutral-50 dark:bg-neutral-850">
-            <div class="max-w-container mx-auto px-6 md:px-12">
+        <!-- Campaign Builder Before Images (Light Grey) -->
         <section class="py-12 md:py-20">
-            <div class="max-w-3xl mb-12">
-                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                    Here is what the campaign manager and one of the spreadsheets looked like before the project.
-                </p>
-            </div>
-
-            <div class="max-w-5xl mx-auto">
-                <img src="assets/images/project-right-tool/campaign-manager-before.webp" alt="Campaign manager interface and spreadsheet workflow before improvements" class="w-full h-auto rounded-lg mb-4">
+            <div class="max-w-3xl mx-auto">
+                <img id="campaign-builder-before-image" src="assets/images/project-right-tool/ops-campaign-builder-1.webp" alt="Campaign builder interface showing the problems" class="w-full h-auto rounded-lg mb-4">
                 <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
                     The campaign manager and the complex spreadsheets used for bulk operations.
                 </p>
             </div>
         </section>
 
-            </div> <!-- Close max-w-container for light grey -->
-        </div> <!-- Close light grey container -->
-
-        <!-- Campaign Interviews (White) -->
-        <div class="max-w-container mx-auto px-6 md:px-12">
-
+                <!-- Campaign Interviews (Light Grey) -->
                 <section class="py-12 md:py-20">
-                    <div class="max-w-3xl">
+                    <div class="max-w-3xl mx-auto">
                         <p class="text-lg font-display text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
                             We interviewed internal users about campaigns and learned...
                         </p>
@@ -279,7 +266,8 @@
                     </div>
                 </section>
 
-        </div> <!-- Close white container -->
+            </div> <!-- Close max-w-container for light grey -->
+        </div> <!-- Close light grey container -->
 
         <!-- Success Metric and HMW Section (Light Grey) -->
         <div class="bg-neutral-50 dark:bg-neutral-850">
@@ -287,7 +275,7 @@
 
         <!-- Success Metric Section (Light Grey) -->
         <section class="py-12 md:py-20">
-            <div class="max-w-3xl">
+            <div class="max-w-3xl mx-auto text-center">
                 <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
                     Success Metric
                 </p>
@@ -314,7 +302,7 @@
             <div class="max-w-container mx-auto px-6 md:px-12">
 
                 <section class="py-12 md:py-20">
-                    <div class="mb-12">
+                    <div class="mb-12 text-center">
                         <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
                             Form Building
                         </p>
@@ -323,12 +311,6 @@
                         </h2>
                     </div>
 
-                    <div class="max-w-5xl mx-auto mb-12">
-                        <img src="assets/images/project-right-tool/form-building-experiments.webp" alt="Form building design experiments and prototypes" class="w-full h-auto rounded-lg mb-4">
-                        <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
-                            Multiple design experiments exploring different approaches to form building.
-                        </p>
-                    </div>
 
                     <!-- Form creation subsection -->
                     <div class="mb-12">
@@ -341,10 +323,22 @@
                     </div>
 
                     <div class="max-w-5xl mx-auto mb-12">
-                        <img src="assets/images/project-right-tool/form-creation.webp" alt="Redesigned form creation interface" class="w-full h-auto rounded-lg mb-4">
-                        <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
-                            The new form creation interface integrated into the customer product.
+                        <div class="relative">
+                            <img src="assets/templates/laptop-template.webp" alt="Laptop template" class="w-full">
+                            <div class="absolute top-[2.5%] left-[9.5%] w-[81%] h-[85%]">
+                                <video width="100%" height="100%" autoplay loop muted playsinline class="object-cover rounded-sm">
+                                    <source src="assets/images/project-right-tool/form-creation.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
+                            Form creation workflow demonstration.
                         </p>
+                    </div>
+
+                    <div class="max-w-5xl mx-auto mb-12">
+                        <img id="form-builder-image" src="assets/images/project-right-tool/ops-form-builder-1.webp" alt="Redesigned form creation interface" class="w-full h-auto rounded-lg">
                     </div>
 
                     <!-- Collaborating with customers subsection -->
@@ -358,8 +352,16 @@
                     </div>
 
                     <div class="max-w-5xl mx-auto">
-                        <img src="assets/images/project-right-tool/customer-collaboration.webp" alt="Customer collaboration interface for form building" class="w-full h-auto rounded-lg mb-4">
-                        <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
+                        <div class="relative">
+                            <img src="assets/templates/laptop-template.webp" alt="Laptop template" class="w-full">
+                            <div class="absolute top-[2.5%] left-[9.5%] w-[81%] h-[85%]">
+                                <video width="100%" height="100%" autoplay loop muted playsinline class="object-cover rounded-sm">
+                                    <source src="assets/images/project-right-tool/collaborating-with-customers.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center mt-4">
                             View-only form builder enabling collaboration between internal teams and customers.
                         </p>
                     </div>
@@ -372,7 +374,7 @@
 
         <!-- Campaign Building (White) -->
         <section class="py-12 md:py-20">
-            <div class="mb-12">
+            <div class="mb-12 text-center">
                 <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
                     Campaign Building
                 </p>
@@ -442,10 +444,17 @@
                 </p>
             </div>
 
-            <div class="max-w-5xl mx-auto">
-                <img src="assets/images/project-right-tool/bulk-campaign-creation.webp" alt="Bulk campaign creation interface for surveys" class="w-full h-auto rounded-lg mb-4">
+            <div class="max-w-5xl mx-auto mb-12">
+                <img id="campaign-builder-image" src="assets/images/project-right-tool/ops-campaign-builder-1.webp" alt="Bulk campaign creation interface for surveys" class="w-full h-auto rounded-lg mb-4">
                 <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
                     Bulk campaign creation tool enabling representative sampling across age and gender.
+                </p>
+            </div>
+
+            <div class="max-w-5xl mx-auto">
+                <img src="assets/images/project-right-tool/forms.webp" alt="Final campaign builder solution" class="w-full h-auto rounded-lg mb-4">
+                <p class="text-sm text-neutral-600 dark:text-neutral-400 text-center">
+                    The completed campaign builder with bulk creation capabilities.
                 </p>
             </div>
         </section>
@@ -457,7 +466,7 @@
             <div class="max-w-container mx-auto px-6 md:px-12">
 
                 <section class="py-12 md:py-20">
-                    <div class="mb-12">
+                    <div class="mb-12 text-center">
                         <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
                             Learnings
                         </p>
@@ -574,6 +583,72 @@
         <p class="mb-2">© 2026 Terrence Fradet</p>
         <p>Created with Figma + Claude · <a href="https://github.com/tjamjam/tfradet-portfolio" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors inline-flex items-center gap-1">View source <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a></p>
     </footer>
+
+    <script>
+        // Auto-cycle form builder BEFORE images (in problem section)
+        const formBuilderBeforeImages = [
+            'assets/images/project-right-tool/ops-form-builder-1.webp',
+            'assets/images/project-right-tool/ops-form-builder-2.webp',
+            'assets/images/project-right-tool/ops-form-builder-3.webp'
+        ];
+        let formBuilderBeforeIndex = 0;
+        const formBuilderBeforeImg = document.getElementById('form-builder-before-image');
+
+        if (formBuilderBeforeImg) {
+            setInterval(() => {
+                formBuilderBeforeIndex = (formBuilderBeforeIndex + 1) % formBuilderBeforeImages.length;
+                formBuilderBeforeImg.src = formBuilderBeforeImages[formBuilderBeforeIndex];
+            }, 3000);
+        }
+
+        // Auto-cycle form builder images (solution section)
+        const formBuilderImages = [
+            'assets/images/project-right-tool/ops-form-builder-1.webp',
+            'assets/images/project-right-tool/ops-form-builder-2.webp',
+            'assets/images/project-right-tool/ops-form-builder-3.webp'
+        ];
+        let formBuilderIndex = 0;
+        const formBuilderImg = document.getElementById('form-builder-image');
+
+        if (formBuilderImg) {
+            setInterval(() => {
+                formBuilderIndex = (formBuilderIndex + 1) % formBuilderImages.length;
+                formBuilderImg.src = formBuilderImages[formBuilderIndex];
+            }, 3000);
+        }
+
+        // Auto-cycle campaign builder BEFORE images (in problem section)
+        const campaignBuilderBeforeImages = [
+            'assets/images/project-right-tool/ops-campaign-builder-1.webp',
+            'assets/images/project-right-tool/ops-campaign-builder-2.webp',
+            'assets/images/project-right-tool/ops-campaign-builder-3.webp'
+        ];
+        let campaignBuilderBeforeIndex = 0;
+        const campaignBuilderBeforeImg = document.getElementById('campaign-builder-before-image');
+
+        if (campaignBuilderBeforeImg) {
+            setInterval(() => {
+                campaignBuilderBeforeIndex = (campaignBuilderBeforeIndex + 1) % campaignBuilderBeforeImages.length;
+                campaignBuilderBeforeImg.src = campaignBuilderBeforeImages[campaignBuilderBeforeIndex];
+            }, 3000);
+        }
+
+        // Auto-cycle campaign builder images (solution section)
+        const campaignBuilderImages = [
+            'assets/images/project-right-tool/ops-campaign-builder-1.webp',
+            'assets/images/project-right-tool/ops-campaign-builder-2.webp',
+            'assets/images/project-right-tool/ops-campaign-builder-3.webp'
+        ];
+        let campaignBuilderIndex = 0;
+        const campaignBuilderImg = document.getElementById('campaign-builder-image');
+
+        if (campaignBuilderImg) {
+            setInterval(() => {
+                campaignBuilderIndex = (campaignBuilderIndex + 1) % campaignBuilderImages.length;
+                campaignBuilderImg.src = campaignBuilderImages[campaignBuilderIndex];
+            }, 3000);
+        }
+    </script>
 
 </body>
 </html>
