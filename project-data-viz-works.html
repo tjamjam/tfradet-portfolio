@@ -457,6 +457,25 @@
         <p>Created with Figma + Claude · <a href="https://github.com/tjamjam/tfradet-portfolio" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors inline-flex items-center gap-1">View source <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a></p>
     </footer>
 
+    <!-- Project Navigation Arrows -->
+    <a href="/project-streamlining-design.html" class="fixed left-4 top-1/2 -translate-y-1/2 z-40 p-3 rounded-full bg-white/10 dark:bg-neutral-900/10 backdrop-blur-md hover:bg-white/20 dark:hover:bg-neutral-900/20 transition-colors group" title="Streamlining Design">
+        <svg class="w-6 h-6 text-neutral-900 dark:text-neutral-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        <span class="absolute left-full ml-3 px-3 py-2 bg-neutral-900 dark:bg-neutral-50 text-neutral-50 dark:text-neutral-900 text-sm rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+            Streamlining Design
+        </span>
+    </a>
+
+    <a href="/personal-projects.html" class="fixed right-4 top-1/2 -translate-y-1/2 z-40 p-3 rounded-full bg-white/10 dark:bg-neutral-900/10 backdrop-blur-md hover:bg-white/20 dark:hover:bg-neutral-900/20 transition-colors group" title="Personal Projects">
+        <svg class="w-6 h-6 text-neutral-900 dark:text-neutral-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+        <span class="absolute right-full mr-3 px-3 py-2 bg-neutral-900 dark:bg-neutral-50 text-neutral-50 dark:text-neutral-900 text-sm rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+            Personal Projects
+        </span>
+    </a>
+
     <!-- Auto-cycling Image Script -->
     <script>
         // Nike Fuel Process cycling images
@@ -474,6 +493,15 @@
                 nikeFuelProcessImg.src = nikeFuelProcessImages[nikeFuelProcessIndex];
             }, 3000);
         }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                window.location.href = '/project-streamlining-design.html';
+            } else if (e.key === 'ArrowRight') {
+                window.location.href = '/personal-projects.html';
+            }
+        });
     </script>
 
 </body>
