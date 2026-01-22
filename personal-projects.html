@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Projects - Terrence Fradet">
+    <title>Personal Projects | Terrence Fradet</title>
+
+    <!-- Google Fonts: Spectral (display) + Lexend (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;600;700&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#171717',
+                            light: '#404040',
+                            dark: '#0a0a0a'
+                        },
+                        accent: {
+                            DEFAULT: '#E74C3C',
+                            light: '#EC7063',
+                            dark: '#C0392B'
+                        },
+                        neutral: {
+                            850: '#1e1e1e'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Dolly Pro', 'Spectral', 'Georgia', 'serif'],
+                        body: ['Lexend', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                    },
+                    maxWidth: {
+                        'container': '1200px'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- Theme Script (loads immediately to prevent flash) -->
+    <script src="src/scripts/theme.js"></script>
+
+    <!-- Copy to Clipboard Script -->
+    <script>
+        function copyEmail(event, email) {
+            const button = event.currentTarget;
+            navigator.clipboard.writeText(email).then(() => {
+                button.classList.add('copied');
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</head>
+<body class="font-body bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/10 dark:bg-neutral-900/10 backdrop-blur-md">
+        <div class="max-w-container mx-auto px-6 md:px-12 py-3">
+        <div class="flex justify-between items-center">
+            <a href="/" class="text-sm text-accent font-medium">← Back</a>
+            <div class="flex gap-6 items-center">
+                <a href="/" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">Home</a>
+                <a href="/about.html" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">About</a>
+                <a href="/resume.html" class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors">Resume</a>
+                <button
+                    onclick="toggleTheme()"
+                    class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors"
+                    aria-label="Toggle dark mode">
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                    <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section Group (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <!-- Hero Section -->
+            <section class="max-w-container mx-auto px-6 md:px-12 py-12 md:py-20">
+                <div class="max-w-4xl mx-auto text-center">
+                    <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
+                        Continuous learning
+                    </p>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+                        Personal Projects
+                    </h1>
+                    <p class="subtitle-text text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Get to know me better by taking a look at some of my personal projects.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Colorful Language Section (White) -->
+        <div class="bg-white dark:bg-neutral-900">
+            <div class="max-w-container mx-auto px-6 md:px-12">
+
+            <section class="py-12 md:py-20">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
+                        Data Viz
+                    </p>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight mb-8">
+                        Colorful Language
+                    </h2>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        The World Color Survey gathered data from 2,696 native speakers of 110 languages, asking each participant to identify 330 different colors.
+                    </p>
+                </div>
+
+                <!-- Main radial visualization -->
+                <div class="max-w-4xl mx-auto mb-6">
+                    <img src="assets/images/project-personal-projects/colorful-language-final.webp" alt="Colorful Language radial visualization" class="w-full h-auto rounded-lg">
+                </div>
+
+                <!-- Caption moved from editor -->
+                <div class="max-w-3xl mx-auto mb-12 text-center">
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        Using Processing, I wrote code to read the survey data and explore various ways to categorize and group it. These sketches evolved into the final image, displaying the results for each language as a series of blocks radiating from the center, arranged from the most frequently used term to the least.
+                    </p>
+                </div>
+
+                <!-- Processing editor (smaller) -->
+                <div class="max-w-xl mx-auto mb-6">
+                    <img src="assets/images/project-personal-projects/processing-editor.webp" alt="Processing code editor" class="w-full h-auto rounded-lg">
+                </div>
+
+                <!-- Caption moved from detail images -->
+                <div class="max-w-3xl mx-auto mb-12 text-center">
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        Mixing colors programmatically resulted in muddy hues, but relying on our own eyes produced satisfying, textured visualizations.
+                    </p>
+                </div>
+
+                <!-- Three detail images (auto-cycling) -->
+                <div class="max-w-4xl mx-auto mb-6">
+                    <img id="detail-image" src="assets/images/project-personal-projects/colorful-language-final-detail-1.webp" alt="Detail visualization" class="w-full h-auto rounded-lg">
+                </div>
+
+                <!-- Caption moved from print images -->
+                <div class="max-w-3xl mx-auto mb-12 text-center">
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Comparing like colors across languages.
+                    </p>
+                </div>
+
+                <!-- Six print images (auto-cycling) -->
+                <div class="max-w-4xl mx-auto mb-6">
+                    <img id="print-image" src="assets/images/project-personal-projects/colorful-print-1.webp" alt="Print design exploration" class="w-full h-auto rounded-lg">
+                </div>
+
+                <!-- Caption moved from averaging -->
+                <div class="max-w-3xl mx-auto mb-12 text-center">
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Poster visualization explorations.
+                    </p>
+                </div>
+
+            </section>
+
+            </div>
+        </div>
+
+        <!-- Green averaging visualization (Full Bleed) -->
+        <div class="mb-12">
+            <img src="assets/images/project-personal-projects/colorful-language-averaging.webp" alt="Color averaging visualization" class="w-full h-auto">
+        </div>
+
+        <!-- Continue Colorful Language Section -->
+        <div class="bg-white dark:bg-neutral-900">
+            <div class="max-w-container mx-auto px-6 md:px-12">
+
+            <section class="py-12 md:py-20">
+
+                <!-- Four process images (auto-cycling) -->
+                <div class="max-w-4xl mx-auto mb-12">
+                    <img id="process-image" src="assets/images/project-personal-projects/colorful-process-1.webp" alt="Survey tool process" class="w-full h-auto rounded-lg">
+                </div>
+
+                <!-- WCS Survey images (auto-cycling) -->
+                <div class="max-w-2xl mx-auto mb-6">
+                    <img id="wcs-image" src="assets/images/project-personal-projects/wcs-survey-1.webp" alt="WCS Survey" class="w-full h-auto rounded-lg">
+                </div>
+
+                <!-- Caption for WCS Survey -->
+                <div class="max-w-3xl mx-auto mb-12 text-center">
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-2">
+                        This is how the survey tool looked and functioned.
+                    </p>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400 italic">
+                        Photo Credit: Thomas Headland
+                    </p>
+                </div>
+
+                <!-- Related Press -->
+                <div class="max-w-3xl mx-auto mb-12">
+                    <h3 class="text-xl font-display font-bold mb-4 text-neutral-900 dark:text-neutral-50">
+                        Related Press
+                    </h3>
+                    <ul class="space-y-2 text-neutral-600 dark:text-neutral-400">
+                        <li>
+                            <a href="https://www.cabinetmagazine.org/issues/52/cook.php" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">
+                                Cabinet: Color Primitive: Hue, language, and semantic universals - Winter 2013/2014
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.visualisingdata.com/2012/11/best-of-the-visualisation-web-november-2012/" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">
+                                Visualising Data: Best of the visualisation web - November 2012
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.popsci.com/science/article/2012-12/how-people-explain-color-throughout-world/" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">
+                                Popular Science: How People Explain Color Throughout the World - 12 December 2012
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Electrical Engineering Section (Light Grey) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850">
+            <div class="max-w-container mx-auto px-6 md:px-12">
+                <section class="py-12 md:py-20">
+                    <div class="max-w-3xl mx-auto text-center mb-12">
+                        <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
+                            Electrical Engineering
+                        </p>
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight mb-8">
+                            Solar System Build
+                        </h2>
+                        <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                            My journey in building a 12v electrical solar system for my campervan started with creating a diagram and asking for feedback in a Facebook group. See how my design evolved with revisions inspired by community feedback.
+                        </p>
+                    </div>
+
+                    <!-- Three electrical diagrams (auto-cycling) -->
+                    <div class="max-w-4xl mx-auto mb-12">
+                        <img id="electrical-diagram" src="assets/images/project-personal-projects/electrical-diagram-1.webp" alt="Solar system diagram evolution" class="w-full h-auto rounded-lg">
+                    </div>
+
+                    <!-- Campervan caption -->
+                    <div class="max-w-5xl mx-auto mb-12">
+                        <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed text-center">
+                            I also built out the entire campervan, from plumbing to the wood work and really enjoyed learning how to do many scary projects including cutting large holes to install windows.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Campervan before/after (Full Bleed with Light Grey Background) -->
+        <div class="bg-neutral-50 dark:bg-neutral-850 pb-12">
+        <div class="mb-12">
+            <div class="flex items-center justify-center gap-4 md:gap-8">
+                <!-- Before image (narrow) -->
+                <div class="w-1/4 flex-shrink-0">
+                    <img src="assets/images/project-personal-projects/moonbeam-before.webp" alt="Campervan before" class="w-full h-auto">
+                </div>
+                <!-- Arrow -->
+                <div class="w-8 md:w-12 flex-shrink-0">
+                    <img src="assets/templates/arrow.svg" alt="Arrow" class="w-full h-auto">
+                </div>
+                <!-- After image (wider) -->
+                <div class="flex-1">
+                    <img src="assets/images/project-personal-projects/moonbeam-after.webp" alt="Campervan after" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Vertical Gardening Section (White) -->
+        <div class="bg-white dark:bg-neutral-900">
+            <div class="max-w-container mx-auto px-6 md:px-12">
+            <section class="py-12 md:py-20">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400 mb-4">
+                        Vertical Gardening
+                    </p>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 dark:text-neutral-50 leading-tight mb-8">
+                        Urban Designs
+                    </h2>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        I mapped out the entire property, planning the use of every square foot. I espaliered plum, apple, cherry, and peach trees, and planted raspberry, blackberry, grape, strawberry, and elderberry bushes.
+                    </p>
+                </div>
+
+            </section>
+            </div>
+        </div>
+
+        <!-- Garden layout: after with arrow to plan (Full Bleed with White Background) -->
+        <div class="bg-white dark:bg-neutral-900">
+        <div class="pb-12">
+            <div class="flex items-center justify-center gap-4 md:gap-8">
+                <!-- After image (on left, smaller) -->
+                <div class="flex-[1]">
+                    <img src="assets/images/project-personal-projects/garden-layout-after.webp" alt="Garden layout after" class="w-full h-auto">
+                </div>
+                <!-- Arrow (rotated to point left) -->
+                <div class="w-8 md:w-12 flex-shrink-0">
+                    <img src="assets/templates/arrow.svg" alt="Arrow" class="w-full h-auto" style="transform: rotate(180deg);">
+                </div>
+                <!-- Plan image (on right, larger) -->
+                <div class="flex-[2]">
+                    <img src="assets/images/project-personal-projects/garden-layout-plan.webp" alt="Garden layout plan" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+
+        <!-- Garden trellis: plan with arrow to after (Full Bleed) -->
+        <div class="pb-12">
+            <div class="flex items-center justify-center gap-4 md:gap-8">
+                <!-- Plan image (on left, narrower) -->
+                <div class="flex-[1]">
+                    <img src="assets/images/project-personal-projects/garden-trellis-plan.webp" alt="Garden trellis plan" class="w-full h-auto">
+                </div>
+                <!-- Arrow -->
+                <div class="w-8 md:w-12 flex-shrink-0">
+                    <img src="assets/templates/arrow.svg" alt="Arrow" class="w-full h-auto">
+                </div>
+                <!-- After image (on right, wider) -->
+                <div class="flex-[2]">
+                    <img src="assets/images/project-personal-projects/garden-trellis-after.webp" alt="Garden trellis after" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- CTA Section (White) -->
+        <div class="max-w-container mx-auto px-6 md:px-12">
+            <section class="py-12 md:py-20">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h3 class="text-2xl md:text-3xl font-display font-bold mb-6">
+                        Want to see more?
+                    </h3>
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-8">
+                        Get in touch with me to see my in-depth case studies.
+                    </p>
+                    <button onclick="copyEmail(event, 'terrencefradet@gmail.com')" class="copy-email inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-medium px-8 py-3 rounded-lg transition-colors cursor-pointer" data-tooltip="Copy to clipboard">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>terrencefradet@gmail.com</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <section class="py-12 md:py-20">
+                <div class="flex justify-center">
+                    <a href="/" class="text-accent font-medium">
+                        ← Back to Home
+                    </a>
+                </div>
+            </section>
+        </div> <!-- Close white container -->
+
+    </main>
+
+    <!-- Keyboard Shortcuts Tip -->
+    <div class="max-w-container mx-auto px-6 md:px-12 py-6 text-center">
+        <p class="text-xs text-neutral-400 dark:text-neutral-500">
+            <kbd class="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded text-neutral-600 dark:text-neutral-400 font-mono">←</kbd>
+            <kbd class="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded text-neutral-600 dark:text-neutral-400 font-mono">→</kbd>
+            to navigate projects ·
+            <kbd class="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded text-neutral-600 dark:text-neutral-400 font-mono">H</kbd>
+            for home
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="max-w-container mx-auto px-6 md:px-12 pb-12 text-center text-sm text-neutral-500 dark:text-neutral-500 border-t border-neutral-200 dark:border-neutral-800 pt-12">
+        <p class="mb-2">© 2026 Terrence Fradet</p>
+        <p>Created with Figma + Claude · <a href="https://github.com/tjamjam/tfradet-portfolio" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors inline-flex items-center gap-1">View source <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a></p>
+    </footer>
+
+    <!-- Project Navigation Arrows -->
+    <a href="/project-data-viz-works.html" class="fixed left-4 top-1/2 -translate-y-1/2 z-40 p-3 rounded-full bg-white/10 dark:bg-neutral-900/10 backdrop-blur-md hover:bg-white/20 dark:hover:bg-neutral-900/20 transition-colors group" title="Data Visualization Works">
+        <svg class="w-6 h-6 text-neutral-900 dark:text-neutral-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        <span class="absolute left-full ml-3 px-3 py-2 bg-neutral-900 dark:bg-neutral-50 text-neutral-50 dark:text-neutral-900 text-sm rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+            Data Visualization Works
+        </span>
+    </a>
+
+    <a href="/project-profitability-productivity.html" class="fixed right-4 top-1/2 -translate-y-1/2 z-40 p-3 rounded-full bg-white/10 dark:bg-neutral-900/10 backdrop-blur-md hover:bg-white/20 dark:hover:bg-neutral-900/20 transition-colors group" title="Profitability via Productivity">
+        <svg class="w-6 h-6 text-neutral-900 dark:text-neutral-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+        <span class="absolute right-full mr-3 px-3 py-2 bg-neutral-900 dark:bg-neutral-50 text-neutral-50 dark:text-neutral-900 text-sm rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+            Profitability via Productivity
+        </span>
+    </a>
+
+    <!-- Auto-cycling Image Scripts -->
+    <script>
+        // Auto-cycle detail images (3 images)
+        const detailImages = [
+            'assets/images/project-personal-projects/colorful-language-final-detail-1.webp',
+            'assets/images/project-personal-projects/colorful-language-final-detail-2.webp',
+            'assets/images/project-personal-projects/colorful-language-final-detail-3.webp'
+        ];
+        let detailIndex = 0;
+        const detailImg = document.getElementById('detail-image');
+
+        if (detailImg) {
+            setInterval(() => {
+                detailIndex = (detailIndex + 1) % detailImages.length;
+                detailImg.src = detailImages[detailIndex];
+            }, 3000);
+        }
+
+        // Auto-cycle print images (6 images)
+        const printImages = [
+            'assets/images/project-personal-projects/colorful-print-1.webp',
+            'assets/images/project-personal-projects/colorful-print-2.webp',
+            'assets/images/project-personal-projects/colorful-print-3.webp',
+            'assets/images/project-personal-projects/colorful-print-4.webp',
+            'assets/images/project-personal-projects/colorful-print-5.webp',
+            'assets/images/project-personal-projects/colorful-print-6.webp'
+        ];
+        let printIndex = 0;
+        const printImg = document.getElementById('print-image');
+
+        if (printImg) {
+            setInterval(() => {
+                printIndex = (printIndex + 1) % printImages.length;
+                printImg.src = printImages[printIndex];
+            }, 3000);
+        }
+
+        // Auto-cycle process images (4 images)
+        const processImages = [
+            'assets/images/project-personal-projects/colorful-process-1.webp',
+            'assets/images/project-personal-projects/colorful-process-2.webp',
+            'assets/images/project-personal-projects/colorful-process-3.webp',
+            'assets/images/project-personal-projects/colorful-process-4.webp'
+        ];
+        let processIndex = 0;
+        const processImg = document.getElementById('process-image');
+
+        if (processImg) {
+            setInterval(() => {
+                processIndex = (processIndex + 1) % processImages.length;
+                processImg.src = processImages[processIndex];
+            }, 3000);
+        }
+
+        // Auto-cycle WCS survey images (4 images)
+        const wcsImages = [
+            'assets/images/project-personal-projects/wcs-survey-1.webp',
+            'assets/images/project-personal-projects/wcs-survey-2.webp',
+            'assets/images/project-personal-projects/wcs-survey-3.webp',
+            'assets/images/project-personal-projects/wcs-survey-4jpg.jpg'
+        ];
+        let wcsIndex = 0;
+        const wcsImg = document.getElementById('wcs-image');
+
+        if (wcsImg) {
+            setInterval(() => {
+                wcsIndex = (wcsIndex + 1) % wcsImages.length;
+                wcsImg.src = wcsImages[wcsIndex];
+            }, 3000);
+        }
+
+        // Auto-cycle electrical diagram images (3 images)
+        const electricalImages = [
+            'assets/images/project-personal-projects/electrical-diagram-1.webp',
+            'assets/images/project-personal-projects/electrical-diagram-2.webp',
+            'assets/images/project-personal-projects/electrical-diagram-3.webp'
+        ];
+        let electricalIndex = 0;
+        const electricalImg = document.getElementById('electrical-diagram');
+
+        if (electricalImg) {
+            setInterval(() => {
+                electricalIndex = (electricalIndex + 1) % electricalImages.length;
+                electricalImg.src = electricalImages[electricalIndex];
+            }, 3000);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                window.location.href = '/project-data-viz-works.html';
+            } else if (e.key === 'ArrowRight') {
+                window.location.href = '/project-profitability-productivity.html';
+            } else if (e.key === 'h' || e.key === 'H') {
+                window.location.href = '/';
+            }
+        });
+    </script>
+
+</body>
+</html>
