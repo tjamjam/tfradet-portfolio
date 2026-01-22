@@ -146,31 +146,24 @@
                     <img src="assets/images/project-personal-projects/processing-editor.webp" alt="Processing code editor" class="w-full h-auto rounded-lg">
                 </div>
 
-                <!-- Three detail images -->
+                <!-- Three detail images (auto-cycling) -->
                 <div class="max-w-3xl mx-auto mb-6 text-center">
                     <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
                         Mixing colors programmatically resulted in muddy hues, but relying on our own eyes produced satisfying, textured visualizations.
                     </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
-                    <img src="assets/images/project-personal-projects/colorful-language-final-detail-1.webp" alt="Detail 1" class="w-full h-auto rounded-lg">
-                    <img src="assets/images/project-personal-projects/colorful-language-final-detail-2.webp" alt="Detail 2" class="w-full h-auto rounded-lg">
-                    <img src="assets/images/project-personal-projects/colorful-language-final-detail-3.webp" alt="Detail 3" class="w-full h-auto rounded-lg">
+                <div class="max-w-4xl mx-auto mb-12">
+                    <img id="detail-image" src="assets/images/project-personal-projects/colorful-language-final-detail-1.webp" alt="Detail visualization" class="w-full h-auto rounded-lg">
                 </div>
 
-                <!-- Six print images -->
+                <!-- Six print images (auto-cycling) -->
                 <div class="max-w-3xl mx-auto mb-6 text-center">
                     <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
                         Poster visualization explorations.
                     </p>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
-                    <img src="assets/images/project-personal-projects/colorful-print-1.webp" alt="Print design 1" class="w-full h-auto rounded-lg">
-                    <img src="assets/images/project-personal-projects/colorful-print-2.webp" alt="Print design 2" class="w-full h-auto rounded-lg">
-                    <img src="assets/images/project-personal-projects/colorful-print-3.webp" alt="Print design 3" class="w-full h-auto rounded-lg">
-                    <img src="assets/images/project-personal-projects/colorful-print-4.webp" alt="Print design 4" class="w-full h-auto rounded-lg">
-                    <img src="assets/images/project-personal-projects/colorful-print-5.webp" alt="Print design 5" class="w-full h-auto rounded-lg">
-                    <img src="assets/images/project-personal-projects/colorful-print-6.webp" alt="Print design 6" class="w-full h-auto rounded-lg">
+                <div class="max-w-4xl mx-auto mb-12">
+                    <img id="print-image" src="assets/images/project-personal-projects/colorful-print-1.webp" alt="Print design exploration" class="w-full h-auto rounded-lg">
                 </div>
 
                 <!-- Green averaging visualization -->
@@ -183,7 +176,7 @@
                     <img src="assets/images/project-personal-projects/colorful-language-averaging.webp" alt="Color averaging visualization" class="w-full h-auto rounded-lg">
                 </div>
 
-                <!-- Four process images -->
+                <!-- Four process images (auto-cycling) -->
                 <div class="max-w-3xl mx-auto mb-6 text-center">
                     <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-2">
                         This is how the survey tool looked and functioned.
@@ -192,11 +185,13 @@
                         Photo Credit: Thomas Headland
                     </p>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12">
-                    <img src="assets/images/project-personal-projects/colorful-process-1.webp" alt="Process 1" class="w-full h-auto rounded-lg">
-                    <img src="assets/images/project-personal-projects/colorful-process-2.webp" alt="Process 2" class="w-full h-auto rounded-lg">
-                    <img src="assets/images/project-personal-projects/colorful-process-3.webp" alt="Process 3" class="w-full h-auto rounded-lg">
-                    <img src="assets/images/project-personal-projects/colorful-process-4.webp" alt="Process 4" class="w-full h-auto rounded-lg">
+                <div class="max-w-4xl mx-auto mb-12">
+                    <img id="process-image" src="assets/images/project-personal-projects/colorful-process-1.webp" alt="Survey tool process" class="w-full h-auto rounded-lg">
+                </div>
+
+                <!-- WCS Survey images (auto-cycling) -->
+                <div class="max-w-4xl mx-auto mb-12">
+                    <img id="wcs-image" src="assets/images/project-personal-projects/wcs-survey-1.webp" alt="WCS Survey" class="w-full h-auto rounded-lg">
                 </div>
 
                 <!-- Related Press -->
@@ -333,6 +328,78 @@
         <p class="mb-2">© 2026 Terrence Fradet</p>
         <p>Created with Figma + Claude · <a href="https://github.com/tjamjam/tfradet-portfolio" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors inline-flex items-center gap-1">View source <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a></p>
     </footer>
+
+    <!-- Auto-cycling Image Scripts -->
+    <script>
+        // Auto-cycle detail images (3 images)
+        const detailImages = [
+            'assets/images/project-personal-projects/colorful-language-final-detail-1.webp',
+            'assets/images/project-personal-projects/colorful-language-final-detail-2.webp',
+            'assets/images/project-personal-projects/colorful-language-final-detail-3.webp'
+        ];
+        let detailIndex = 0;
+        const detailImg = document.getElementById('detail-image');
+
+        if (detailImg) {
+            setInterval(() => {
+                detailIndex = (detailIndex + 1) % detailImages.length;
+                detailImg.src = detailImages[detailIndex];
+            }, 3000);
+        }
+
+        // Auto-cycle print images (6 images)
+        const printImages = [
+            'assets/images/project-personal-projects/colorful-print-1.webp',
+            'assets/images/project-personal-projects/colorful-print-2.webp',
+            'assets/images/project-personal-projects/colorful-print-3.webp',
+            'assets/images/project-personal-projects/colorful-print-4.webp',
+            'assets/images/project-personal-projects/colorful-print-5.webp',
+            'assets/images/project-personal-projects/colorful-print-6.webp'
+        ];
+        let printIndex = 0;
+        const printImg = document.getElementById('print-image');
+
+        if (printImg) {
+            setInterval(() => {
+                printIndex = (printIndex + 1) % printImages.length;
+                printImg.src = printImages[printIndex];
+            }, 3000);
+        }
+
+        // Auto-cycle process images (4 images)
+        const processImages = [
+            'assets/images/project-personal-projects/colorful-process-1.webp',
+            'assets/images/project-personal-projects/colorful-process-2.webp',
+            'assets/images/project-personal-projects/colorful-process-3.webp',
+            'assets/images/project-personal-projects/colorful-process-4.webp'
+        ];
+        let processIndex = 0;
+        const processImg = document.getElementById('process-image');
+
+        if (processImg) {
+            setInterval(() => {
+                processIndex = (processIndex + 1) % processImages.length;
+                processImg.src = processImages[processIndex];
+            }, 3000);
+        }
+
+        // Auto-cycle WCS survey images (4 images)
+        const wcsImages = [
+            'assets/images/project-personal-projects/wcs-survey-1.webp',
+            'assets/images/project-personal-projects/wcs-survey-2.webp',
+            'assets/images/project-personal-projects/wcs-survey-3.webp',
+            'assets/images/project-personal-projects/wcs-survey-4jpg.jpg'
+        ];
+        let wcsIndex = 0;
+        const wcsImg = document.getElementById('wcs-image');
+
+        if (wcsImg) {
+            setInterval(() => {
+                wcsIndex = (wcsIndex + 1) % wcsImages.length;
+                wcsImg.src = wcsImages[wcsIndex];
+            }, 3000);
+        }
+    </script>
 
 </body>
 </html>
