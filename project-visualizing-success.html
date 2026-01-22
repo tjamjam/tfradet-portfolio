@@ -403,8 +403,19 @@
 
     </main>
 
+    <!-- Keyboard Shortcuts Tip -->
+    <div class="max-w-container mx-auto px-6 md:px-12 py-6 text-center">
+        <p class="text-xs text-neutral-400 dark:text-neutral-500">
+            <kbd class="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded text-neutral-600 dark:text-neutral-400 font-mono">←</kbd>
+            <kbd class="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded text-neutral-600 dark:text-neutral-400 font-mono">→</kbd>
+            to navigate projects ·
+            <kbd class="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded text-neutral-600 dark:text-neutral-400 font-mono">H</kbd>
+            for home
+        </p>
+    </div>
+
     <!-- Footer -->
-    <footer class="max-w-container mx-auto px-6 md:px-12 py-12 text-center text-sm text-neutral-500 dark:text-neutral-500 border-t border-neutral-200 dark:border-neutral-800">
+    <footer class="max-w-container mx-auto px-6 md:px-12 pb-12 text-center text-sm text-neutral-500 dark:text-neutral-500 border-t border-neutral-200 dark:border-neutral-800 pt-12">
         <p class="mb-2">© 2026 Terrence Fradet</p>
         <p>Created with Figma + Claude · <a href="https://github.com/tjamjam/tfradet-portfolio" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors inline-flex items-center gap-1">View source <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a></p>
     </footer>
@@ -435,6 +446,8 @@
                 window.location.href = '/project-student-success.html';
             } else if (e.key === 'ArrowRight') {
                 window.location.href = '/project-accelerating-sales-cycle.html';
+            } else if (e.key === 'h' || e.key === 'H') {
+                window.location.href = '/';
             }
         });
     </script>
