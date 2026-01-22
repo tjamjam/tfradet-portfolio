@@ -255,20 +255,9 @@
                         </p>
                     </div>
 
-                    <!-- Three electrical diagrams with v1, v2, v3 labels -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
-                        <div>
-                            <p class="text-sm font-semibold text-neutral-700 dark:text-neutral-300 mb-3 text-center">v1</p>
-                            <img src="assets/images/project-personal-projects/electrical-diagram-1.webp" alt="Solar system diagram v1" class="w-full h-auto rounded-lg">
-                        </div>
-                        <div>
-                            <p class="text-sm font-semibold text-neutral-700 dark:text-neutral-300 mb-3 text-center">v2</p>
-                            <img src="assets/images/project-personal-projects/electrical-diagram-2.webp" alt="Solar system diagram v2" class="w-full h-auto rounded-lg">
-                        </div>
-                        <div>
-                            <p class="text-sm font-semibold text-neutral-700 dark:text-neutral-300 mb-3 text-center">v3</p>
-                            <img src="assets/images/project-personal-projects/electrical-diagram-3.webp" alt="Solar system diagram v3" class="w-full h-auto rounded-lg">
-                        </div>
+                    <!-- Three electrical diagrams (auto-cycling) -->
+                    <div class="max-w-4xl mx-auto mb-12">
+                        <img id="electrical-diagram" src="assets/images/project-personal-projects/electrical-diagram-1.webp" alt="Solar system diagram evolution" class="w-full h-auto rounded-lg">
                     </div>
 
                     <!-- Campervan before/after -->
@@ -415,6 +404,22 @@
             setInterval(() => {
                 wcsIndex = (wcsIndex + 1) % wcsImages.length;
                 wcsImg.src = wcsImages[wcsIndex];
+            }, 3000);
+        }
+
+        // Auto-cycle electrical diagram images (3 images)
+        const electricalImages = [
+            'assets/images/project-personal-projects/electrical-diagram-1.webp',
+            'assets/images/project-personal-projects/electrical-diagram-2.webp',
+            'assets/images/project-personal-projects/electrical-diagram-3.webp'
+        ];
+        let electricalIndex = 0;
+        const electricalImg = document.getElementById('electrical-diagram');
+
+        if (electricalImg) {
+            setInterval(() => {
+                electricalIndex = (electricalIndex + 1) % electricalImages.length;
+                electricalImg.src = electricalImages[electricalIndex];
             }, 3000);
         }
     </script>
