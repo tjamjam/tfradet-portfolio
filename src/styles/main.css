@@ -4,23 +4,7 @@
 /* Dolly Pro Font Family */
 @font-face {
   font-family: 'Dolly Pro';
-  src: url('../../assets/fonts/Dolly/DollyPro-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Dolly Pro';
-  src: url('../../assets/fonts/Dolly/DollyPro-RegularItalic.otf') format('opentype');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Dolly Pro';
-  src: url('../../assets/fonts/Dolly/DollyPro-Bold.otf') format('opentype');
+  src: url('../../assets/fonts/Dolly/DollyPro-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -28,7 +12,7 @@
 
 @font-face {
   font-family: 'Dolly Pro SmallCaps';
-  src: url('../../assets/fonts/Dolly/DollyPro-RegularSmallCaps.otf') format('opentype');
+  src: url('../../assets/fonts/Dolly/DollyPro-RegularSmallCaps.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -133,9 +117,9 @@ h3.uppercase {
   font-weight: 400;
 }
 
-/* Subtitle text uses Dolly Pro Regular */
+/* Subtitle text uses Lexend */
 .subtitle-text {
-  font-family: 'Dolly Pro', 'Spectral', Georgia, serif;
+  font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
